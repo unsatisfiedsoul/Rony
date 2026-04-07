@@ -1,0 +1,30 @@
+[dns-waf-detect:cloudflare] [dns] [info] plc.com.bd
+[waf-detect:cloudflare] [http] [info] https://plc.com.bd
+[tls-version] [ssl] [info] plc.com.bd:443 ["tls10"]
+[deprecated-tls:tls_1.1] [ssl] [info] plc.com.bd:443 ["tls11"]
+[tls-version] [ssl] [info] plc.com.bd:443 ["tls11"]
+[deprecated-tls:tls_1.0] [ssl] [info] plc.com.bd:443 ["tls10"]
+[tls-version] [ssl] [info] plc.com.bd:443 ["tls12"]
+[weak-cipher-suites:tls-1.0] [ssl] [low] plc.com.bd:443 ["[tls10 TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA]"]
+[tls-version] [ssl] [info] plc.com.bd:443 ["tls13"]
+[weak-cipher-suites:tls-1.1] [ssl] [low] plc.com.bd:443 ["[tls11 TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA]"]
+[robots-txt-endpoint:endpoints] [http] [info] https://plc.com.bd/robots.txt ["/controllers/","/localization/","/log/","/mails/","/en/classes/","/en/modules/","/en/js/","/js/jquery/","/js/","/override/","/en/cache/","/en/localization/","/en/var/","/en/app/","/en/override/","/en/translations/","/en/webservice/","/cache/","/pdf/","/webservice/","/en/config/","/en/vendor/","/classes/","/modules/","/var/","/en/controllers/","/en/upload/","/download/","/src/","/tools/","/en/mails/","/en/src/","/en/tools/","/app/","/translations/","/vendor/","/en/download/","/config/","/upload/","/en/log/","/en/pdf/"]
+[https-to-http-redirect] [http] [info] https://plc.com.bd
+[php-eol:version] [http] [info] https://plc.com.bd ["7.1.28"]
+[package-json] [http] [info] https://plc.com.bd/package-lock.json
+[docker-compose-config] [http] [medium] https://plc.com.bd/docker-compose.yml
+[robots-txt] [http] [info] https://plc.com.bd/robots.txt
+[missing-sri] [http] [info] http://www.plc.com.bd/ ["https://www.google.com/recaptcha/api.js?hl=en"]
+[CVE-2020-15081] [http] [low] https://plc.com.bd/upload/
+[pki-validation-exposure] [http] [info] https://plc.com.bd/.well-known/pki-validation/
+[tech-detect:cloudflare] [http] [info] https://plc.com.bd
+[tech-detect:php] [http] [info] https://plc.com.bd
+[caa-fingerprint] [dns] [info] plc.com.bd
+[nameserver-fingerprint] [dns] [info] plc.com.bd ["aron.ns.cloudflare.com.","alan.ns.cloudflare.com."]
+[mx-fingerprint] [dns] [info] plc.com.bd ["50 mx3.zoho.com.","10 mx.zoho.com.","20 mx2.zoho.com."]
+[aaaa-fingerprint] [dns] [info] plc.com.bd ["2606:4700:3033::6815:1726","2606:4700:3033::ac43:d0cc"]
+[spf-record-detect] [dns] [info] plc.com.bd ["v=spf1 include:zoho.com ~all""]
+[txt-fingerprint] [dns] [info] plc.com.bd [""v=spf1 include:zoho.com ~all"",""zoho-verification=zb83718027.zmverify.zoho.com""]
+[ssl-issuer] [ssl] [info] plc.com.bd:443 ["Google Trust Services"]
+[ssl-dns-names] [ssl] [info] plc.com.bd:443 ["plc.com.bd","*.plc.com.bd"]
+[wildcard-tls] [ssl] [info] plc.com.bd:443 ["CN: plc.com.bd","SAN: [plc.com.bd *.plc.com.bd]"]

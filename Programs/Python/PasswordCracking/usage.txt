@@ -1,0 +1,14 @@
+# Test password strength
+python password_tester.py -t "MyP@ssw0rd123"
+
+# Generate and test a hash
+python password_tester.py -c "5f4dcc3b5aa765d61d8327deb882cf99" -H md5
+
+# Use dictionary attack
+python password_tester.py -c "hash_here" -w /usr/share/wordlists/rockyou.txt
+
+# Brute force test
+python password_tester.py -c "hash_here" -b 4 -v
+
+# Interactive mode
+python password_tester.py

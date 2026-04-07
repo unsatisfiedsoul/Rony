@@ -1,0 +1,9 @@
+"mcpServers": {
+  "cyber-intel": {
+    "command": "python",
+    "args": ["/path/to/server.py"],
+    "env": {
+      "MY_API_KEY": "sk_live_12345"
+    }
+  }
+}

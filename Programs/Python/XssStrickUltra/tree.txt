@@ -1,0 +1,25 @@
+xss-ultra/
+├── main.py
+├── core/
+│   ├── engine.py
+│   ├── config.py
+│   ├── logger.py
+│   ├── payload_engine.py
+│   ├── validator.py
+│
+├── modules/
+│   ├── recon.py
+│   ├── crawler.py
+│   ├── js_parser.py
+│   ├── param_miner.py
+│   ├── xss_engine.py
+│
+├── integrations/
+│   ├── dalfox.py
+│   ├── kxss.py
+│
+├── ui/
+│   ├── dashboard.py
+│
+├── payloads/
+└── results/

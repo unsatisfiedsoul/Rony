@@ -1,0 +1,20 @@
+xss-auto-pro/
+├── main.py
+├── core/
+│   ├── engine.py
+│   ├── utils.py
+│   ├── output.py
+│   └── config.py
+│
+├── modules/
+│   ├── recon.py
+│   ├── crawler.py
+│   ├── param_extractor.py
+│   ├── xss_scanner.py
+│   ├── filter.py
+│
+├── payloads/
+│   ├── reflected.txt
+│   ├── dom.txt
+│
+└── results/

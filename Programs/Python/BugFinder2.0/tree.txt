@@ -1,0 +1,17 @@
+BugFinder/
+├── main.py
+├── core/
+│   ├── recon.py
+│   ├── collector.py      🔥 (gau + wayback + httpx)
+│   ├── crawler.py
+│   ├── scanner.py
+│   ├── param_discovery.py 🔥
+│   ├── js_analyzer.py     🔥
+│   ├── reporter.py
+│   └── utils.py
+├── modules/
+│   ├── xss.py
+│   ├── sqli.py
+│   ├── lfi.py
+│   ├── ssrf.py           🔥
+│   └── open_redirect.py

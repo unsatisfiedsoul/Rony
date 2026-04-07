@@ -1,0 +1,14 @@
+scanner/
+├── main.py
+├── core/
+│   ├── recon.py
+│   ├── crawler.py
+│   ├── scanner.py
+│   ├── utils.py
+│   └── reporter.py
+├── modules/
+│   ├── xss.py
+│   ├── sqli.py
+│   ├── lfi.py
+│   └── open_redirect.py
+└── wordlists/

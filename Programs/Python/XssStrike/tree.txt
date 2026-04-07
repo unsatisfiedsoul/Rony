@@ -1,0 +1,8 @@
+xss-auto/
+├── main.py
+├── core/
+│   ├── crawler.py
+│   ├── params.py
+│   ├── scanner.py
+│   ├── utils.py
+│   └── payloads.txt

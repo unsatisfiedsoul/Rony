@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VAPT Checklist — Blue Pine Apple Technology</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow:wght@300;400;600;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e0d;
+    --surface: #111714;
+    --card: #151c19;
+    --border: #1e2e28;
+    --accent: #00e87a;
+    --accent2: #00b85e;
+    --accent-dim: rgba(0,232,122,0.08);
+    --accent-glow: rgba(0,232,122,0.18);
+    --text: #d4e8dc;
+    --text-muted: #5a7a68;
+    --text-dim: #8aab97;
+    --red: #ff4d4d;
+    --yellow: #ffd166;
+    --mono: 'Share Tech Mono', monospace;
+    --sans: 'Barlow', sans-serif;
+    --cond: 'Barlow Condensed', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 14px;
+    min-height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* scanline overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 3px,
+      rgba(0,0,0,0.06) 3px,
+      rgba(0,0,0,0.06) 4px
+    );
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* HEADER */
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 28px;
+    margin-bottom: 36px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 20px;
+    animation: fadeDown 0.5s ease both;
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .shield {
+    width: 34px;
+    height: 34px;
+    background: var(--accent);
+    clip-path: polygon(50% 0%, 100% 20%, 100% 60%, 50% 100%, 0% 60%, 0% 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .brand-name {
+    font-family: var(--cond);
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: var(--cond);
+    font-weight: 900;
+    font-size: clamp(26px, 5vw, 42px);
+    letter-spacing: 1px;
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  h1 span { color: var(--accent); }
+
+  .meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: right;
+  }
+
+  .meta-grid span { color: var(--text-dim); }
+
+  /* PROGRESS BAR */
+  .progress-bar-wrap {
+    background: var(--border);
+    border-radius: 2px;
+    height: 4px;
+    margin-bottom: 36px;
+    overflow: hidden;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent2), var(--accent));
+    border-radius: 2px;
+    transition: width 0.4s ease;
+    width: 0%;
+  }
+
+  .progress-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: right;
+    margin-top: 6px;
+  }
+
+  .progress-label span { color: var(--accent); }
+
+  /* SECTIONS */
+  .section {
+    margin-bottom: 32px;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section:nth-child(2) { animation-delay: 0.05s; }
+  .section:nth-child(3) { animation-delay: 0.1s; }
+  .section:nth-child(4) { animation-delay: 0.15s; }
+  .section:nth-child(5) { animation-delay: 0.2s; }
+  .section:nth-child(6) { animation-delay: 0.25s; }
+  .section:nth-child(7) { animation-delay: 0.3s; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .section-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--bg);
+    background: var(--accent);
+    padding: 2px 7px;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+
+  .section-title {
+    font-family: var(--cond);
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+    flex: 1;
+  }
+
+  .section-count {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-muted);
+  }
+
+  .section-count span { color: var(--accent); }
+
+  .collapse-btn {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--text-muted);
+    transition: color 0.2s;
+  }
+
+  .section-header:hover .collapse-btn { color: var(--accent); }
+
+  .items {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.15s;
+    position: relative;
+  }
+
+  .item:last-child { border-bottom: none; }
+
+  .item:hover { background: var(--accent-dim); }
+
+  .item.checked {
+    background: rgba(0, 232, 122, 0.04);
+  }
+
+  .item.checked .item-text {
+    color: var(--text-muted);
+    text-decoration: line-through;
+    text-decoration-color: var(--text-muted);
+  }
+
+  .checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid var(--text-muted);
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    font-size: 10px;
+    color: transparent;
+  }
+
+  .item.checked .checkbox {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+  }
+
+  .item-text {
+    flex: 1;
+    line-height: 1.5;
+    color: var(--text-dim);
+    transition: color 0.15s;
+    font-size: 13px;
+  }
+
+  .item-text strong {
+    color: var(--text);
+    font-weight: 600;
+    display: block;
+    font-size: 13px;
+    margin-bottom: 1px;
+  }
+
+  .badge {
+    font-family: var(--mono);
+    font-size: 9px;
+    padding: 2px 5px;
+    border-radius: 2px;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-weight: 700;
+  }
+
+  .badge-high { background: rgba(255,77,77,0.15); color: var(--red); }
+  .badge-med  { background: rgba(255,209,102,0.12); color: var(--yellow); }
+  .badge-low  { background: rgba(0,232,122,0.1); color: var(--accent); }
+
+  /* SCOPE BANNER */
+  .scope-banner {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    padding: 14px 18px;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  .scope-item { }
+  .scope-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .scope-value {
+    font-family: var(--cond);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+    letter-spacing: 0.5px;
+  }
+  .scope-value.accent { color: var(--accent); }
+
+  /* NOTES */
+  .note {
+    background: rgba(255,209,102,0.05);
+    border: 1px solid rgba(255,209,102,0.15);
+    border-left: 3px solid var(--yellow);
+    padding: 10px 14px;
+    font-size: 12px;
+    color: var(--yellow);
+    font-family: var(--mono);
+    margin-top: 10px;
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* PRINT */
+  @media print {
+    body::before { display: none; }
+    .item { break-inside: avoid; }
+    body { background: white; color: black; }
+  }
+
+  @media (max-width: 600px) {
+    .header { grid-template-columns: 1fr; }
+    .meta-grid { text-align: left; grid-template-columns: 1fr; }
+    h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div>
+      <div class="brand">
+        <div class="shield"></div>
+        <div class="brand-name">Byte Capsule</div>
+      </div>
+      <h1>VAPT <span>Checklist</span></h1>
+    </div>
+    <div class="meta-grid">
+      <div>CLIENT</div><div><span>Blue Pine Apple Technology</span></div>
+      <div>DATE</div><div><span>April 2, 2026</span></div>
+      <div>ASSESSOR</div><div><span>Lead Pentester</span></div>
+      <div>SCOPE</div><div><span>Network + Infrastructure</span></div>
+    </div>
+  </div>
+
+  <!-- Scope Summary -->
+  <div class="scope-banner">
+    <div class="scope-item">
+      <div class="scope-label">Routers</div>
+      <div class="scope-value accent">03</div>
+    </div>
+    <div class="scope-item">
+      <div class="scope-label">Switches</div>
+      <div class="scope-value accent">04 Core / 06 Dist</div>
+    </div>
+    <div class="scope-item">
+      <div class="scope-label">Public IPs</div>
+      <div class="scope-value accent">02</div>
+    </div>
+    <div class="scope-item">
+      <div class="scope-label">Firewall</div>
+      <div class="scope-value">Cato K2 (x2)</div>
+    </div>
+    <div class="scope-item">
+      <div class="scope-label">Remote Access</div>
+      <div class="scope-value">VPN + RDP</div>
+    </div>
+    <div class="scope-item">
+      <div class="scope-label">Active Directory</div>
+      <div class="scope-value">Not in use</div>
+    </div>
+  </div>
+
+  <!-- Progress -->
+  <div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="progress-label">Progress: <span id="progressText">0 / 0</span> items completed</div>
+  </div>
+  <br>
+
+  <!-- Section 1: Pre-Engagement -->
+  <div class="section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-tag">01</div>
+      <div class="section-title">Pre-Engagement</div>
+      <div class="section-count"><span id="c0">0</span> done</div>
+      <div class="collapse-btn">▾</div>
+    </div>
+    <div class="items">
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Obtain signed authorization / Rules of Engagement</strong>Confirm written permission from Blue Pine Apple Technology before testing begins.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Confirm testing window</strong>Office Hours selected — align tester schedule accordingly.</div><div class="badge badge-low">LOW</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Confirm dedicated seating & assessor laptop access</strong>Both confirmed Yes on scoping form.</div><div class="badge badge-low">LOW</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Receive critical device listing</strong>Client will provide list at time of testing.</div><div class="badge badge-med">MED</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Confirm rollback/backup plan is ready</strong>Confirmed Yes — verify backup integrity before any active testing.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Obtain router/switch models & firmware versions via WhatsApp</strong>Per scoping notes — Mikrotik v.1009 and v.2004 confirmed for routers.</div><div class="badge badge-med">MED</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Note DoS/Stress testing is NOT prohibited</strong>Client did not restrict this — but apply caution on production systems.</div><div class="badge badge-med">MED</div></div>
+    </div>
+  </div>
+
+  <!-- Section 2: Network / Perimeter -->
+  <div class="section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-tag">02</div>
+      <div class="section-title">Network & Perimeter</div>
+      <div class="section-count"><span id="c1">0</span> done</div>
+      <div class="collapse-btn">▾</div>
+    </div>
+    <div class="items">
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Reconnaissance on 2 public IPs</strong>WHOIS, passive DNS, open port enumeration (Nmap full scan).</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Service fingerprinting on public-facing ports</strong>Identify exposed services (HTTP/S, SSH, RDP, etc.).</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Cato K2 firewall rule review</strong>Two K2 devices handle most operations — check for overly permissive inbound/outbound rules.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>No dedicated extra firewall — assess K2 as sole perimeter control</strong>Per additional notes on scoping form.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Test for network-level vulnerabilities (CVEs) on Mikrotik routers</strong>v.1009 (x2) and v.2004 (x1) — check RouterOS known vulnerabilities.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Core/Distribution switch security audit</strong>04 core + 06 distribution switches — check for default credentials, SNMP exposure, CDP/LLDP leakage.</div><div class="badge badge-med">MED</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Check ISP → Router → Cato K2 connectivity chain</strong>Validate the actual flow (Cato noted over standard firewall placement).</div><div class="badge badge-med">MED</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Test for inter-VLAN routing issues</strong>VLAN segmentation is NOT implemented — flat network increases lateral movement risk.</div><div class="badge badge-high">HIGH</div></div>
+    </div>
+    <div class="note">⚠ No VLAN segmentation. Flat network — a compromised device can reach all other devices. Flag as high-risk finding.</div>
+  </div>
+
+  <!-- Section 3: Remote Access -->
+  <div class="section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-tag">03</div>
+      <div class="section-title">Remote Access (VPN & RDP)</div>
+      <div class="section-count"><span id="c2">0</span> done</div>
+      <div class="collapse-btn">▾</div>
+    </div>
+    <div class="items">
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Enumerate VPN endpoint exposure</strong>Cato-based VPN in use — identify VPN gateway, version, known CVEs.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Test MFA enforcement on VPN</strong>MFA enabled only when using VPN — verify it cannot be bypassed.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Test RDP access (RDP → Office flow)</strong>RDP is used to connect to office from outside — scan for exposed RDP ports on public IPs.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Check for NLA (Network Level Authentication) on RDP</strong>Ensure RDP requires authentication before session is established.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Brute-force resistance test on VPN / RDP</strong>Check account lockout policies and rate limiting.</div><div class="badge badge-med">MED</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Check for split tunneling on VPN</strong>If enabled, home network could bridge into office network.</div><div class="badge badge-med">MED</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Review VPN user access scope</strong>Ensure VPN users access only required segments, not full internal network.</div><div class="badge badge-med">MED</div></div>
+    </div>
+  </div>
+
+  <!-- Section 4: Internal Infrastructure -->
+  <div class="section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-tag">04</div>
+      <div class="section-title">Internal Infrastructure</div>
+      <div class="section-count"><span id="c3">0</span> done</div>
+      <div class="collapse-btn">▾</div>
+    </div>
+    <div class="items">
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Internal network discovery scan</strong>Full host discovery, OS fingerprinting, open port enumeration on internal range.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>No Active Directory — check local authentication hygiene</strong>Verify password policies, local admin accounts, and credential exposure on endpoints.</div><div class="badge badge-med">MED</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>No business-critical app servers (ERP/HR/Accounting)</strong>Confirmed None on scoping form — verify this claim during testing.</div><div class="badge badge-low">LOW</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Database server in US — test reachability from internal network</strong>Data server located in US with fileshares accessed from there — check if internal systems have uncontrolled DB access.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>File share access control review</strong>Department-wise file shares not present locally — validate fileshare permissions for US-hosted shares.</div><div class="badge badge-med">MED</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Check for unnecessary open services on internal hosts</strong>Look for telnet, FTP, SMBv1, and other legacy protocols.</div><div class="badge badge-med">MED</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Test for lateral movement paths</strong>Given flat network, enumerate how far a foothold can propagate.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Check server patching levels (Win/Linux)</strong>Identify unpatched OS vulnerabilities on servers in scope.</div><div class="badge badge-high">HIGH</div></div>
+    </div>
+  </div>
+
+  <!-- Section 5: Firewall & Device Config -->
+  <div class="section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-tag">05</div>
+      <div class="section-title">Firewall & Device Configuration</div>
+      <div class="section-count"><span id="c4">0</span> done</div>
+      <div class="collapse-btn">▾</div>
+    </div>
+    <div class="items">
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Cato K2 device configuration review</strong>Review policy rules, NAT settings, and logging configuration on both K2 units.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Check for default credentials on network devices</strong>Routers and switches — default admin/password must be changed.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Verify firmware is up to date on Mikrotik devices</strong>v.1009 and v.2004 — compare against latest stable RouterOS release.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>SNMP community string exposure</strong>Check if SNMP v1/v2c is in use with default "public/private" strings.</div><div class="badge badge-med">MED</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Management interface exposure</strong>Ensure router/switch management (Winbox, WebFig, SSH) is not exposed publicly.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Logging and monitoring adequacy</strong>Verify that security events are being logged on K2 devices and reviewed.</div><div class="badge badge-med">MED</div></div>
+    </div>
+  </div>
+
+  <!-- Section 6: Vulnerability Assessment -->
+  <div class="section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-tag">06</div>
+      <div class="section-title">Vulnerability Assessment</div>
+      <div class="section-count"><span id="c5">0</span> done</div>
+      <div class="collapse-btn">▾</div>
+    </div>
+    <div class="items">
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Run authenticated vulnerability scan on internal hosts</strong>Use Nessus / OpenVAS with credentials for comprehensive coverage.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Run unauthenticated scan on public IPs (2 IPs)</strong>External perspective — simulate attacker with no credentials.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Check for known CVEs on Mikrotik RouterOS versions in use</strong>v.1009 and v.2004 — cross-reference NVD/CVE database.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Exploit validation for critical/high findings</strong>Attempt safe exploitation to confirm exploitability (no destructive payloads).</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Document false positive filtering</strong>Review and validate scanner output before inclusion in report.</div><div class="badge badge-med">MED</div></div>
+    </div>
+  </div>
+
+  <!-- Section 7: Reporting & Wrap-up -->
+  <div class="section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-tag">07</div>
+      <div class="section-title">Reporting & Wrap-up</div>
+      <div class="section-count"><span id="c6">0</span> done</div>
+      <div class="collapse-btn">▾</div>
+    </div>
+    <div class="items">
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Draft findings report with CVSS scoring</strong>Include risk rating (Critical/High/Med/Low), affected asset, evidence, and remediation steps.</div><div class="badge badge-med">MED</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Highlight flat network architecture as structural risk</strong>No VLAN segmentation is a systemic issue — recommend network redesign.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Include MFA gap finding</strong>MFA only enforced for VPN — recommend extension to all remote access including RDP.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Debrief with client representative</strong>Walk through findings before finalizing the report.</div><div class="badge badge-med">MED</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Ensure all test artifacts and tools are removed from client systems</strong>Clean up any payloads, agents, or test accounts created during engagement.</div><div class="badge badge-high">HIGH</div></div>
+      <div class="item" onclick="toggle(this)"><div class="checkbox">✓</div><div class="item-text"><strong>Deliver final signed report to Byte Capsule and client</strong>Both parties retain a copy per engagement agreement.</div><div class="badge badge-low">LOW</div></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const sectionCounts = [0,0,0,0,0,0,0];
+  const sectionTotals = [7,8,7,8,6,5,6];
+
+  function getItems() {
+    return document.querySelectorAll('.item');
+  }
+
+  function toggle(el) {
+    el.classList.toggle('checked');
+    updateAll();
+  }
+
+  function toggleSection(headerEl) {
+    const items = headerEl.nextElementSibling;
+    const btn = headerEl.querySelector('.collapse-btn');
+    const isHidden = items.style.display === 'none';
+    items.style.display = isHidden ? '' : 'none';
+    btn.textContent = isHidden ? '▾' : '▸';
+  }
+
+  function updateAll() {
+    const allItems = getItems();
+    let total = allItems.length;
+    let done = 0;
+
+    const sections = document.querySelectorAll('.section');
+    sections.forEach((sec, i) => {
+      const items = sec.querySelectorAll('.item');
+      const checked = sec.querySelectorAll('.item.checked');
+      const countEl = document.getElementById('c' + i);
+      if (countEl) countEl.textContent = checked.length + '/' + items.length;
+    });
+
+    allItems.forEach(item => { if (item.classList.contains('checked')) done++; });
+
+    const bar = document.getElementById('progressBar');
+    const label = document.getElementById('progressText');
+    const pct = total ? Math.round((done/total)*100) : 0;
+    bar.style.width = pct + '%';
+    label.textContent = done + ' / ' + total;
+  }
+
+  updateAll();
+</script>
+</body>
+</html>

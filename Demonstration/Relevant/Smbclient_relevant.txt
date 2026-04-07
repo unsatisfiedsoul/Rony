@@ -1,0 +1,8 @@
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+        ADMIN$          Disk      Remote Admin
+        C$              Disk      Default share
+        IPC$            IPC       Remote IPC
+        nt4wrksv        Disk
+SMB1 disabled -- no workgroup available

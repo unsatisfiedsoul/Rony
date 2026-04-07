@@ -1,0 +1,23 @@
+1. Environment Setup
+2. Reconnaissance
+   2.1 - Port Scanning
+   2.2 - Service Enumeration
+   2.3 - Virtual Host Discovery
+3. Initial Access - CVE-2026-23744
+   3.1 - Vulnerability Research
+   3.2 - Exploit Development
+   3.3 - Shell Acquisition
+   3.4 - Shell Stabilization
+4. Post-Exploitation Enumeration
+   4.1 - User Context
+   4.2 - Network Services
+   4.3 - Running Processes
+   4.4 - File System Analysis
+   4.5 - Group Membership Analysis
+5. Privilege Escalation - Docker Group Abuse
+   5.1 - Activating Docker Group
+   5.2 - Container Verification
+   5.3 - Container Escape
+   5.4 - Flag Capture
+6. Vulnerability Summary
+7. Remediation Recommendations

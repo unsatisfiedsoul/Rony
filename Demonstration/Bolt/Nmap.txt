@@ -1,0 +1,10 @@
+# Nmap 7.98 scan initiated Wed Mar 25 14:40:31 2026 as: nmap -oN Nmap.txt 10.49.151.227
+Nmap scan report for 10.49.151.227
+Host is up (0.091s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+8000/tcp open  http-alt
+
+# Nmap done at Wed Mar 25 14:40:40 2026 -- 1 IP address (1 host up) scanned in 9.08 seconds

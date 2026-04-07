@@ -1,0 +1,5 @@
+curl -i -k https://kobold.htb/ --resolve kobold.htb:443:10.129.16.144
+curl -k https://10.129.16.144/ -H "Host: kobold.htb"
+dirb https://10.129.16.144/ /data/data/com.termux/files/usr/share/dirb/wordlists/common.txt -H "Host: kobold.htb"
+ffuf -u https://10.129.16.144/ -w ~/Rony/Wordlists/SecLists-master/Discovery/DNS/subdomains-top1million-110000.txt -H "Host: FUZZ.kobold.htb" -k -fs 1234
+

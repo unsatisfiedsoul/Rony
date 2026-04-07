@@ -1,0 +1,5 @@
+curl -i "http://10.129.15.145/capture"
+go to "http://10.129.15.145/data/0"
+press "Download" button
+tshark -r 0.pcap
+

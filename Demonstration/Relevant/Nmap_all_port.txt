@@ -1,0 +1,12 @@
+# Nmap 7.98 scan initiated Wed Mar 25 11:13:04 2026 as: nmap -p 49663,49666,4968 -sV -oN Nmap_all_port.txt 10.48.140.61
+Nmap scan report for 10.48.140.61
+Host is up (0.077s latency).
+
+PORT      STATE    SERVICE VERSION
+4968/tcp  filtered unknown
+49663/tcp open     http    Microsoft IIS httpd 10.0
+49666/tcp open     msrpc   Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Mar 25 11:15:39 2026 -- 1 IP address (1 host up) scanned in 154.54 seconds

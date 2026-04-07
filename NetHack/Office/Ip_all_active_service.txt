@@ -1,0 +1,594 @@
+# Nmap 7.98 scan initiated Thu Mar 12 10:46:43 2026 as: nmap -sV -sC -A -iL Ip_all_active.txt -oN Ip_all_active_service.txt
+Nmap scan report for 192.168.0.1
+Host is up (0.013s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT     STATE SERVICE    VERSION
+22/tcp   open  ssh        OpenSSH 6.6.0 (protocol 2.0)
+| ssh-hostkey: 
+|_  1024 6e:46:05:e9:c5:b4:9e:62:4a:21:b9:9e:10:bc:aa:de (DSA)
+53/tcp   open  domain     ISC BIND 9.16.23 (RedHat Linux)
+| dns-nsid: 
+|_  bind.version: 9.16.23-RH
+80/tcp   open  http       TP-LINK router http config
+|_http-title: Opening...
+443/tcp  open  ssl/https?
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=tplinkwifi.net/countryName=CN
+| Subject Alternative Name: DNS:tplinkwifi.net, IP Address:192.168.0.1
+| Not valid before: 2010-01-01T00:00:00
+|_Not valid after:  2030-12-31T00:00:00
+1900/tcp open  upnp       TP-LINK router upnpd
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 192.168.0.120
+Host is up (0.011s latency).
+All 1000 scanned ports on 192.168.0.120 are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+Nmap scan report for 192.168.0.130
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.0.130 are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+Nmap scan report for 192.168.0.189
+Host is up (0.011s latency).
+All 1000 scanned ports on 192.168.0.189 are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+Nmap scan report for 192.168.0.206
+Host is up (0.013s latency).
+Not shown: 989 filtered tcp ports (no-response)
+PORT     STATE SERVICE         VERSION
+80/tcp   open  http            Microsoft IIS httpd 10.0
+|_http-title: IIS Windows
+|_http-server-header: Microsoft-IIS/10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+135/tcp  open  msrpc           Microsoft Windows RPC
+139/tcp  open  netbios-ssn     Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+1801/tcp open  msmq?
+2103/tcp open  msrpc           Microsoft Windows RPC
+2105/tcp open  msrpc           Microsoft Windows RPC
+2107/tcp open  msrpc           Microsoft Windows RPC
+2869/tcp open  http            Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Service Unavailable
+4002/tcp open  mlchat-proxy?
+7070/tcp open  ssl/realserver?
+| ssl-cert: Subject: commonName=AnyDesk Client
+| Not valid before: 2025-11-30T15:11:13
+|_Not valid after:  2075-11-18T15:11:13
+|_ssl-date: TLS randomness does not represent time
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2026-03-12T04:51:16
+|_  start_date: N/A
+|_nbstat: NetBIOS name: DESKTOP-34IA7OD, NetBIOS user: <unknown>, NetBIOS MAC: 44:85:00:86:70:27 (Intel Corporate)
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+|_clock-skew: -1s
+
+Nmap scan report for 192.168.0.219
+Host is up (0.0041s latency).
+Not shown: 989 closed tcp ports (conn-refused)
+PORT     STATE SERVICE       VERSION
+21/tcp   open  ftp           Microsoft ftpd
+| ftp-syst: 
+|_  SYST: Windows_NT
+22/tcp   open  ssh           OpenSSH for_Windows_9.5 (protocol 2.0)
+80/tcp   open  http          Microsoft IIS httpd 10.0
+|_http-title: Site doesn't have a title (text/html).
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+2179/tcp open  vmrdp?
+3306/tcp open  mysql         MySQL (unauthorized)
+3389/tcp open  ms-wbt-server
+| rdp-ntlm-info: 
+|   Target_Name: DCS-DC
+|   NetBIOS_Domain_Name: DCS-DC
+|   NetBIOS_Computer_Name: DCS-DC
+|   DNS_Domain_Name: DCS-DC
+|   DNS_Computer_Name: DCS-DC
+|   Product_Version: 10.0.22621
+|_  System_Time: 2026-03-12T04:51:19+00:00
+| ssl-cert: Subject: commonName=DCS-DC
+| Not valid before: 2026-02-05T05:08:43
+|_Not valid after:  2026-08-07T05:08:43
+5357/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Service Unavailable
+5985/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3389-TCP:V=7.98%I=7%D=3/12%Time=69B24577%P=aarch64-unknown-linux-an
+SF:droid%r(TerminalServerCookie,13,"\x03\0\0\x13\x0e\xd0\0\0\x124\0\x02/\x
+SF:08\0\x02\0\0\0");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2026-03-12T04:51:23
+|_  start_date: N/A
+|_nbstat: NetBIOS name: DCS-DC, NetBIOS user: <unknown>, NetBIOS MAC: 30:9c:23:01:59:0c (Micro-Star Intl)
+
+Nmap scan report for 192.168.0.234
+Host is up (0.018s latency).
+Not shown: 989 filtered tcp ports (no-response)
+PORT     STATE SERVICE         VERSION
+22/tcp   open  ssh             (protocol 2.0)
+| fingerprint-strings: 
+|   NULL: 
+|_    SSH-2.0-OpenSSH_for_Windows_10.0 Win32-OpenSSH-GitHub
+80/tcp   open  http            Microsoft IIS httpd 10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: IIS Windows
+|_http-server-header: Microsoft-IIS/10.0
+135/tcp  open  msrpc           Microsoft Windows RPC
+139/tcp  open  netbios-ssn     Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+1801/tcp open  msmq?
+2103/tcp open  msrpc           Microsoft Windows RPC
+2105/tcp open  msrpc           Microsoft Windows RPC
+2107/tcp open  msrpc           Microsoft Windows RPC
+4002/tcp open  mlchat-proxy?
+7070/tcp open  ssl/realserver?
+| ssl-cert: Subject: commonName=AnyDesk Client
+| Not valid before: 2026-02-24T07:14:24
+|_Not valid after:  2076-02-12T07:14:24
+|_ssl-date: TLS randomness does not represent time
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port22-TCP:V=7.98%I=7%D=3/12%Time=69B24573%P=aarch64-unknown-linux-andr
+SF:oid%r(NULL,37,"SSH-2\.0-OpenSSH_for_Windows_10\.0\x20Win32-OpenSSH-GitH
+SF:ub\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2026-03-12T04:51:28
+|_  start_date: N/A
+|_clock-skew: 1s
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+|_nbstat: NetBIOS name: DESKTOP-6DL9KHE, NetBIOS user: <unknown>, NetBIOS MAC: 80:af:ca:28:b1:5e (Shenzhen Cudy Technology)
+
+Nmap scan report for 192.168.0.236
+Host is up (0.021s latency).
+All 1000 scanned ports on 192.168.0.236 are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+Nmap scan report for 192.168.1.1
+Host is up (0.013s latency).
+Not shown: 998 closed tcp ports (conn-refused)
+PORT     STATE SERVICE        VERSION
+1723/tcp open  pptp           MikroTik (Firmware: 1)
+2000/tcp open  bandwidth-test MikroTik bandwidth-test server
+Service Info: Host: Banani
+
+Nmap scan report for 192.168.1.99
+Host is up (0.024s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE        VERSION
+85/tcp   open     mit-ml-dev?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Cache-Control: no-store
+|     Connection: close
+|     Content-Length: 99
+|     Content-Type: text/html
+|     Date: Wed, 11 Mar 2026 05:37:32 GMT
+|     Expires: 0
+|     Pragma: no-cache
+|     X-Frame-Options: sameorigin
+|     <!doctype html>
+|     <html lang=en>
+|     <title>Error 404 : Not Found</title>
+|     <h1>Error 404 : Not Found</h1>
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Cache-Control: max-age=31536000
+|     Connection: close
+|     Content-Length: 1280
+|     Content-Type: text/html
+|     Date: Wed, 11 Mar 2026 05:37:32 GMT
+|     Expires: Thu, 11 Mar 2027 05:37:32 GMT
+|     X-Frame-Options: sameorigin
+|     <!doctype html>
+|     <html lang="en">
+|     <meta charset="utf-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <link rel="icon" href="/favicon.png">
+|     <link rel="icon" href="/favicon.svg">
+|     <title>RouterOS</title>
+|     <link rel="stylesheet" href="/assets/style-692511ab2675.css">
+|     <script src="/assets/script-bd71a1293274.js"></script>
+|     <div class="login">
+|     <section>
+|     <div class="brand"><img src="mikrotik_logo.svg" alt=""></div>
+|     <form class="form" id="login">
+|     <div id="error" class="errorMessage"></div>
+|     <div>
+|     <label for="name">Login</label>
+|     <input id="name" autocomplete="username" type="text" data-defaultuser="admin">
+|     </div>
+|     <div>
+|     <label for="password">Password
+|   HTTPOptions: 
+|     HTTP/1.0 503 Service Unavailable
+|     Cache-Control: no-store
+|     Connection: close
+|     Content-Length: 109
+|     Content-Type: text/html
+|     Date: Wed, 11 Mar 2026 05:37:32 GMT
+|     Expires: 0
+|     Pragma: no-cache
+|     X-Frame-Options: sameorigin
+|     <!doctype html>
+|     <html lang=en>
+|     <title>Error 503 : unknown method</title>
+|_    <h1>Error 503 : unknown method</h1>
+443/tcp  open     ssl/https?
+1723/tcp filtered pptp
+2000/tcp open     bandwidth-test MikroTik bandwidth-test server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port85-TCP:V=7.98%I=7%D=3/12%Time=69B24579%P=aarch64-unknown-linux-andr
+SF:oid%r(GetRequest,5E0,"HTTP/1\.0\x20200\x20OK\r\nCache-Control:\x20max-a
+SF:ge=31536000\r\nConnection:\x20close\r\nContent-Length:\x201280\r\nConte
+SF:nt-Type:\x20text/html\r\nDate:\x20Wed,\x2011\x20Mar\x202026\x2005:37:32
+SF:\x20GMT\r\nExpires:\x20Thu,\x2011\x20Mar\x202027\x2005:37:32\x20GMT\r\n
+SF:X-Frame-Options:\x20sameorigin\r\n\r\n<!doctype\x20html>\n<html\x20lang
+SF:=\"en\">\n<meta\x20charset=\"utf-8\">\n<meta\x20name=\"viewport\"\x20co
+SF:ntent=\"width=device-width,\x20initial-scale=1\">\n<link\x20rel=\"icon\
+SF:"\x20href=\"/favicon\.png\">\n<link\x20rel=\"icon\"\x20href=\"/favicon\
+SF:.svg\">\n<title>RouterOS</title>\n<link\x20rel=\"stylesheet\"\x20href=\
+SF:"/assets/style-692511ab2675\.css\">\n<script\x20src=\"/assets/script-bd
+SF:71a1293274\.js\"></script>\n\n<div\x20class=\"login\">\n<section>\n<div
+SF:\x20class=\"brand\"><img\x20src=\"mikrotik_logo\.svg\"\x20alt=\"\"></di
+SF:v>\n<form\x20class=\"form\"\x20id=\"login\">\n<div\x20id=\"error\"\x20c
+SF:lass=\"errorMessage\"></div>\n<div>\n\x20\x20<label\x20for=\"name\">Log
+SF:in</label>\n\x20\x20<input\x20id=\"name\"\x20autocomplete=\"username\"\
+SF:x20type=\"text\"\x20data-defaultuser=\"admin\">\n</div>\n<div>\n\x20\x2
+SF:0<label\x20for=\"password\">Password")%r(HTTPOptions,14B,"HTTP/1\.0\x20
+SF:503\x20Service\x20Unavailable\r\nCache-Control:\x20no-store\r\nConnecti
+SF:on:\x20close\r\nContent-Length:\x20109\r\nContent-Type:\x20text/html\r\
+SF:nDate:\x20Wed,\x2011\x20Mar\x202026\x2005:37:32\x20GMT\r\nExpires:\x200
+SF:\r\nPragma:\x20no-cache\r\nX-Frame-Options:\x20sameorigin\r\n\r\n<!doct
+SF:ype\x20html>\n<html\x20lang=en>\n<title>Error\x20503\x20:\x20unknown\x2
+SF:0method</title>\n<h1>Error\x20503\x20:\x20unknown\x20method</h1>\n")%r(
+SF:FourOhFourRequest,136,"HTTP/1\.0\x20404\x20Not\x20Found\r\nCache-Contro
+SF:l:\x20no-store\r\nConnection:\x20close\r\nContent-Length:\x2099\r\nCont
+SF:ent-Type:\x20text/html\r\nDate:\x20Wed,\x2011\x20Mar\x202026\x2005:37:3
+SF:2\x20GMT\r\nExpires:\x200\r\nPragma:\x20no-cache\r\nX-Frame-Options:\x2
+SF:0sameorigin\r\n\r\n<!doctype\x20html>\n<html\x20lang=en>\n<title>Error\
+SF:x20404\x20:\x20Not\x20Found</title>\n<h1>Error\x20404\x20:\x20Not\x20Fo
+SF:und</h1>\n");
+
+Nmap scan report for 192.168.1.100
+Host is up (0.018s latency).
+Not shown: 993 closed tcp ports (conn-refused)
+PORT     STATE SERVICE    VERSION
+22/tcp   open  ssh        Dropbear sshd 2017.75 (protocol 2.0)
+23/tcp   open  landesk-rc LANDesk remote management
+80/tcp   open  http       lighttpd 1.4.31
+|_http-title: OLT Web Management System
+|_http-server-header: lighttpd/1.4.31
+161/tcp  open  snmp?
+443/tcp  open  ssl/https?
+| ssl-cert: Subject: commonName=Test Server Cert/organizationName=OpenSSL Group/countryName=UK
+| Not valid before: 2011-12-08T14:01:48
+|_Not valid after:  2021-10-16T14:01:48
+|_ssl-date: 2018-01-04T19:43:36+00:00; -8y66d09h09m22s from scanner time.
+2602/tcp open  landesk-rc LANDesk remote management
+2604/tcp open  landesk-rc LANDesk remote management
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: -2988d09h09m22s
+
+Nmap scan report for 192.168.1.101
+Host is up (0.038s latency).
+Not shown: 993 closed tcp ports (conn-refused)
+PORT     STATE SERVICE    VERSION
+22/tcp   open  ssh        Dropbear sshd 2017.75 (protocol 2.0)
+23/tcp   open  landesk-rc LANDesk remote management
+80/tcp   open  http       lighttpd 1.4.31
+|_http-server-header: lighttpd/1.4.31
+|_http-title: OLT Web Management System
+161/tcp  open  snmp?
+443/tcp  open  ssl/https?
+|_ssl-date: 2022-08-11T21:17:26+00:00; -3y212d07h35m29s from scanner time.
+| ssl-cert: Subject: commonName=Test Server Cert/organizationName=OpenSSL Group/countryName=UK
+| Not valid before: 2011-12-08T14:01:48
+|_Not valid after:  2021-10-16T14:01:48
+2602/tcp open  ripd?
+| fingerprint-strings: 
+|   GenericLines: 
+|     ****************************************************************
+|     GPON OLT Integrated Operating System. **
+|     Device Model : FD1604E-C1 **
+|     Hardware version : V1.1 **
+|     Firmware version : V3.4.26_251128 **
+|     BuildDate : Fri, 28 Nov 2025 18:04:09 +0800 **
+|     Address : D0:5F:AF:E0:05:0E **
+|     ****************************************************************
+|     User Access Verification
+|     User name: 
+|     Please entry username!
+|     User name:
+|   NULL: 
+|     ****************************************************************
+|     GPON OLT Integrated Operating System. **
+|     Device Model : FD1604E-C1 **
+|     Hardware version : V1.1 **
+|     Firmware version : V3.4.26_251128 **
+|     BuildDate : Fri, 28 Nov 2025 18:04:09 +0800 **
+|     Address : D0:5F:AF:E0:05:0E **
+|     ****************************************************************
+|     User Access Verification
+|_    User name:
+2604/tcp open  landesk-rc LANDesk remote management
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port2602-TCP:V=7.98%I=7%D=3/12%Time=69B24588%P=aarch64-unknown-linux-an
+SF:droid%r(NULL,245,"\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\
+SF:*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+SF:\*\*\r\n\*\*\x20\x20GPON\x20OLT\x20Integrated\x20Operating\x20System\.\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\*\*\r\n\*\*\x20\x20Device\x20Model\x20\x20\x20\x20\x20:\x2
+SF:0FD1604E-C1\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\*\*\r\n\*\*\x2
+SF:0\x20Hardware\x20version\x20:\x20V1\.1\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\*\*\r\n\*\*\x20\x20Firmware\x20ver
+SF:sion\x20:\x20V3\.4\.26_251128\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\*\*\r\n\*\*\
+SF:x20\x20BuildDate\x20\x20\x20\x20\x20\x20\x20\x20:\x20Fri,\x2028\x20Nov\
+SF:x202025\x2018:04:09\x20\+0800\x20\x20\x20\x20\x20\x20\x20\x20\*\*\r\n\*
+SF:\*\x20\x20Mac\x20Address\x20\x20\x20\x20\x20\x20:\x20D0:5F:AF:E0:05:0E\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\*\*\r\n\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\
+SF:*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+SF:\*\*\*\*\*\r\n\r\nUser\x20Access\x20Verification\r\n\r\n\xff\xfb\x01\xf
+SF:f\xfb\x03\xff\xfe\"\xff\xfd\x1fUser\x20name:\x20")%r(GenericLines,26C,"
+SF:\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\
+SF:*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\r\n\*\*\x20\x
+SF:20GPON\x20OLT\x20Integrated\x20Operating\x20System\.\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\*\*\r
+SF:\n\*\*\x20\x20Device\x20Model\x20\x20\x20\x20\x20:\x20FD1604E-C1\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\*\*\r\n\*\*\x20\x20Hardware\x20v
+SF:ersion\x20:\x20V1\.1\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\*\*\r\n\*\*\x20\x20Firmware\x20version\x20:\x20V3\.4
+SF:\.26_251128\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\*\*\r\n\*\*\x20\x20BuildDate\x
+SF:20\x20\x20\x20\x20\x20\x20\x20:\x20Fri,\x2028\x20Nov\x202025\x2018:04:0
+SF:9\x20\+0800\x20\x20\x20\x20\x20\x20\x20\x20\*\*\r\n\*\*\x20\x20Mac\x20A
+SF:ddress\x20\x20\x20\x20\x20\x20:\x20D0:5F:AF:E0:05:0E\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\*
+SF:\*\r\n\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\
+SF:*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\r\n\r\n
+SF:User\x20Access\x20Verification\r\n\r\n\xff\xfb\x01\xff\xfb\x03\xff\xfe\
+SF:"\xff\xfd\x1fUser\x20name:\x20\r\n%\x20Please\x20entry\x20username!\r\n
+SF:User\x20name:\x20");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: -1308d07h35m29s
+
+Nmap scan report for 192.168.8.200
+Host is up (0.050s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT    STATE SERVICE    VERSION
+22/tcp  open  ssh        OpenSSH 7.3 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 6f:b5:db:a8:1c:7e:33:ae:51:38:9e:a8:80:68:6d:60 (RSA)
+|   256 97:1d:e2:8c:4a:f2:67:6a:cc:1b:95:fe:dc:9d:68:22 (ECDSA)
+|_  256 9c:0e:c0:cc:4a:ad:69:bf:be:cb:ce:88:26:65:46:45 (ED25519)
+23/tcp  open  landesk-rc LANDesk remote management
+80/tcp  open  http
+|_http-title: Web
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Date: Sun Jan 2 22:06:53 2022
+|     Content-Length: 1108
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     Last-Modified: Mon Jan 19 09:05:21 2026
+|     <!doctype html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="UTF-8" />
+|     <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+|     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+|     <meta http-equiv="Pragma" content="no-cache" />
+|     <meta http-equiv="Expires" content="0" />
+|     <link rel="stylesheet" href="/custom/custom.css">
+|     <!-- <link rel="stylesheet" href="../custom_css_store/lanly/custom.css"> -->
+|     <title>Web</title>
+|     <link rel="modulepreload" crossorigin href="/assets/elementPlus-legacy-CJtBVVl1.js">
+|     <link rel="modulepreload" crossorigin href="/assets/echarts-legacy-
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     Date: Sun Jan 2 22:06:53 2022
+|     Content-Length: 145
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     <html>
+|     <head><title>Document Error: Not Found</title></head>
+|     <body>
+|     <h2>Access Error: Not Found</h2>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     HTTP/1.0 406 Not Acceptable
+|     Date: Sun Jan 2 22:06:53 2022
+|     Content-Length: 155
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     <html>
+|     <head><title>Document Error: Not Acceptable</title></head>
+|     <body>
+|     <h2>Access Error: Not Acceptable</h2>
+|     </body>
+|_    </html>
+443/tcp open  ssl/https
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=test.org/organizationName=Default Company Ltd/countryName=CN
+| Not valid before: 2024-05-08T06:41:04
+|_Not valid after:  2027-05-08T06:41:04
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.98%I=7%D=3/12%Time=69B2459E%P=aarch64-unknown-linux-andr
+SF:oid%r(GetRequest,4F6,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Sun\x20Jan\x20
+SF:\x202\x2022:06:53\x202022\r\nContent-Length:\x201108\r\nConnection:\x20
+SF:close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nLast-Modified:\x20Mon\x20Jan
+SF:\x2019\x2009:05:21\x202026\r\n\r\n<!doctype\x20html>\r\n<html\x20lang=\
+SF:"en\">\r\n\x20\x20<head>\r\n\x20\x20\x20\x20<meta\x20charset=\"UTF-8\"\
+SF:x20/>\r\n\x20\x20\x20\x20<!--\x20<link\x20rel=\"icon\"\x20type=\"image/
+SF:svg\+xml\"\x20href=\"/vite\.svg\"\x20/>\x20-->\r\n\x20\x20\x20\x20<meta
+SF:\x20name=\"viewport\"\x20content=\"width=device-width,\x20initial-scale
+SF:=1\.0\"\x20/>\r\n\x20\x20\x20\x20<meta\x20http-equiv=\"Cache-Control\"\
+SF:x20content=\"no-cache,\x20no-store,\x20must-revalidate\"\x20/>\r\n\x20\
+SF:x20\x20\x20<meta\x20http-equiv=\"Pragma\"\x20content=\"no-cache\"\x20/>
+SF:\r\n\x20\x20\x20\x20<meta\x20http-equiv=\"Expires\"\x20content=\"0\"\x2
+SF:0/>\r\n\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"/custom/cu
+SF:stom\.css\">\r\n\x20\x20\x20\x20<!--\x20<link\x20rel=\"stylesheet\"\x20
+SF:href=\"\.\./custom_css_store/lanly/custom\.css\">\x20-->\r\n\x20\x20\x2
+SF:0\x20<title>Web</title>\r\n\x20\x20\x20\x20\n\x20\x20\x20\x20<link\x20r
+SF:el=\"modulepreload\"\x20crossorigin\x20href=\"/assets/elementPlus-legac
+SF:y-CJtBVVl1\.js\">\n\x20\x20\x20\x20<link\x20rel=\"modulepreload\"\x20cr
+SF:ossorigin\x20href=\"/assets/echarts-legacy-")%r(HTTPOptions,110,"HTTP/1
+SF:\.0\x20404\x20Not\x20Found\r\nDate:\x20Sun\x20Jan\x20\x202\x2022:06:53\
+SF:x202022\r\nContent-Length:\x20145\r\nConnection:\x20close\r\nX-Frame-Op
+SF:tions:\x20SAMEORIGIN\r\n\r\n<html>\r\n\x20\x20\x20\x20<head><title>Docu
+SF:ment\x20Error:\x20Not\x20Found</title></head>\r\n\x20\x20\x20\x20<body>
+SF:\r\n\x20\x20\x20\x20\x20\x20\x20\x20<h2>Access\x20Error:\x20Not\x20Foun
+SF:d</h2>\r\n\x20\x20\x20\x20</body>\r\n</html>\r\n\r\n")%r(RTSPRequest,11
+SF:F,"HTTP/1\.0\x20406\x20Not\x20Acceptable\r\nDate:\x20Sun\x20Jan\x20\x20
+SF:2\x2022:06:53\x202022\r\nContent-Length:\x20155\r\nConnection:\x20close
+SF:\r\nX-Frame-Options:\x20SAMEORIGIN\r\n\r\n<html>\r\n\x20\x20\x20\x20<he
+SF:ad><title>Document\x20Error:\x20Not\x20Acceptable</title></head>\r\n\x2
+SF:0\x20\x20\x20<body>\r\n\x20\x20\x20\x20\x20\x20\x20\x20<h2>Access\x20Er
+SF:ror:\x20Not\x20Acceptable</h2>\r\n\x20\x20\x20\x20</body>\r\n</html>\r\
+SF:n\r\n");
+
+Nmap scan report for 192.168.100.2
+Host is up (0.046s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE        VERSION
+85/tcp   open     mit-ml-dev?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Cache-Control: no-store
+|     Connection: close
+|     Content-Length: 99
+|     Content-Type: text/html
+|     Date: Wed, 11 Mar 2026 05:38:16 GMT
+|     Expires: 0
+|     Pragma: no-cache
+|     X-Frame-Options: sameorigin
+|     <!doctype html>
+|     <html lang=en>
+|     <title>Error 404 : Not Found</title>
+|     <h1>Error 404 : Not Found</h1>
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Cache-Control: max-age=31536000
+|     Connection: close
+|     Content-Length: 1280
+|     Content-Type: text/html
+|     Date: Wed, 11 Mar 2026 05:38:14 GMT
+|     Expires: Thu, 11 Mar 2027 05:38:14 GMT
+|     X-Frame-Options: sameorigin
+|     <!doctype html>
+|     <html lang="en">
+|     <meta charset="utf-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <link rel="icon" href="/favicon.png">
+|     <link rel="icon" href="/favicon.svg">
+|     <title>RouterOS</title>
+|     <link rel="stylesheet" href="/assets/style-692511ab2675.css">
+|     <script src="/assets/script-bd71a1293274.js"></script>
+|     <div class="login">
+|     <section>
+|     <div class="brand"><img src="mikrotik_logo.svg" alt=""></div>
+|     <form class="form" id="login">
+|     <div id="error" class="errorMessage"></div>
+|     <div>
+|     <label for="name">Login</label>
+|     <input id="name" autocomplete="username" type="text" data-defaultuser="admin">
+|     </div>
+|     <div>
+|     <label for="password">Password
+|   HTTPOptions: 
+|     HTTP/1.0 503 Service Unavailable
+|     Cache-Control: no-store
+|     Connection: close
+|     Content-Length: 109
+|     Content-Type: text/html
+|     Date: Wed, 11 Mar 2026 05:38:14 GMT
+|     Expires: 0
+|     Pragma: no-cache
+|     X-Frame-Options: sameorigin
+|     <!doctype html>
+|     <html lang=en>
+|     <title>Error 503 : unknown method</title>
+|_    <h1>Error 503 : unknown method</h1>
+443/tcp  open     ssl/https?
+1723/tcp filtered pptp
+2000/tcp open     bandwidth-test MikroTik bandwidth-test server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port85-TCP:V=7.98%I=7%D=3/12%Time=69B245A3%P=aarch64-unknown-linux-andr
+SF:oid%r(GetRequest,5E0,"HTTP/1\.0\x20200\x20OK\r\nCache-Control:\x20max-a
+SF:ge=31536000\r\nConnection:\x20close\r\nContent-Length:\x201280\r\nConte
+SF:nt-Type:\x20text/html\r\nDate:\x20Wed,\x2011\x20Mar\x202026\x2005:38:14
+SF:\x20GMT\r\nExpires:\x20Thu,\x2011\x20Mar\x202027\x2005:38:14\x20GMT\r\n
+SF:X-Frame-Options:\x20sameorigin\r\n\r\n<!doctype\x20html>\n<html\x20lang
+SF:=\"en\">\n<meta\x20charset=\"utf-8\">\n<meta\x20name=\"viewport\"\x20co
+SF:ntent=\"width=device-width,\x20initial-scale=1\">\n<link\x20rel=\"icon\
+SF:"\x20href=\"/favicon\.png\">\n<link\x20rel=\"icon\"\x20href=\"/favicon\
+SF:.svg\">\n<title>RouterOS</title>\n<link\x20rel=\"stylesheet\"\x20href=\
+SF:"/assets/style-692511ab2675\.css\">\n<script\x20src=\"/assets/script-bd
+SF:71a1293274\.js\"></script>\n\n<div\x20class=\"login\">\n<section>\n<div
+SF:\x20class=\"brand\"><img\x20src=\"mikrotik_logo\.svg\"\x20alt=\"\"></di
+SF:v>\n<form\x20class=\"form\"\x20id=\"login\">\n<div\x20id=\"error\"\x20c
+SF:lass=\"errorMessage\"></div>\n<div>\n\x20\x20<label\x20for=\"name\">Log
+SF:in</label>\n\x20\x20<input\x20id=\"name\"\x20autocomplete=\"username\"\
+SF:x20type=\"text\"\x20data-defaultuser=\"admin\">\n</div>\n<div>\n\x20\x2
+SF:0<label\x20for=\"password\">Password")%r(HTTPOptions,14B,"HTTP/1\.0\x20
+SF:503\x20Service\x20Unavailable\r\nCache-Control:\x20no-store\r\nConnecti
+SF:on:\x20close\r\nContent-Length:\x20109\r\nContent-Type:\x20text/html\r\
+SF:nDate:\x20Wed,\x2011\x20Mar\x202026\x2005:38:14\x20GMT\r\nExpires:\x200
+SF:\r\nPragma:\x20no-cache\r\nX-Frame-Options:\x20sameorigin\r\n\r\n<!doct
+SF:ype\x20html>\n<html\x20lang=en>\n<title>Error\x20503\x20:\x20unknown\x2
+SF:0method</title>\n<h1>Error\x20503\x20:\x20unknown\x20method</h1>\n")%r(
+SF:FourOhFourRequest,136,"HTTP/1\.0\x20404\x20Not\x20Found\r\nCache-Contro
+SF:l:\x20no-store\r\nConnection:\x20close\r\nContent-Length:\x2099\r\nCont
+SF:ent-Type:\x20text/html\r\nDate:\x20Wed,\x2011\x20Mar\x202026\x2005:38:1
+SF:6\x20GMT\r\nExpires:\x200\r\nPragma:\x20no-cache\r\nX-Frame-Options:\x2
+SF:0sameorigin\r\n\r\n<!doctype\x20html>\n<html\x20lang=en>\n<title>Error\
+SF:x20404\x20:\x20Not\x20Found</title>\n<h1>Error\x20404\x20:\x20Not\x20Fo
+SF:und</h1>\n");
+
+Nmap scan report for 192.168.100.99
+Host is up (0.017s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE        VERSION
+443/tcp  open  ssl/https?
+1723/tcp open  pptp           MikroTik (Firmware: 1)
+2000/tcp open  bandwidth-test MikroTik bandwidth-test server
+Service Info: Host: SegunBagicha
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Mar 12 10:53:11 2026 -- 16 IP addresses (15 hosts up) scanned in 387.72 seconds

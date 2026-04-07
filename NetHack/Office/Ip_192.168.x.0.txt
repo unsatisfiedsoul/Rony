@@ -1,0 +1,42 @@
+# Nmap 7.98 scan initiated Thu Mar 12 10:15:36 2026 as: nmap -sn -oN Ip_192.168.0.0.txt 192.168.0.1/24
+Nmap scan report for 192.168.0.1
+Host is up (0.019s latency).
+Nmap scan report for 192.168.0.120
+Host is up (0.098s latency).
+Nmap scan report for 192.168.0.130
+Host is up (0.065s latency).
+Nmap scan report for 192.168.0.189
+Host is up (0.024s latency).
+Nmap scan report for 192.168.0.206
+Host is up (0.0016s latency).
+Nmap scan report for 192.168.0.219
+Host is up (0.0042s latency).
+Nmap scan report for 192.168.0.231
+Host is up (0.0055s latency).
+Nmap scan report for 192.168.0.234
+Host is up (0.048s latency).
+Nmap scan report for 192.168.0.236
+Host is up (0.11s latency).
+# Nmap done at Thu Mar 12 10:15:41 2026 -- 256 IP addresses (9 hosts up) scanned in 4.49 seconds
+# Nmap 7.98 scan initiated Thu Mar 12 10:18:28 2026 as: nmap -sn -oN Ip_192.168.1.0.txt 192.168.1.1/24
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+Nmap scan report for 192.168.1.1
+Host is up (0.20s latency).
+Nmap scan report for 192.168.1.99
+Host is up (0.054s latency).
+Nmap scan report for 192.168.1.100
+Host is up (0.078s latency).
+Nmap scan report for 192.168.1.101
+Host is up (0.040s latency).
+# Nmap done at Thu Mar 12 10:19:06 2026 -- 256 IP addresses (4 hosts up) scanned in 37.40 seconds
+# Nmap 7.98 scan initiated Thu Mar 12 10:22:16 2026 as: nmap -sn -oN Ip_192.168.8.0.txt 192.168.8.1/24
+Nmap scan report for 192.168.8.200
+Host is up (0.033s latency).
+# Nmap done at Thu Mar 12 10:22:56 2026 -- 256 IP addresses (1 host up) scanned in 40.16 seconds
+# Nmap 7.98 scan initiated Thu Mar 12 10:24:53 2026 as: nmap -sn -oN Ip_192.168.100.0.txt 192.168.100.1/24
+Nmap scan report for 192.168.100.2
+Host is up (0.025s latency).
+Nmap scan report for 192.168.100.99
+Host is up (0.012s latency).
+# Nmap done at Thu Mar 12 10:24:57 2026 -- 256 IP addresses (2 hosts up) scanned in 3.75 seconds

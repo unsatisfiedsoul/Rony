@@ -1,0 +1,12 @@
+# Nmap 7.98 scan initiated Thu Mar 12 10:18:28 2026 as: nmap -sn -oN Ip_192.168.1.0.txt 192.168.1.1/24
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+Nmap scan report for 192.168.1.1
+Host is up (0.20s latency).
+Nmap scan report for 192.168.1.99
+Host is up (0.054s latency).
+Nmap scan report for 192.168.1.100
+Host is up (0.078s latency).
+Nmap scan report for 192.168.1.101
+Host is up (0.040s latency).
+# Nmap done at Thu Mar 12 10:19:06 2026 -- 256 IP addresses (4 hosts up) scanned in 37.40 seconds

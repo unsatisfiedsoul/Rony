@@ -1,0 +1,19 @@
+# Nmap 7.98 scan initiated Thu Mar 12 10:25:24 2026 as: nmap -oN Ip_192.168.100.0_all.txt 192.168.100.0/24
+Nmap scan report for 192.168.100.2
+Host is up (0.011s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE
+85/tcp   open     mit-ml-dev
+443/tcp  open     https
+1723/tcp filtered pptp
+2000/tcp open     cisco-sccp
+
+Nmap scan report for 192.168.100.99
+Host is up (0.013s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+443/tcp  open  https
+1723/tcp open  pptp
+2000/tcp open  cisco-sccp
+
+# Nmap done at Thu Mar 12 10:25:31 2026 -- 256 IP addresses (2 hosts up) scanned in 7.07 seconds

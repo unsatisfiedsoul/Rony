@@ -1,0 +1,14 @@
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-03-06 12:28 +0600
+Nmap scan report for 192.168.0.1
+Host is up (0.024s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT     STATE SERVICE    VERSION
+22/tcp   open  ssh        OpenSSH 6.6.0 (protocol 2.0)
+53/tcp   open  domain     ISC BIND 9.16.23 (RedHat Linux)
+80/tcp   open  http       TP-LINK router http config
+443/tcp  open  ssl/https?
+1900/tcp open  upnp       TP-LINK router upnpd
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 22.57 seconds

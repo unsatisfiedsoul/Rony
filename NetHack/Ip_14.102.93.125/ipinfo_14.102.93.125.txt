@@ -1,0 +1,12 @@
+Core
+- IP           14.102.93.125
+- Anycast      false
+- Hostname     
+- City         Deoli
+- Region       Delhi
+- Country      India (IN)
+- Currency     INR (₹)
+- Location     28.5025,77.2312
+- Organization AS18002 AS Number for Interdomain Routing
+- Postal       110062
+- Timezone     Asia/Kolkata

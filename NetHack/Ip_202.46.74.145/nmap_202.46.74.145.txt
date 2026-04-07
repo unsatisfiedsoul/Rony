@@ -1,0 +1,40 @@
+# Nmap 7.98 scan initiated Fri Mar  6 00:35:15 2026 as: nmap -sV -sV -A -oN nmap_202.46.74.145.txt 202.46.74.145
+Nmap scan report for 202.46.74.145
+Host is up (0.16s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE    VERSION
+80/tcp   open  http       Apache httpd 2.4.41 ((Ubuntu))
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+443/tcp  open  ssl/https?
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=202.46.74.145/organizationName=Multidata Komputindo/stateOrProvinceName=East Java/countryName=ID
+| Not valid before: 2023-12-06T02:06:59
+|_Not valid after:  2038-01-18T03:14:07
+1723/tcp open  pptp       MikroTik (Firmware: 1)
+8291/tcp open  winbox     MikroTik WinBox
+| mikrotik-routeros-version: 
+|   index: 
+| roteros.dll  6.45.2
+| advtool.dll  6.45.2
+| dhcp.dll     6.45.2
+| hotspot.dll  6.45.2
+| ntp.dll      6.45.2
+| ppp.dll      6.45.2
+| roting4.dll  6.45.2
+| secure.dll   6.45.2
+| system.dll   6.45.2
+| 
+|   list: 
+| advtool.jg  6.45.2
+| dhcp.jg     6.45.2
+| hotspot.jg  6.45.2
+| ntp.jg      6.45.2
+| ppp.jg      6.45.2
+| roteros.jg  6.45.2
+| roting4.jg  6.45.2
+|_secure.jg   6.45.2
+Service Info: Host: MT Backbone JSM; OS: RouterOS 6.45.2; CPE: cpe:/o:mikrotik:routeros, cpe:/o:mikrotik:routeros:6.45.2
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Mar  6 00:38:18 2026 -- 1 IP address (1 host up) scanned in 183.29 seconds

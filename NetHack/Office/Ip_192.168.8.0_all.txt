@@ -1,0 +1,11 @@
+# Nmap 7.98 scan initiated Thu Mar 12 10:23:17 2026 as: nmap -oN Ip_192.168.8.0_all.txt 192.168.8.0/24
+Nmap scan report for 192.168.8.200
+Host is up (0.038s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT    STATE SERVICE
+22/tcp  open  ssh
+23/tcp  open  telnet
+80/tcp  open  http
+443/tcp open  https
+
+# Nmap done at Thu Mar 12 10:23:46 2026 -- 256 IP addresses (1 host up) scanned in 29.23 seconds

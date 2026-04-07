@@ -1,0 +1,4 @@
+# Nmap 7.98 scan initiated Thu Mar 12 10:22:16 2026 as: nmap -sn -oN Ip_192.168.8.0.txt 192.168.8.1/24
+Nmap scan report for 192.168.8.200
+Host is up (0.033s latency).
+# Nmap done at Thu Mar 12 10:22:56 2026 -- 256 IP addresses (1 host up) scanned in 40.16 seconds

@@ -1,0 +1,85 @@
+# Nmap 7.98 scan initiated Thu Mar 12 10:17:00 2026 as: nmap -oN Ip_192.168.0.0_all.txt 192.168.0.0/24
+Nmap scan report for 192.168.0.1
+Host is up (0.030s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+53/tcp   open  domain
+80/tcp   open  http
+443/tcp  open  https
+1900/tcp open  upnp
+
+Nmap scan report for 192.168.0.120
+Host is up (0.017s latency).
+All 1000 scanned ports on 192.168.0.120 are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+Nmap scan report for 192.168.0.130
+Host is up (0.016s latency).
+All 1000 scanned ports on 192.168.0.130 are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+Nmap scan report for 192.168.0.189
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.0.189 are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+Nmap scan report for 192.168.0.206
+Host is up (0.017s latency).
+Not shown: 989 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+80/tcp   open  http
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+1801/tcp open  msmq
+2103/tcp open  zephyr-clt
+2105/tcp open  eklogin
+2107/tcp open  msmq-mgmt
+2869/tcp open  icslap
+4002/tcp open  mlchat-proxy
+7070/tcp open  realserver
+
+Nmap scan report for 192.168.0.219
+Host is up (0.017s latency).
+Not shown: 989 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+80/tcp   open  http
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2179/tcp open  vmrdp
+3306/tcp open  mysql
+3389/tcp open  ms-wbt-server
+5357/tcp open  wsdapi
+5985/tcp open  wsman
+
+Nmap scan report for 192.168.0.231
+Host is up (0.015s latency).
+All 1000 scanned ports on 192.168.0.231 are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+Nmap scan report for 192.168.0.234
+Host is up (0.027s latency).
+Not shown: 989 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+1801/tcp open  msmq
+2103/tcp open  zephyr-clt
+2105/tcp open  eklogin
+2107/tcp open  msmq-mgmt
+4002/tcp open  mlchat-proxy
+7070/tcp open  realserver
+
+Nmap scan report for 192.168.0.236
+Host is up (0.017s latency).
+All 1000 scanned ports on 192.168.0.236 are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+# Nmap done at Thu Mar 12 10:17:16 2026 -- 256 IP addresses (9 hosts up) scanned in 16.44 seconds

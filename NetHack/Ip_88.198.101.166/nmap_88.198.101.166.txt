@@ -1,0 +1,2292 @@
+# Nmap 7.98 scan initiated Fri Mar  6 00:40:37 2026 as: nmap -sV -sV -A -oN nmap_88.198.101.166.txt 88.198.101.166
+Nmap scan report for static.88-198-101-166.clients.your-server.de (88.198.101.166)
+Host is up (0.21s latency).
+Not shown: 769 closed tcp ports (conn-refused)
+Bug in ganglia-info: no string output.
+Bug in ganglia-info: no string output.
+PORT      STATE    SERVICE           VERSION
+22/tcp    open     ssh               OpenSSH 8.4p1 Debian 5+deb11u3 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 af:0e:a7:bf:3b:37:2a:1b:3b:5b:e9:b7:3b:d7:67:f3 (RSA)
+|   256 be:d0:ac:c9:a6:4f:d2:54:72:a8:1e:81:ae:4a:34:4b (ECDSA)
+|_  256 cf:b1:d5:f5:40:4b:32:43:0b:03:e8:24:06:b7:70:e7 (ED25519)
+37/tcp    filtered time
+139/tcp   filtered netbios-ssn
+389/tcp   filtered ldap
+445/tcp   filtered microsoft-ds
+1503/tcp  filtered imtc-mcs
+1719/tcp  filtered h323gatestat
+1720/tcp  filtered h323q931
+2000/tcp  filtered cisco-sccp
+5060/tcp  filtered sip
+5061/tcp  filtered sip-tls
+8000/tcp  open     http-alt
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GetRequest, NULL, RPCCheck, SSLSessionReq, Socks4, Socks5, TLSSessionReq, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8000
+8001/tcp  open     vcom-tunnel?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, HTTPOptions, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8001
+8002/tcp  open     teradataordbms?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8002
+8007/tcp  open     ajp12?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, HTTPOptions, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8007
+8008/tcp  open     http
+| fingerprint-strings: 
+|   HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, Socks5, TLSSessionReq, ajp: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8008
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+8009/tcp  open     ajp13?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, Help, Kerberos, NULL, SSLv23SessionReq, TerminalServerCookie, ajp: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8009
+|_ajp-methods: Failed to get a valid response for the OPTION request
+8010/tcp  open     xmpp?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, NULL, SSLSessionReq, Socks5: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8010
+8011/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, Kerberos, NULL, RPCCheck, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8011
+8021/tcp  open     ftp-proxy?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, NULL, RPCCheck, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8021
+8022/tcp  open     oa-system?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, NULL, SMBProgNeg, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8022
+8031/tcp  open     unknown
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, Kerberos, NULL, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8031
+8042/tcp  open     fs-agent?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8042
+8045/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Kerberos, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8045
+8080/tcp  open     http-proxy
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, HTTPOptions, Help, NULL, RTSPRequest, Socks4, Socks5: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8080
+8081/tcp  open     blackice-icecap?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, HTTPOptions, NULL, RPCCheck, SIPOptions, WWWOFFLEctrlstat: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8081
+8082/tcp  open     blackice-alerts?
+| fingerprint-strings: 
+|   GenericLines, Kerberos, LDAPBindReq, NULL, RPCCheck, SSLSessionReq, TerminalServer, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8082
+8083/tcp  open     us-srv?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, HTTPOptions, NULL, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8083
+8084/tcp  open     websnp?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, HTTPOptions, NULL, RPCCheck, SMBProgNeg, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8084
+8085/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, JavaRMI, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8085
+8086/tcp  open     d-s-n?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, Help, NULL, SMBProgNeg, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8086
+8087/tcp  open     simplifymedia?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, HTTPOptions, Help, Kerberos, NULL, RPCCheck, TLSSessionReq, TerminalServerCookie, riak-pbc: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8087
+8088/tcp  open     radan-http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, Help, NULL, RPCCheck, SSLSessionReq, Socks5, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8088
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+8089/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8089
+8090/tcp  open     opsmessaging?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, Help, LDAPSearchReq, LPDString, NULL, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8090
+8093/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, HTTPOptions, Help, Kerberos, LANDesk-RC, NULL, RPCCheck, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8093
+8099/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Kerberos, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8099
+8100/tcp  open     xprint-server?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, Kerberos, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8100
+8180/tcp  open     unknown
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, HTTPOptions, Kerberos, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8180
+8181/tcp  open     intermapper?
+| fingerprint-strings: 
+|   GenericLines, GetRequest, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8181
+8192/tcp  open     sophos?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, Help, NULL, RPCCheck, RTSPRequest, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8192
+8193/tcp  open     sophos?
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8193
+8194/tcp  open     sophos?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, Help, NULL, RPCCheck, SSLSessionReq, SSLv23SessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8194
+8200/tcp  open     trivnet1?
+| fingerprint-strings: 
+|   HTTPOptions, Help, Kerberos, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8200
+8222/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8222
+8254/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8254
+8290/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Kerberos, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8290
+8291/tcp  open     winbox?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, MikroTik_Winbox, NULL, RPCCheck, RTSPRequest, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8291
+8292/tcp  open     blp3?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8292
+8300/tcp  open     tmi?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8300
+8333/tcp  open     bitcoin?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8333
+8383/tcp  open     m2mservices?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, LDAPSearchReq, LPDString, NULL, SMBProgNeg, TLSSessionReq, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8383
+8400/tcp  open     cvd?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8400
+8402/tcp  open     abarsd?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, NULL, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8402
+8443/tcp  open     https-alt
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, Help, Kerberos, NULL, RPCCheck, RTSPRequest, SSLSessionReq, SSLv23SessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8443
+8500/tcp  open     fmtp?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8500
+8600/tcp  open     asterix?
+| fingerprint-strings: 
+|   GetRequest, Kerberos, NULL, RPCCheck, RTSPRequest, SMBProgNeg, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8600
+8649/tcp  open     unknown
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, Kerberos, LPDString, NULL, RPCCheck, SMBProgNeg, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8649
+8651/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, NULL, SMBProgNeg, SSLSessionReq, TLSSessionReq, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8651
+8652/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, HTTPOptions, Help, Kerberos, NULL, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8652
+8654/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8654
+8701/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, JavaRMI, NULL, RPCCheck, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8701
+8800/tcp  open     sunwebadmin?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8800
+8873/tcp  open     dxspider?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8873
+8888/tcp  open     sun-answerbook?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, NULL, RTSPRequest, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8888
+8899/tcp  open     ospf-lite?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, HTTPOptions, Help, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8899
+8994/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, LDAPBindReq, NULL, SMBProgNeg, TLSSessionReq, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:8994
+9000/tcp  open     cslistener?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, HTTPOptions, Kerberos, NULL, RPCCheck, SSLSessionReq, TLSSessionReq, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9000
+9001/tcp  open     tor-orport?
+| fingerprint-strings: 
+|   GenericLines, GetRequest, NULL, Radmin, SSLSessionReq, SSLv23SessionReq, TLSSessionReq, mongodb, tarantool: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9001
+9002/tcp  open     dynamid?
+| fingerprint-strings: 
+|   GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9002
+9003/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9003
+9009/tcp  open     pichat?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, FourOhFourRequest, LDAPBindReq, NULL, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9009
+9010/tcp  open     sdr?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, Help, Kerberos, LPDString, NULL, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9010
+9011/tcp  open     d-star?
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, Help, NULL, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9011
+9040/tcp  open     tor-trans?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GetRequest, HTTPOptions, Help, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9040
+9050/tcp  open     tor-socks?
+| fingerprint-strings: 
+|   GetRequest, Help, Kerberos, NULL, RPCCheck, SMBProgNeg, SSLSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9050
+9071/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, Help, NULL, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9071
+9080/tcp  open     glrpc?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, HTTPOptions, Help, Kerberos, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9080
+9081/tcp  open     cisco-aqos?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, HTTPOptions, Kerberos, NULL, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9081
+9090/tcp  open     zeus-admin?
+| fingerprint-strings: 
+|   GenericLines, GetRequest, HTTPOptions, NULL, RTSPRequest, WMSRequest, drda, ibm-db2-das, informix: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9090
+9091/tcp  open     xmltec-xmlmail?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, Kerberos, NULL, RTSPRequest, SSLSessionReq, informix: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9091
+9099/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, HTTPOptions, JavaRMI, NULL, RPCCheck, RTSPRequest, drda, informix: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9099
+9100/tcp  open     jetdirect?
+9101/tcp  open     jetdirect?
+9102/tcp  open     jetdirect?
+9103/tcp  open     jetdirect?
+9110/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, Help, NULL, RPCCheck, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9110
+9111/tcp  open     DragonIDSConsole?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, Help, NULL, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9111
+9200/tcp  open     wap-wsp?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9200
+9207/tcp  open     wap-vcal-s?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, Kerberos, NULL, RTSPRequest, SMBProgNeg, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9207
+9220/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9220
+9290/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9290
+9415/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9415
+9418/tcp  open     git?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9418
+9485/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9485
+9500/tcp  open     ismserver?
+| fingerprint-strings: 
+|   GenericLines, GetRequest, Help, JavaRMI, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9500
+9502/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9502
+9503/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9503
+9535/tcp  open     man?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9535
+9575/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9575
+9593/tcp  open     cba8?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, NULL, RPCCheck, RTSPRequest, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9593
+9594/tcp  open     msgsys?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GetRequest, HTTPOptions, NULL, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9594
+9595/tcp  open     pds?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9595
+9618/tcp  open     condor?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, NULL, RPCCheck, RTSPRequest, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9618
+9666/tcp  open     zoomcp?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9666
+9876/tcp  open     sd?
+| fingerprint-strings: 
+|   GenericLines, GetRequest, HTTPOptions, Kerberos, NULL, RPCCheck, SMBProgNeg, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9876
+9877/tcp  open     x510?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9877
+9878/tcp  open     kca-service?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GetRequest, HTTPOptions, NULL, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9878
+9898/tcp  open     monkeycom?
+| fingerprint-strings: 
+|   FourOhFourRequest, Kerberos, LPDString, NULL, RPCCheck, RTSPRequest, SMBProgNeg, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9898
+9900/tcp  open     iua?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, HTTPOptions, Kerberos, NULL, RPCCheck, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9900
+9917/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9917
+9929/tcp  open     nping-echo?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9929
+9943/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9943
+9944/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, NULL, RPCCheck, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9944
+9968/tcp  open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, NULL, RPCCheck, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9968
+9998/tcp  open     distinct32?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GetRequest, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie, teamspeak-tcpquery-ver: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9998
+| uptime-agent-info: HTTP/1.1 500 OK
+| Date: Wed, 20 Jan 2021 05:55:41 GMT
+| Content-Type: text/plain; charset=utf-8
+| Content-Length: 28
+| Connection: keep-alive
+| 
+| err init 88.198.101.166:9998\x0D
+|_\x0D
+9999/tcp  open     abyss?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, JavaRMI, NULL, RTSPRequest: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 28
+|     Connection: keep-alive
+|_    init 88.198.101.166:9999
+10000/tcp open     snet-sensor-mgmt?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, Kerberos, NULL, RPCCheck, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10000
+10001/tcp open     scp-config?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, JavaRMI, Kerberos, NULL, RPCCheck, SMBProgNeg, TLSSessionReq, X11Probe, ZendJavaBridge: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10001
+10002/tcp open     documentum?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, NULL, RTSPRequest, SSLSessionReq, SharpTV, ZendJavaBridge: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10002
+10003/tcp open     documentum_s?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, NULL, RPCCheck, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10003
+10004/tcp open     emcrmirccd?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10004
+10009/tcp open     swdtp-sv?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, HTTPOptions, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10009
+10010/tcp open     rxapi?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10010
+10012/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10012
+10024/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10024
+10025/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, NULL, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10025
+10082/tcp open     amandaidx?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10082
+10180/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10180
+10215/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10215
+10243/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10243
+10566/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GetRequest, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10566
+10616/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, NULL, RPCCheck, RTSPRequest, SMBProgNeg, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10616
+10617/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, NULL, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10617
+10621/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10621
+10626/tcp open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, NULL, RPCCheck, SMBProgNeg, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10626
+10628/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, Help, NULL, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10628
+10629/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10629
+10778/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, Help, Kerberos, NULL, RPCCheck, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:10778
+11110/tcp open     sgi-soap?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:11110
+11111/tcp open     vce?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, FourOhFourRequest, GetRequest, HTTPOptions, LDAPSearchReq, NULL, RTSPRequest, SSLSessionReq, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:11111
+11967/tcp open     sysinfo-sp?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, Kerberos, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:11967
+12000/tcp open     cce4x?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, HTTPOptions, Help, JavaRMI, NULL, RPCCheck, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:12000
+12174/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, NULL, RPCCheck, RTSPRequest, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:12174
+12265/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, HTTPOptions, Kerberos, NULL, RPCCheck, SMBProgNeg, SSLSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:12265
+12345/tcp open     netbus?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GetRequest, Help, NULL, OfficeScan, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:12345
+13456/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:13456
+13722/tcp open     netbackup?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:13722
+13782/tcp open     netbackup?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, Kerberos, NULL, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:13782
+13783/tcp open     netbackup?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:13783
+14000/tcp open     scotty-ft?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, JavaRMI, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:14000
+14238/tcp open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GetRequest, HTTPOptions, NULL, RPCCheck, RTSPRequest, TLSSessionReq, TerminalServerCookie, oracle-tns: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:14238
+14441/tcp open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GetRequest, Help, Kerberos, NULL, RPCCheck, SMBProgNeg, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:14441
+14442/tcp open     unknown
+| fingerprint-strings: 
+|   GenericLines, HTTPOptions, Help, Kerberos, NULL, SMBProgNeg, SSLSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:14442
+15000/tcp open     hydap?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, Help, JavaRMI, Kerberos, NULL, RPCCheck, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:15000
+15002/tcp open     onep-tls?
+| fingerprint-strings: 
+|   GenericLines, GetRequest, HTTPOptions, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:15002
+15003/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:15003
+15004/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, NULL, RPCCheck, RTSPRequest, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:15004
+15660/tcp open     bex-xr?
+| fingerprint-strings: 
+|   GenericLines, GetRequest, HTTPOptions, Help, Kerberos, NULL, RTSPRequest, SMBProgNeg, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:15660
+15742/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:15742
+16000/tcp open     fmsas?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, HTTPOptions, Help, JavaRMI, Kerberos, NULL, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:16000
+16001/tcp open     fmsascon?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, HTTPOptions, Kerberos, NULL, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:16001
+16012/tcp open     unknown
+| fingerprint-strings: 
+|   GenericLines, GetRequest, Kerberos, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:16012
+16016/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:16016
+16018/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:16018
+16080/tcp open     osxwebadmin?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:16080
+16113/tcp open     unknown
+| fingerprint-strings: 
+|   GenericLines, GetRequest, Help, NULL, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:16113
+16992/tcp open     amt-soap-http?
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions, Help, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:16992
+16993/tcp open     amt-soap-https?
+| fingerprint-strings: 
+|   GetRequest, Help, Kerberos, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:16993
+17877/tcp open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:17877
+17988/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:17988
+18040/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, HTTPOptions, Help, NULL, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:18040
+18101/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:18101
+18988/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, Help, Kerberos, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:18988
+19101/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, NULL, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:19101
+19283/tcp open     keysrvr?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GetRequest, HTTPOptions, Kerberos, NULL, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:19283
+19315/tcp open     keyshadow?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, FourOhFourRequest, GenericLines, GetRequest, Kerberos, NULL, RPCCheck, TLSSessionReq, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:19315
+19350/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, HTTPOptions, LPDString, NULL, RTSPRequest, SMBProgNeg, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:19350
+19780/tcp open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, Kerberos, NULL, SMBProgNeg, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:19780
+19801/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:19801
+19842/tcp open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:19842
+20000/tcp open     dnp?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, HTTPOptions, NULL, RPCCheck, RTSPRequest, SSLSessionReq, oracle-tns: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:20000
+20005/tcp open     btx?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, Help, Kerberos, NULL, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:20005
+20031/tcp open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:20031
+20221/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Kerberos, NULL, RPCCheck, RTSPRequest, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:20221
+20222/tcp open     ipulse-ics?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, NULL, RPCCheck, SMBProgNeg, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:20222
+20828/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:20828
+21571/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GetRequest, NULL, RPCCheck, RTSPRequest, SMBProgNeg, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:21571
+22939/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, Help, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:22939
+23502/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, Help, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:23502
+24444/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:24444
+24800/tcp open     unknown
+| fingerprint-strings: 
+|   GenericLines, GetRequest, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:24800
+25734/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:25734
+25735/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, Kerberos, NULL, RPCCheck, SMBProgNeg, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:25735
+26214/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, NULL, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:26214
+27000/tcp open     flexlm0?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, SMBProgNeg: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:27000
+27352/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:27352
+27353/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:27353
+27355/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:27355
+27356/tcp open     unknown
+| fingerprint-strings: 
+|   GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:27356
+27715/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, HTTPOptions, Help, Kerberos, NULL, RPCCheck, SMBProgNeg, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:27715
+28201/tcp open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, HTTPOptions, Help, Kerberos, NULL, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:28201
+30000/tcp open     ndmps?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:30000
+30718/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:30718
+30951/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, HTTPOptions, NULL, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:30951
+31038/tcp open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, HTTPOptions, NULL, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:31038
+31337/tcp open     Elite?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, Help, Kerberos, NULL, RPCCheck, SIPOptions, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:31337
+32768/tcp open     filenet-tms?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32768
+32769/tcp open     filenet-rpc?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32769
+32770/tcp open     sometimes-rpc3?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, NULL, RPCCheck, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32770
+32771/tcp open     sometimes-rpc5?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32771
+32772/tcp open     sometimes-rpc7?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32772
+32773/tcp open     sometimes-rpc9?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32773
+32774/tcp open     sometimes-rpc11?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Kerberos, NULL, RPCCheck, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32774
+32775/tcp open     sometimes-rpc13?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32775
+32776/tcp open     sometimes-rpc15?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32776
+32777/tcp open     sometimes-rpc17?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GetRequest, HTTPOptions, Kerberos, NULL, RTSPRequest, SMBProgNeg, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32777
+32778/tcp open     sometimes-rpc19?
+| fingerprint-strings: 
+|   GenericLines, GetRequest, Help, Kerberos, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32778
+32779/tcp open     sometimes-rpc21?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32779
+32780/tcp open     sometimes-rpc23?
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions, NULL, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32780
+32781/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, NULL, RTSPRequest, SMBProgNeg: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32781
+32782/tcp open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GenericLines, GetRequest, Help, NULL, RPCCheck, RTSPRequest, SMBProgNeg, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32782
+32783/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, NULL, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32783
+32784/tcp open     unknown
+| fingerprint-strings: 
+|   GenericLines, GetRequest, HTTPOptions, Kerberos, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32784
+32785/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, NULL, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:32785
+33354/tcp open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GetRequest, HTTPOptions, Kerberos, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:33354
+33899/tcp open     unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GetRequest, HTTPOptions, NULL, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:33899
+34571/tcp open     unknown
+| fingerprint-strings: 
+|   FourOhFourRequest, GenericLines, GetRequest, LPDString, NULL, RTSPRequest, SMBProgNeg, SSLSessionReq, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:34571
+34572/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, HTTPOptions, Help, Kerberos, NULL, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:34572
+34573/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, Help, NULL, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:34573
+35500/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 500 OK
+|     Date: Wed, 20 Jan 2021 05:55:41 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 29
+|     Connection: keep-alive
+|_    init 88.198.101.166:35500
+9 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8000-TCP:V=7.98%I=7%D=3/6%Time=69A9CE33%P=aarch64-unknown-linux-and
+SF:roid%r(NULL,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202
+SF:021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\n
+SF:Content-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.
+SF:198\.101\.166:8000\r\n\r\n")%r(GetRequest,A7,"HTTP/1\.1\x20500\x20OK\nD
+SF:ate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20
+SF:text/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20kee
+SF:p-alive\n\nerr\x20init\x2088\.198\.101\.166:8000\r\n\r\n")%r(X11Probe,A
+SF:7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:
+SF:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Lengt
+SF:h:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166
+SF::8000\r\n\r\n")%r(Socks5,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x202
+SF:0\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20ch
+SF:arset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x2
+SF:0init\x2088\.198\.101\.166:8000\r\n\r\n")%r(Socks4,A7,"HTTP/1\.1\x20500
+SF:\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-
+SF:Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnectio
+SF:n:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8000\r\n\r\n")%r(R
+SF:PCCheck,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\
+SF:x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nCont
+SF:ent-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\
+SF:.101\.166:8000\r\n\r\n")%r(DNSStatusRequestTCP,A7,"HTTP/1\.1\x20500\x20
+SF:OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type
+SF::\x20text/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x
+SF:20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8000\r\n\r\n")%r(SSLSe
+SF:ssionReq,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021
+SF:\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nCon
+SF:tent-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198
+SF:\.101\.166:8000\r\n\r\n")%r(TLSSessionReq,A7,"HTTP/1\.1\x20500\x20OK\nD
+SF:ate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20
+SF:text/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20kee
+SF:p-alive\n\nerr\x20init\x2088\.198\.101\.166:8000\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8001-TCP:V=7.98%I=7%D=3/6%Time=69A9CE33%P=aarch64-unknown-linux-and
+SF:roid%r(NULL,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202
+SF:021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\n
+SF:Content-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.
+SF:198\.101\.166:8001\r\n\r\n")%r(FourOhFourRequest,A7,"HTTP/1\.1\x20500\x
+SF:20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Ty
+SF:pe:\x20text/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:
+SF:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8001\r\n\r\n")%r(HTT
+SF:POptions,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021
+SF:\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nCon
+SF:tent-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198
+SF:\.101\.166:8001\r\n\r\n")%r(RTSPRequest,A7,"HTTP/1\.1\x20500\x20OK\nDat
+SF:e:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20te
+SF:xt/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-
+SF:alive\n\nerr\x20init\x2088\.198\.101\.166:8001\r\n\r\n")%r(RPCCheck,A7,
+SF:"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41
+SF:\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:
+SF:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8
+SF:001\r\n\r\n")%r(DNSVersionBindReqTCP,A7,"HTTP/1\.1\x20500\x20OK\nDate:\
+SF:x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/
+SF:plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-ali
+SF:ve\n\nerr\x20init\x2088\.198\.101\.166:8001\r\n\r\n")%r(DNSStatusReques
+SF:tTCP,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x20
+SF:05:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent
+SF:-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.10
+SF:1\.166:8001\r\n\r\n")%r(SSLSessionReq,A7,"HTTP/1\.1\x20500\x20OK\nDate:
+SF:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text
+SF:/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-al
+SF:ive\n\nerr\x20init\x2088\.198\.101\.166:8001\r\n\r\n")%r(TerminalServer
+SF:Cookie,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x
+SF:2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nConte
+SF:nt-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.
+SF:101\.166:8001\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8002-TCP:V=7.98%I=7%D=3/6%Time=69A9CE33%P=aarch64-unknown-linux-and
+SF:roid%r(NULL,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202
+SF:021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\n
+SF:Content-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.
+SF:198\.101\.166:8002\r\n\r\n")%r(GetRequest,A7,"HTTP/1\.1\x20500\x20OK\nD
+SF:ate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20
+SF:text/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20kee
+SF:p-alive\n\nerr\x20init\x2088\.198\.101\.166:8002\r\n\r\n")%r(FourOhFour
+SF:Request,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\
+SF:x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nCont
+SF:ent-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\
+SF:.101\.166:8002\r\n\r\n")%r(GenericLines,A7,"HTTP/1\.1\x20500\x20OK\nDat
+SF:e:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20te
+SF:xt/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-
+SF:alive\n\nerr\x20init\x2088\.198\.101\.166:8002\r\n\r\n")%r(HTTPOptions,
+SF:A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55
+SF::41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Leng
+SF:th:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.16
+SF:6:8002\r\n\r\n")%r(RTSPRequest,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed
+SF:,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;
+SF:\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n\n
+SF:err\x20init\x2088\.198\.101\.166:8002\r\n\r\n")%r(RPCCheck,A7,"HTTP/1\.
+SF:1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\n
+SF:Content-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x2028\nC
+SF:onnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8002\r\n\r
+SF:\n")%r(DNSVersionBindReqTCP,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x
+SF:2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x2
+SF:0charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n\nerr
+SF:\x20init\x2088\.198\.101\.166:8002\r\n\r\n")%r(SSLSessionReq,A7,"HTTP/1
+SF:\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT
+SF:\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x2028\
+SF:nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8002\r\n
+SF:\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8007-TCP:V=7.98%I=7%D=3/6%Time=69A9CE33%P=aarch64-unknown-linux-and
+SF:roid%r(NULL,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202
+SF:021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\n
+SF:Content-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.
+SF:198\.101\.166:8007\r\n\r\n")%r(GenericLines,A7,"HTTP/1\.1\x20500\x20OK\
+SF:nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x
+SF:20text/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20k
+SF:eep-alive\n\nerr\x20init\x2088\.198\.101\.166:8007\r\n\r\n")%r(HTTPOpti
+SF:ons,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x200
+SF:5:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-
+SF:Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101
+SF:\.166:8007\r\n\r\n")%r(RTSPRequest,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x2
+SF:0Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/pl
+SF:ain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive
+SF:\n\nerr\x20init\x2088\.198\.101\.166:8007\r\n\r\n")%r(RPCCheck,A7,"HTTP
+SF:/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20G
+SF:MT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x202
+SF:8\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8007\r
+SF:\n\r\n")%r(DNSStatusRequestTCP,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed
+SF:,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;
+SF:\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n\n
+SF:err\x20init\x2088\.198\.101\.166:8007\r\n\r\n")%r(SSLSessionReq,A7,"HTT
+SF:P/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20
+SF:GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x20
+SF:28\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8007\
+SF:r\n\r\n")%r(TerminalServerCookie,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20W
+SF:ed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plai
+SF:n;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n
+SF:\nerr\x20init\x2088\.198\.101\.166:8007\r\n\r\n")%r(TLSSessionReq,A7,"H
+SF:TTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x
+SF:20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x
+SF:2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:800
+SF:7\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8008-TCP:V=7.98%I=7%D=3/6%Time=69A9CE33%P=aarch64-unknown-linux-and
+SF:roid%r(NULL,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202
+SF:021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\n
+SF:Content-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.
+SF:198\.101\.166:8008\r\n\r\n")%r(Socks5,A7,"HTTP/1\.1\x20500\x20OK\nDate:
+SF:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text
+SF:/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-al
+SF:ive\n\nerr\x20init\x2088\.198\.101\.166:8008\r\n\r\n")%r(ajp,A7,"HTTP/1
+SF:\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT
+SF:\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x2028\
+SF:nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8008\r\n
+SF:\r\n")%r(HTTPOptions,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x2
+SF:0Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charse
+SF:t=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20ini
+SF:t\x2088\.198\.101\.166:8008\r\n\r\n")%r(RTSPRequest,A7,"HTTP/1\.1\x2050
+SF:0\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent
+SF:-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnecti
+SF:on:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8008\r\n\r\n")%r(
+SF:RPCCheck,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021
+SF:\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nCon
+SF:tent-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198
+SF:\.101\.166:8008\r\n\r\n")%r(Help,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20W
+SF:ed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plai
+SF:n;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n
+SF:\nerr\x20init\x2088\.198\.101\.166:8008\r\n\r\n")%r(SSLSessionReq,A7,"H
+SF:TTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x
+SF:20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x
+SF:2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:800
+SF:8\r\n\r\n")%r(TLSSessionReq,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x
+SF:2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x2
+SF:0charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n\nerr
+SF:\x20init\x2088\.198\.101\.166:8008\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8009-TCP:V=7.98%I=7%D=3/6%Time=69A9CE33%P=aarch64-unknown-linux-and
+SF:roid%r(NULL,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202
+SF:021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\n
+SF:Content-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.
+SF:198\.101\.166:8009\r\n\r\n")%r(SSLv23SessionReq,A7,"HTTP/1\.1\x20500\x2
+SF:0OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Typ
+SF:e:\x20text/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\
+SF:x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8009\r\n\r\n")%r(ajp,
+SF:A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55
+SF::41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Leng
+SF:th:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.16
+SF:6:8009\r\n\r\n")%r(GenericLines,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20We
+SF:d,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain
+SF:;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n\
+SF:nerr\x20init\x2088\.198\.101\.166:8009\r\n\r\n")%r(DNSVersionBindReqTCP
+SF:,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:5
+SF:5:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Len
+SF:gth:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.1
+SF:66:8009\r\n\r\n")%r(DNSStatusRequestTCP,A7,"HTTP/1\.1\x20500\x20OK\nDat
+SF:e:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20te
+SF:xt/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-
+SF:alive\n\nerr\x20init\x2088\.198\.101\.166:8009\r\n\r\n")%r(Help,A7,"HTT
+SF:P/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20
+SF:GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x20
+SF:28\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8009\
+SF:r\n\r\n")%r(TerminalServerCookie,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20W
+SF:ed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plai
+SF:n;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n
+SF:\nerr\x20init\x2088\.198\.101\.166:8009\r\n\r\n")%r(Kerberos,A7,"HTTP/1
+SF:\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT
+SF:\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x2028\
+SF:nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8009\r\n
+SF:\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8010-TCP:V=7.98%I=7%D=3/6%Time=69A9CE33%P=aarch64-unknown-linux-and
+SF:roid%r(NULL,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202
+SF:021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\n
+SF:Content-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.
+SF:198\.101\.166:8010\r\n\r\n")%r(GetRequest,A7,"HTTP/1\.1\x20500\x20OK\nD
+SF:ate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20
+SF:text/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20kee
+SF:p-alive\n\nerr\x20init\x2088\.198\.101\.166:8010\r\n\r\n")%r(FourOhFour
+SF:Request,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\
+SF:x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nCont
+SF:ent-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\
+SF:.101\.166:8010\r\n\r\n")%r(Socks5,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20
+SF:Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/pla
+SF:in;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\
+SF:n\nerr\x20init\x2088\.198\.101\.166:8010\r\n\r\n")%r(GenericLines,A7,"H
+SF:TTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x
+SF:20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x
+SF:2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:801
+SF:0\r\n\r\n")%r(HTTPOptions,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x20
+SF:20\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20c
+SF:harset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x
+SF:20init\x2088\.198\.101\.166:8010\r\n\r\n")%r(DNSStatusRequestTCP,A7,"HT
+SF:TP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x2
+SF:0GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x2
+SF:028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8010
+SF:\r\n\r\n")%r(Help,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Ja
+SF:n\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=u
+SF:tf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x
+SF:2088\.198\.101\.166:8010\r\n\r\n")%r(SSLSessionReq,A7,"HTTP/1\.1\x20500
+SF:\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-
+SF:Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnectio
+SF:n:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8010\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8011-TCP:V=7.98%I=7%D=3/6%Time=69A9CE33%P=aarch64-unknown-linux-and
+SF:roid%r(NULL,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202
+SF:021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\n
+SF:Content-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.
+SF:198\.101\.166:8011\r\n\r\n")%r(GetRequest,A7,"HTTP/1\.1\x20500\x20OK\nD
+SF:ate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20
+SF:text/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20kee
+SF:p-alive\n\nerr\x20init\x2088\.198\.101\.166:8011\r\n\r\n")%r(HTTPOption
+SF:s,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:
+SF:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Le
+SF:ngth:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.
+SF:166:8011\r\n\r\n")%r(RPCCheck,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,
+SF:\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\
+SF:x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n\ne
+SF:rr\x20init\x2088\.198\.101\.166:8011\r\n\r\n")%r(DNSVersionBindReqTCP,A
+SF:7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:
+SF:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Lengt
+SF:h:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166
+SF::8011\r\n\r\n")%r(DNSStatusRequestTCP,A7,"HTTP/1\.1\x20500\x20OK\nDate:
+SF:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text
+SF:/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-al
+SF:ive\n\nerr\x20init\x2088\.198\.101\.166:8011\r\n\r\n")%r(Help,A7,"HTTP/
+SF:1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GM
+SF:T\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x2028
+SF:\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8011\r\
+SF:n\r\n")%r(SSLSessionReq,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020
+SF:\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20cha
+SF:rset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20
+SF:init\x2088\.198\.101\.166:8011\r\n\r\n")%r(Kerberos,A7,"HTTP/1\.1\x2050
+SF:0\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent
+SF:-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnecti
+SF:on:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8011\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8021-TCP:V=7.98%I=7%D=3/6%Time=69A9CE33%P=aarch64-unknown-linux-and
+SF:roid%r(NULL,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202
+SF:021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\n
+SF:Content-Length:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.
+SF:198\.101\.166:8021\r\n\r\n")%r(GetRequest,A7,"HTTP/1\.1\x20500\x20OK\nD
+SF:ate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20
+SF:text/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20kee
+SF:p-alive\n\nerr\x20init\x2088\.198\.101\.166:8021\r\n\r\n")%r(HTTPOption
+SF:s,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:
+SF:55:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Le
+SF:ngth:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.
+SF:166:8021\r\n\r\n")%r(RPCCheck,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,
+SF:\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;\
+SF:x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n\ne
+SF:rr\x20init\x2088\.198\.101\.166:8021\r\n\r\n")%r(DNSVersionBindReqTCP,A
+SF:7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:
+SF:41\x20GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Lengt
+SF:h:\x2028\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166
+SF::8021\r\n\r\n")%r(DNSStatusRequestTCP,A7,"HTTP/1\.1\x20500\x20OK\nDate:
+SF:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text
+SF:/plain;\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-al
+SF:ive\n\nerr\x20init\x2088\.198\.101\.166:8021\r\n\r\n")%r(Help,A7,"HTTP/
+SF:1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20GM
+SF:T\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x2028
+SF:\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8021\r\
+SF:n\r\n")%r(TerminalServerCookie,A7,"HTTP/1\.1\x20500\x20OK\nDate:\x20Wed
+SF:,\x2020\x20Jan\x202021\x2005:55:41\x20GMT\nContent-Type:\x20text/plain;
+SF:\x20charset=utf-8\nContent-Length:\x2028\nConnection:\x20keep-alive\n\n
+SF:err\x20init\x2088\.198\.101\.166:8021\r\n\r\n")%r(TLSSessionReq,A7,"HTT
+SF:P/1\.1\x20500\x20OK\nDate:\x20Wed,\x2020\x20Jan\x202021\x2005:55:41\x20
+SF:GMT\nContent-Type:\x20text/plain;\x20charset=utf-8\nContent-Length:\x20
+SF:28\nConnection:\x20keep-alive\n\nerr\x20init\x2088\.198\.101\.166:8021\
+SF:r\n\r\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Mar  6 00:46:00 2026 -- 1 IP address (1 host up) scanned in 323.22 seconds

@@ -1,0 +1,4 @@
+;; Got SERVFAIL reply from 8.8.8.8, trying next server
+;; Got SERVFAIL reply from 8.8.4.4
+** server can't find 125.93.102.14.in-addr.arpa: SERVFAIL
+

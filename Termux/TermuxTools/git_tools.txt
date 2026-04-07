@@ -1,0 +1,4 @@
+nikto|git clone https://github.com/sullo/nikto.git ~/Tools/nikto
+enum4linux|git clone https://github.com/CiscoCXSecurity/enum4linux.git ~/Tools/enum4linux
+sqlmap|git clone https://github.com/sqlmapproject/sqlmap.git ~/Tools/sqlmap
+msfconsole|git clone https://github.com/h4ck3r0/Metasploit-termux.git ~/Tools/Metasploit-termux

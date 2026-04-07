@@ -1,0 +1,12 @@
+#Red Team Modified Unified Kill Chain
+
+1. **Setup** — Installing Termux & tooling
+2. **Reconnaissance** — OSINT, surface mapping
+3. **Enumeration** — Ports, services, users, misconfigs
+4. **Payload Delivery** — Craft, stage, bypass AV
+5. **Exploitation** — Trigger vulnerability, execute code
+6. **Initial Access** — C2 foothold, reverse shell
+7. **Privilege Escalation** — SYSTEM/root, token abuse
+8. **Persistence** — Backdoors, rogue accounts, implants
+9. **Asset Collection** — Dump creds, exfiltrate data
+10. **Pivoting** — Lateral movement, internal propagation

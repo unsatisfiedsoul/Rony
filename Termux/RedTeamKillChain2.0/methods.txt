@@ -1,0 +1,30 @@
+  nmap              pkg install nmap
+  msfconsole        
+  sqlmap            
+  nc                pkg install netcat-openbsd
+  curl              pkg install curl
+  git               pkg install git
+  python3           pkg install python
+  ssh               pkg install openssh
+  proxychains4      pkg install proxychains-ng
+  subfinder         go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+  dnsrecon          pip install dnsrecon
+  fierce            pip install fierce
+  dnsx              go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+  gau               go install github.com/lc/gau/v2/cmd/gau@latest
+  waybackurls       go install github.com/tomnomnom/waybackurls@latest
+  naabu             go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+  httpx             go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+  nuclei            go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+  ffuf              go install github.com/ffuf/ffuf/v2@latest
+  gobuster          go install github.com/OJ/gobuster/v3@latest
+  feroxbuster       pkg install feroxbuster
+  dirb              pkg install dirb
+  nikto             
+  enum4linux        
+  snmpwalk          pkg install net-snmp
+  sslscan           pkg install sslscan
+  chisel            go install github.com/jpillora/chisel@latest
+  termux-open-url   pkg install termux-tools
+  lsof              pkg install lsof
+  wget              pkg install wget

@@ -1,0 +1,1 @@
+nimdrop -l <LISTENER_IP> -p <HTTP_PORT> [-c <C2_PORT>]

@@ -1,0 +1,57 @@
+pkg install root-repo
+pkg install x11-repo
+pkg upgrade
+ls
+pwd
+mkdir Rony
+cd Rony
+mkdir Tools
+cd Tools
+git clone https://github.com/Ahmed-AlNassif/Metasploit-Termux-Installer.git
+cd Metasploit-Termux-Installer
+pkg install git
+git clone https://github.com/Ahmed-AlNassif/Metasploit-Termux-Installer.git
+cd Metasploit-Termux-Installer
+chmod +x install_metasploit.sh
+./install_metasploit.sh 
+msfconsole
+./install_metasploit.sh 
+cd ..
+ls
+rm -r Metasploit-Termux-Installer/
+rm -rf Metasploit-Termux-Installer/
+git clone https://github.com/rapid7/metasploit-framework.git
+source <(curl -fsSL https://kutt.it/msf)
+ls
+wget https://github.com/gushmazuko/metasploit_in_termux/raw/master/metasploit.sh
+ls
+bash metasploit.sh 
+msfconsole
+nmap
+pkg install nmap
+ifconfig
+nmap -sn 192.168.1.1/24
+nmap 192.168.1.1/24
+nmap 192.168.1.1
+nmap 192.168.1.1 -Pn
+nmap -sn 192.168.1.1/24
+ifconfig
+nmap -sn 192.168.1.1/18
+exit
+/data/data/com.termux/files/usr/bin/hollywood 
+cd
+exit
+/data/data/com.termux/files/usr/bin/hollywood 
+lear
+clear
+exit
+clear
+cd
+ckear
+clear
+termux
+shell
+clear
+init
+cmatrix
+exit

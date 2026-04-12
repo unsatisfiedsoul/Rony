@@ -1,0 +1,63 @@
+{
+  "auth0": {
+    "domain": "login.lansweeper.com",
+    "clientId": "95fz4isY8xDEZKNCS4XaZpXdBRngsqhh",
+    "audience": "https://app.lansweeper.com",
+    "integrationAudience": "https://api.lansweeper.com",
+    "mfaAudience": "https://dev-734bjlip.eu.auth0.com/mfa/",
+    "ssoCallbackUrl": "https://login.lansweeper.com/login/callback",
+    "ssoConnectionCertificate": "https://login.lansweeper.com/pem?cert=connection",
+    "tenant": "dev-734bjlip"
+  },
+  "fusionAuth": {
+    "serverUrl": "https://login.auth.lansweeper.com",
+    "clientId": "8324d58f-c573-e738-f7a8-51c0bd3d2b0e",
+    "clientIdAlt": "ac76005a-3120-61a2-11fc-5b7a0a74bcf8"
+  },
+  "lsAuthUrl": "https://lsauth.eu.lansweeper.com",
+  "docUrl": "https://docs.lansweeper.com/docs/api/intro",
+  "sentry": {
+    "dsn": "https://e6125963a8d4bd8f53bb869e9fc58d65@o368066.ingest.us.sentry.io/4507582442110976",
+    "tracesSampleRate": 0.3,
+    "environment": "prd-euw1"
+  },
+  "gtmId": "GTM-W24G3H7",
+  "gtmMarketingId": "GTM-M6HQMTV",
+  "configcatKey": "RtXXCNR1pVisE0FYDsrxpA/1tL1XhOLJUenCwX5qM5j5A",
+  "configcatPollingIntervalInSeconds": 30,
+  "staticContentUrl": "https://static.lansweeper.com",
+  "installerApi": {
+    "url": "https://installerapi.lansweeper.com/v1/installers",
+    "fallbackSmart": "https://cdn.lansweeper.com/build/smart/LansweeperSmartInstaller_8.0.170_alpha.4.msi",
+    "fallbackHybrid": "https://cdn.lansweeper.com/download/8.0.130/22/LansweeperSetup.exe",
+    "installerEnv": "prd"
+  },
+  "communityId": "n38bV6vj5ZWhg9RDE9DQWCdDBuLVdx10",
+  "communityHostname": "https://community.lansweeper.com",
+  "communityUrl": "https://community.lansweeper.com/plugins/common/feature/oidcss/sso_login_redirect/providerid/lansweeper_fa",
+  "gojsLicenseKey": "238647e1b2664ac702d90776423d68bc5cf07e34ce960ef60a001df4e4586943279bea7805db8ec5d5f046fc1a7bc1d98ec26c3b874b556bef30d08c43b6d6fbb63772e0440d4787f00772c49efb2fa6ae7b26a1c0b170f7d97b8df5e9a0c3ce5becfa844dce06bb297d06625029ac4ee7f9de7ef010dc493e3d9ea7a8b9ae5bea6c76d496b75f",
+  "pendoKey": "4732a515-b792-4bcc-5df7-e0e56fb8135c",
+  "vwoAccountId": "838810",
+  "environmentHost": "",
+  "wsEnvironmentHost": "wss://eu.lansweeper.com",
+  "regionsURLs": {
+    "us": "https://us.lansweeper.com",
+    "eu": "https://eu.lansweeper.com"
+  },
+  "oldUiRegionsURLs": {
+    "us": "https://legacy.us.lansweeper.com",
+    "eu": "https://legacy.eu.lansweeper.com"
+  },
+  "oldUiRegionsByOrigin": {
+    "https://beta.us.lansweeper.com": "https://legacy.us.lansweeper.com",
+    "https://beta.eu.lansweeper.com": "https://legacy.eu.lansweeper.com"
+  },
+  "legacyUIHostPattern": "https://legacy.{region}.lansweeper.com",
+  "reportsSpinOffBaseUrlPattern": "https://{region}.lansweeper.com/reports",
+  "biApiUrl": "https://lansweeper-api.eu.luzmo.com",
+  "biServerUrl": "https://lansweeper.eu.luzmo.com",
+  "flowBuilderUrl": "https://flowbuilder.eu.lansweeper.com/",
+  "flowBuilderDocumentationUrl": "https://docs.lansweeper.com/docs/what-is-flow-builder",
+  "vcUrl": "https://eu.lansweeper.com/api/vc",
+  "selfServicePortalUrl": "https://billing.lansweeper.com"
+}

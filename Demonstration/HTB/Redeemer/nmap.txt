@@ -1,0 +1,4 @@
+# Nmap 7.99 scan initiated Thu Apr  9 00:13:21 2026 as: nmap -Pn -p- -oN nmap.txt 10.129.79.12
+Warning: 10.129.79.12 giving up on port because retransmission cap hit (10).
+Strange SO_ERROR from connection to 10.129.79.12 (103 - 'Software caused connection abort') -- bailing scan
+QUITTING!

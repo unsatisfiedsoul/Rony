@@ -1,0 +1,32 @@
+[INF] Targets loaded for current scan: 1
+[INF] Templates clustered: 2255 (Reduced 2130 Requests)
+[dns-waf-detect:cloudflare] [dns] [info] lansweeper.com
+[INF] Using Interactsh Server: oast.pro
+[azure-domain-tenant] [http] [info] https://login.microsoftonline.com:443/lansweeper.com/v2.0/.well-known/openid-configuration ["006ab0d2-c8fa-43a7-8a27-0ae2c287588a"]
+[waf-detect:cloudflare] [http] [info] https://lansweeper.com
+[tls-version] [ssl] [info] lansweeper.com:443 ["tls12"]
+[tls-version] [ssl] [info] lansweeper.com:443 ["tls13"]
+[tech-detect:cloudflare] [http] [info] https://lansweeper.com
+[google-floc-disabled] [http] [info] https://lansweeper.com
+[rdap-whois:status] [http] [info] https://rdap.verisign.com/com/v1/domain/lansweeper.com ["client transfer prohibited"]
+[rdap-whois:registrationDate] [http] [info] https://rdap.verisign.com/com/v1/domain/lansweeper.com ["2004-06-04T10:07:29Z"]
+[rdap-whois:lastChangeDate] [http] [info] https://rdap.verisign.com/com/v1/domain/lansweeper.com ["2025-05-05T04:17:01Z"]
+[rdap-whois:expirationDate] [http] [info] https://rdap.verisign.com/com/v1/domain/lansweeper.com ["2026-06-04T10:07:29Z"]
+[rdap-whois:nameServers] [http] [info] https://rdap.verisign.com/com/v1/domain/lansweeper.com ["ALEENA.NS.CLOUDFLARE.COM","DANTE.NS.CLOUDFLARE.COM"]
+[rdap-whois:secureDNS] [http] [info] https://rdap.verisign.com/com/v1/domain/lansweeper.com ["false"]
+[http-missing-security-headers:strict-transport-security] [http] [info] https://lansweeper.com
+[http-missing-security-headers:content-security-policy] [http] [info] https://lansweeper.com
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://lansweeper.com
+[http-missing-security-headers:clear-site-data] [http] [info] https://lansweeper.com
+[caa-fingerprint] [dns] [info] lansweeper.com
+[dkim-record-detect] [dns] [info] google._domainkey.lansweeper.com ["v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNeBmSlFZICW83Q0MKKPm5oXr+JIEvL4etcFrRRo3dkdxjxkXEYBKPHPkSIb7Euj1/FTBMu7wHhvqah2X7AfiFdwF9TLfCznyzfA47RTJN5Kf2jmLw/pBomYQGVHLUv4r5kiBNL2ZFvhXF7oac3AYE7gspcJSrtco5/ipkNJJGMQIDAQAB""]
+[dmarc-detect] [dns] [info] _dmarc.lansweeper.com [""v=DMARC1; p=reject; pct=100; sp=reject; fo=1; rua=mailto:asbw3jmp@ag.eu.dmarcian.com; ruf=mailto:asbw3jmp@fr.eu.dmarcian.com""]
+[dkim-record-detect] [dns] [info] selector2._domainkey.lansweeper.com ["v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDSo2I/RvAcfvQllytCMBEurlyflrUXZ//9zsRt0APmrKNfI1p8ONXxA2EtLYzRmvzDZHvGlCEhqNTIBVBlMz8YsFOtKAk75Lvgvw+54oGhNga4neJBcYrGOQDjhSXjcS47BxAKcc1hf75uwqWCMLBC3TpWjnEmNDBmvinen+zd1QIDAQAB;""]
+[dkim-record-detect] [dns] [info] selector1._domainkey.lansweeper.com ["v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw4n3UdpakmOQQqD4NNz4FJBjkXiHER9gVGKJ6DoT4gO9ZtAcqpaQ7QMKqDXFgOOyWal5JEO1EmSTVBURHRq13IlNgMCMEzHX9UE2vNc1Gdey78ZOTy3BRrKfGUTR+ZwgI2+CcA5q+EslZ2q97iGxVOp503UVe+w6g7Yqn1QVrfU6V2dOuGqYwt0r6wDVrZbEm" "dpmCjIJhU3a9k/sUMCoP2P5SxNhGiUiH1RSC46F4DLy60KJckLF7PhuLQkR65V2Gvyh74jBx3d4hH98Z14oS+5UQylwru0nOSl4H78afd51JRLJic9Le+jjhCiD3eyYFGNlcQcNFYi9Kh25ztfoyQIDAQAB;""]
+[nameserver-fingerprint] [dns] [info] lansweeper.com ["aleena.ns.cloudflare.com.","dante.ns.cloudflare.com."]
+[ssl-issuer] [ssl] [info] lansweeper.com:443 ["Google Trust Services"]
+[ssl-dns-names] [ssl] [info] lansweeper.com:443 ["lansweeper.com"]
+[aaaa-fingerprint] [dns] [info] lansweeper.com ["2606:4700:10::6814:28fa","2606:4700:10::ac42:ac79"]
+[mx-fingerprint] [dns] [info] lansweeper.com ["0 lansweeper-com.mail.protection.outlook.com."]
+[mx-service-detector:Office 365] [dns] [info] lansweeper.com
+[INF] Scan completed in 6m. 28 matches found.

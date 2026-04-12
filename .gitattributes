@@ -2,3 +2,5 @@
 *.bin filter=lfs diff=lfs merge=lfs -text
 *.pth filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
+Tools/Active[[:space:]]Directory[[:space:]]Tools/ filter=lfs diff=lfs merge=lfs -text
+Tools/Active[[:space:]]Directory[[:space:]]Tools/WSASS_Release_1.0/proc.png filter=lfs diff=lfs merge=lfs -text

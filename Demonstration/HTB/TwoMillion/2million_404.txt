@@ -1,0 +1,10 @@
+HTTP/1.1 405 Method Not Allowed
+Server: nginx
+Date: Thu, 09 Apr 2026 07:16:28 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Set-Cookie: PHPSESSID=t0rapmqt40859f4onnd2mch15u; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+

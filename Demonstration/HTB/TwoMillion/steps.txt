@@ -1,0 +1,11 @@
+-----------| 1st challenge, Become a user |---------------
+1. First we got a index(Landing) page. Where we got how to go to invite page by /invite.
+2. In invite page we got a javascript file inviteapi.js where we get two api locaton. one for how to generate invite code and one for varify the code.
+3. Now we go to api/v1/invite/how/to/generate which gives us a message which changed to rot13 we find the /api/v1/invite/generate for getting the invite code.
+4. The code is in base64, so we decode it.
+5. Now we go to api/v1/invite/varify to see if the code is valid or not.
+6. Now we go to /registration page and filling the form we call api/v1/user/register which registers a user and sends to /login.
+7. In login we send info and call /api/v1/user/login which redirects us to /home page. Now the first challenge is complete.
+8. Now we explore /api which gives us /api/v1 then it gives us many other api link. Which will be needed in second challenge.
+
+-------------| 2nd challenge, Hack admin |-----------------

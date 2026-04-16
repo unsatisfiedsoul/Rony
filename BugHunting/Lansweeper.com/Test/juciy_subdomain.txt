@@ -1,0 +1,15 @@
+developer.lansweeper.com
+mibapiprd.lansweeper.com
+billing-test.lansweeper.com
+obot-mcp-dev.lansweeper.com
+api.lansweeper.com
+apps.vpn.lansweeper.com
+dev.embedtech.lansweeper.com
+vpn.lansweeper.com
+installerapi.lansweeper.com
+cdn-dev-website.lansweeper.com
+sweept-dev.lansweeper.com
+testdomain.lansweeper.com
+testsupport.lansweeper.com
+staging.developer.lansweeper.com
+productapi.lansweeper.com

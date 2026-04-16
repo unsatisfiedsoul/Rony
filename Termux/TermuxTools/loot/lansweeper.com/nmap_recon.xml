@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///data/data/com.termux/files/usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.99 scan initiated Thu Apr 16 20:28:35 2026 as: nmap -v -sn -oA ./loot/lansweeper.com/nmap_recon lansweeper.com -->
+<nmaprun scanner="nmap" args="nmap -v -sn -oA ./loot/lansweeper.com/nmap_recon lansweeper.com" start="1776349715" startstr="Thu Apr 16 20:28:35 2026" version="7.99" xmloutputversion="1.05">
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1776349715"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1776349715"/>
+<taskbegin task="Ping Scan" time="1776349715"/>
+<taskend task="Ping Scan" time="1776349715" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1776349715"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1776349716"/>
+<host><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="172.66.172.121" addrtype="ipv4"/>
+<hostnames>
+<hostname name="lansweeper.com" type="user"/>
+</hostnames>
+<times srtt="36963" rttvar="36963" to="184815"/>
+</host>
+<runstats><finished time="1776349716" timestr="Thu Apr 16 20:28:36 2026" summary="Nmap done at Thu Apr 16 20:28:36 2026; 1 IP address (1 host up) scanned in 0.66 seconds" elapsed="0.66" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

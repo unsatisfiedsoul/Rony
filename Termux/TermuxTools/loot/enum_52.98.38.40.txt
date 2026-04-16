@@ -1,0 +1,18 @@
+# Nmap 7.99 scan initiated Thu Apr 16 20:29:31 2026 as: nmap -sV -sC -A -T4 -oN ./loot/enum_52.98.38.40.txt 52.98.38.40
+Nmap scan report for 52.98.38.40
+Host is up (0.13s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT    STATE  SERVICE    VERSION
+80/tcp  open   http       Microsoft IIS httpd 10.0
+|_http-title: Did not follow redirect to https://52.98.38.40/mail/
+|_http-server-header: Microsoft-IIS/10.0
+110/tcp closed pop3
+143/tcp closed imap
+443/tcp closed https
+587/tcp closed submission
+993/tcp closed imaps
+995/tcp closed pop3s
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr 16 20:29:56 2026 -- 1 IP address (1 host up) scanned in 25.21 seconds

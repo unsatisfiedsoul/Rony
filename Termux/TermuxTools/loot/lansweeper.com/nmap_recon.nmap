@@ -1,0 +1,5 @@
+# Nmap 7.99 scan initiated Thu Apr 16 20:28:35 2026 as: nmap -v -sn -oA ./loot/lansweeper.com/nmap_recon lansweeper.com
+Nmap scan report for lansweeper.com (172.66.172.121)
+Host is up (0.037s latency).
+Other addresses for lansweeper.com (not scanned): 104.20.40.250 2606:4700:10::6814:28fa 2606:4700:10::ac42:ac79
+# Nmap done at Thu Apr 16 20:28:36 2026 -- 1 IP address (1 host up) scanned in 0.66 seconds

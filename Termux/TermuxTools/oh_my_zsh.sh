@@ -1,1 +1,2 @@
-sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)"
+git clone https://github.com/Sohil876/Termux-zsh.git && cd Termux-zsh
+bash setup.sh

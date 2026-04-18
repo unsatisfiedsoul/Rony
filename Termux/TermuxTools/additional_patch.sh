@@ -9,6 +9,7 @@ git clone https://github.com/Sohil876/Termux-zsh.git && cd Termux-zsh
 bash setup.sh
 
 echo '------------|Patching msfconsole|---------'
+pkg install ruby
 gem install mini_portile2 -v 2.8.2
 
 cp -r ~/Tools/Metasploit-termux ~/

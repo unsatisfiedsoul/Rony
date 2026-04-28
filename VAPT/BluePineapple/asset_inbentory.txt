@@ -1,0 +1,8 @@
+Asset Breakdown
+🖥️ Windows systems: 1
+🐧 Linux server: 1
+📷 IP Cameras (ONVIF/RTSP): ~20
+📺 NVR systems: 1–2
+🖨️ Printers: 2
+🌐 Network gateway/router: 1
+🔌 Misc IoT/embedded devices: Several

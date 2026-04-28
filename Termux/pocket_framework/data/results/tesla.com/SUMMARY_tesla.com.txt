@@ -1,0 +1,14 @@
+===============================================
+      SECURITY SCAN SUMMARY: tesla.com
+      Generated: Thu Apr 23 02:49:24 +06 2026
+===============================================
+
+[+] TARGET INFRASTRUCTURE
+Host is up (0.038s latency).
+
+[+] DISCOVERED SERVICES
+# Nmap 7.99 scan initiated Thu Apr 23 02:48:53 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/tesla.com/scan_tesla.com.txt tesla.com
+80/tcp  open  http     AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+443/tcp open  ssl/http AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+
+[+] SOFTWARE & INFRASTRUCTURE

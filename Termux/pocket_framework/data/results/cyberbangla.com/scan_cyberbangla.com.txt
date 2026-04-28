@@ -1,0 +1,13 @@
+# Nmap 7.99 scan initiated Fri Apr 24 00:26:56 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/cyberbangla.com/scan_cyberbangla.com.txt cyberbangla.com
+Nmap scan report for cyberbangla.com (44.232.173.249)
+Host is up (0.29s latency).
+Other addresses for cyberbangla.com (not scanned): 52.40.42.113
+rDNS record for 44.232.173.249: ec2-44-232-173-249.us-west-2.compute.amazonaws.com
+Not shown: 998 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     OpenResty web app server
+443/tcp open  ssl/http OpenResty web app server
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Apr 24 00:27:48 2026 -- 1 IP address (1 host up) scanned in 51.78 seconds

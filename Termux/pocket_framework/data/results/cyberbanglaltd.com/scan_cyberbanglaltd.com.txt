@@ -1,0 +1,13 @@
+# Nmap 7.99 scan initiated Fri Apr 24 00:35:53 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/cyberbanglaltd.com/scan_cyberbanglaltd.com.txt cyberbanglaltd.com
+Nmap scan report for cyberbanglaltd.com (104.21.48.200)
+Host is up (0.0064s latency).
+Other addresses for cyberbanglaltd.com (not scanned): 172.67.187.235 2606:4700:3031::6815:30c8 2606:4700:3035::ac43:bbeb
+Not shown: 997 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE  VERSION
+80/tcp   open  http     Cloudflare http proxy
+443/tcp  open  ssl/http Cloudflare http proxy
+8080/tcp open  http     Cloudflare http proxy
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Apr 24 00:36:23 2026 -- 1 IP address (1 host up) scanned in 29.54 seconds

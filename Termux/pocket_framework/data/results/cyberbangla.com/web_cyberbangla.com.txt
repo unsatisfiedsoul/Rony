@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+Server: openresty
+Date: Thu, 23 Apr 2026 18:28:24 GMT
+Content-Type: text/html
+Content-Length: 19012
+Connection: keep-alive
+Vary: Accept-Encoding
+Last-Modified: Thu, 19 Mar 2026 15:17:38 GMT
+ETag: "b103ecaba91267fbf0297458e694ef17"
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+

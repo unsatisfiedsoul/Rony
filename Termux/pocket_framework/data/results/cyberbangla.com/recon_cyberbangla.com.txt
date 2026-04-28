@@ -1,0 +1,6 @@
+# Nmap 7.99 scan initiated Fri Apr 24 00:26:53 2026 as: nmap -sn -T4 --host-timeout 2m -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/cyberbangla.com/recon_cyberbangla.com.txt cyberbangla.com
+Nmap scan report for cyberbangla.com (44.232.173.249)
+Host is up (0.34s latency).
+Other addresses for cyberbangla.com (not scanned): 52.40.42.113
+rDNS record for 44.232.173.249: ec2-44-232-173-249.us-west-2.compute.amazonaws.com
+# Nmap done at Fri Apr 24 00:26:56 2026 -- 1 IP address (1 host up) scanned in 2.97 seconds

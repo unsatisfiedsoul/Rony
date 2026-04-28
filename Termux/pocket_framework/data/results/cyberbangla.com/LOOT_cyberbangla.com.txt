@@ -1,0 +1,5 @@
+===============================================
+           EXTRACTED SENSITIVE DATA            
+===============================================
+recon_cyberbangla.com.txt:rDNS record for 44.232.173.249: ec2-44-232-173-249.us-west-2.compute.amazonaws.com
+scan_cyberbangla.com.txt:rDNS record for 44.232.173.249: ec2-44-232-173-249.us-west-2.compute.amazonaws.com

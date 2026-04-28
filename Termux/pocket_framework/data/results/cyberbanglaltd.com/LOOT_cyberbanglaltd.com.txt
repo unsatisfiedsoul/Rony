@@ -1,0 +1,5 @@
+===============================================
+           EXTRACTED SENSITIVE DATA            
+===============================================
+web_cyberbanglaltd.com.txt:set-cookie: XSRF-TOKEN=eyJpdiI6ImZncVFTUEhuU202QmlPUFh3Tkd4K2c9PSIsInZhbHVlIjoiRjRuTmJEb25YV3Z3TmFQbVZ3NnMwMkxMaDJia0RWMHRTL1hDMjIvd1pCejQvR2N0VzNOcGlpUDhJL1FYZmkvcjhLVjdmZkdaQU1MQ1dDRGNYV2h2dTBOVnVra1VXRUFEUG5BOWxxZHpYMDVnMUU5OW5nTGkvZHNaUlN2eFJVTzMiLCJtYWMiOiIyMjcxYzM0NmMzMWMzOTM4MzNlZDZhMmQxNmFiZmNhZDk1OWZmNWQwMGEyNzJkMDAzZmJkYTFiMWMxMGFkNjI1IiwidGFnIjoiIn0%3D; expires=Thu, 23 Apr 2026 20:37:26 GMT; Max-Age=7200; path=/; samesite=lax
+web_cyberbanglaltd.com.txt:set-cookie: laravel_session=eyJpdiI6InpYNVI4QjlnUkFBbGloMCtjcnZpYUE9PSIsInZhbHVlIjoiY3BOS3p1R0s5V0RwY0FEc0ZSL0MvdjdJdHlyVVYzdTY2T0d5b3h5N3F1dlB4VHMyT0ZnSy9kSTRyUVhVYm1WWnEvVTNJdDYzbmcvRWYrcm5oOXJSTkpGeGwyejIrRWZCcjVxSUZyY1l4c0xmSCtiOHFQc3dTN0tnc2FBQlllL2YiLCJtYWMiOiI1NjdmMTE4NDExYzk1NzJhY2Q0ZjM1Y2RiMDJkMWExMmVmNDBlMTFiODYxMThlNTU5OTdiODI0NDFmOTViM2NhIiwidGFnIjoiIn0%3D; expires=Thu, 23 Apr 2026 20:37:26 GMT; Max-Age=7200; path=/; httponly; samesite=lax

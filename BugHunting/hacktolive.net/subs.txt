@@ -1,0 +1,10 @@
+academy.hacktolive.net
+api.hacktolive.net
+backend.hacktolive.net
+blog.hacktolive.net
+frontend.hacktolive.net
+mail.hacktolive.net
+n8n.hacktolive.net
+shop.hacktolive.net
+www.hacktolive.net
+www.shop.hacktolive.net

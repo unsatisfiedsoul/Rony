@@ -1,0 +1,5 @@
+autodiscover.cyberbangla.com
+cpanel.cyberbangla.com
+cpcalendars.cyberbangla.com
+cpcontacts.cyberbangla.com
+www.cyberbangla.com

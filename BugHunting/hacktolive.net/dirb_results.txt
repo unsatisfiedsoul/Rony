@@ -1,0 +1,44 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: tmp_dirb.txt
+START_TIME: Fri Apr 24 00:04:23 2026
+URL_BASE: https://api.hacktolive.net/
+WORDLIST_FILES: /data/data/com.termux/files/usr/share/dirb/wordlists/common.txt
+OPTION: Silent Mode
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: https://api.hacktolive.net/ ----
++ Going to next directory.
+
+-----------------
+END_TIME: Fri Apr 24 00:04:26 2026
+DOWNLOADED: 24 - FOUND: 0
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: tmp_dirb.txt
+START_TIME: Fri Apr 24 00:04:26 2026
+URL_BASE: https://n8n.hacktolive.net/
+WORDLIST_FILES: /data/data/com.termux/files/usr/share/dirb/wordlists/common.txt
+OPTION: Silent Mode
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: https://n8n.hacktolive.net/ ----
++ Going to next directory.
+
+-----------------
+END_TIME: Fri Apr 24 00:04:29 2026
+DOWNLOADED: 25 - FOUND: 0

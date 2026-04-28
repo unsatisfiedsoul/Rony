@@ -1,0 +1,37 @@
+===============================================
+      SECURITY SCAN SUMMARY: zerodaytest.com
+      Generated: Thu Apr 23 17:05:45 +06 2026
+===============================================
+
+[+] TARGET INFRASTRUCTURE
+Host is up (0.042s latency).
+
+[+] DISCOVERED SERVICES
+# Nmap 7.99 scan initiated Thu Apr 23 17:05:11 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/zerodaytest.com/scan_zerodaytest.com.txt zerodaytest.com
+80/tcp   open  http     Cloudflare http proxy
+443/tcp  open  ssl/http Cloudflare http proxy
+8080/tcp open  http     Cloudflare http proxy
+8443/tcp open  ssl/http Cloudflare http proxy
+
+[+] DISCOVERED SUBDOMAINS
+autoconfig.zerodaytest.com
+autodiscover.zerodaytest.com
+webmail.zerodaytest.com
+www.zerodaytest.com
+zt.zerodaytest.com
+
+[+] SOFTWARE & INFRASTRUCTURE
+Server: cloudflare
+server: cloudflare
+x-nextjs-cache: HIT
+x-powered-by: Next.js
+Cloudflare http proxy
+scan initiated Thu Apr 23 17:05:11 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/zerodaytest.com/scan_zerodaytest.com.txt zerodaytest.com
+
+[+] EXPOSED FILES & PATHS
+[FOUND] http://zerodaytest.com/robots.txt
+[FOUND] http://zerodaytest.com/robots.txt
+[FOUND] http://zerodaytest.com/robots.txt
+
+[!] VULNERABILITY REPORT (NUCLEI)
+No significant vulnerabilities found.

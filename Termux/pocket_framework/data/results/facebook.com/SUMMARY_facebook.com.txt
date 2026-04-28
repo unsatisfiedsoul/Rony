@@ -1,0 +1,19 @@
+===============================================
+      SECURITY SCAN SUMMARY: facebook.com
+      Generated: Thu Apr 23 02:44:34 +06 2026
+===============================================
+
+[+] TARGET INFRASTRUCTURE
+Host is up (0.0093s latency).
+
+[+] DISCOVERED SERVICES
+# Nmap 7.99 scan initiated Thu Apr 23 02:43:54 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/facebook.com/scan_facebook.com.txt facebook.com
+80/tcp  open  http      proxygen-bolt
+443/tcp open  ssl/https
+
+[+] SOFTWARE & INFRASTRUCTURE
+SF:nt-Type:\x20text/plain\r\nServer:\x20proxygen-bolt\r\nDate:\x20Wed,\x20
+SF:on:\x20https:///\r\nContent-Type:\x20text/plain\r\nServer:\x20proxygen-
+Server: proxygen-bolt
+
+[!] Check LOOT_facebook.com.txt for cleaned findings.

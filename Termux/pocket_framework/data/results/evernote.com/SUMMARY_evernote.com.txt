@@ -1,0 +1,16 @@
+===============================================
+      SECURITY SCAN SUMMARY: evernote.com
+      Generated: Thu Apr 23 02:39:47 +06 2026
+===============================================
+
+[+] TARGET INFRASTRUCTURE
+Host is up (0.043s latency).
+
+[+] DISCOVERED SERVICES
+# Nmap 7.99 scan initiated Thu Apr 23 02:37:51 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/evernote.com/scan_evernote.com.txt evernote.com
+80/tcp  open  http
+443/tcp open  ssl/https
+
+[+] SOFTWARE & INFRASTRUCTURE
+
+[!] Check LOOT_evernote.com.txt for cleaned findings.

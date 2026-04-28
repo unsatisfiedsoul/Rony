@@ -1,0 +1,7 @@
+✅ Recommended Next Steps Summary
+
+· Cameras → Isolate into a dedicated VLAN with no internet access unless necessary.
+· 192.168.5.31 → Patch OpenSSH immediately.
+· 192.168.5.119 → Disable Telnet, use SSH only.
+· Printers (60, 90) → Keep in isolated print VLAN.
+· Gateway (5.1) → Review if IP forwarding is truly needed.

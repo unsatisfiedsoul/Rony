@@ -1,0 +1,5 @@
+autoconfig.zerodaytest.com
+autodiscover.zerodaytest.com
+webmail.zerodaytest.com
+www.zerodaytest.com
+zt.zerodaytest.com

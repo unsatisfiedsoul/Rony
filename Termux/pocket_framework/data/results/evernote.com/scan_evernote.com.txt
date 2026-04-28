@@ -1,0 +1,85 @@
+# Nmap 7.99 scan initiated Thu Apr 23 02:37:51 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/evernote.com/scan_evernote.com.txt evernote.com
+Nmap scan report for evernote.com (34.98.96.201)
+Host is up (0.044s latency).
+rDNS record for 34.98.96.201: 201.96.98.34.bc.googleusercontent.com
+Not shown: 998 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+443/tcp open  ssl/https
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.99%I=7%D=4/23%Time=69E931AB%P=aarch64-unknown-linux-andr
+SF:oid%r(GetRequest,BF,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nCache-
+SF:Control:\x20private\r\nLocation:\x20https://34\.98\.96\.201:443/\r\nCon
+SF:tent-Length:\x200\r\nDate:\x20Wed,\x2022\x20Apr\x202026\x2020:38:03\x20
+SF:GMT\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\n\r\n")%r(HTTPOpt
+SF:ions,BF,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nCache-Control:\x20
+SF:private\r\nLocation:\x20https://34\.98\.96\.201:443/\r\nContent-Length:
+SF:\x200\r\nDate:\x20Wed,\x2022\x20Apr\x202026\x2020:38:04\x20GMT\r\nConte
+SF:nt-Type:\x20text/html;\x20charset=UTF-8\r\n\r\n")%r(RTSPRequest,1AD,"HT
+SF:TP/1\.0\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html;\x20char
+SF:set=UTF-8\r\nReferrer-Policy:\x20no-referrer\r\nContent-Length:\x20273\
+SF:r\nDate:\x20Wed,\x2022\x20Apr\x202026\x2020:38:04\x20GMT\r\n\r\n\n<html
+SF:><head>\n<meta\x20http-equiv=\"content-type\"\x20content=\"text/html;ch
+SF:arset=utf-8\">\n<title>400\x20Bad\x20Request</title>\n</head>\n<body\x2
+SF:0text=#000000\x20bgcolor=#ffffff>\n<h1>Error:\x20Bad\x20Request</h1>\n<
+SF:h2>Your\x20client\x20has\x20issued\x20a\x20malformed\x20or\x20illegal\x
+SF:20request\.</h2>\n<h2></h2>\n</body></html>\n")%r(FourOhFourRequest,DE,
+SF:"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nCache-Control:\x20private\
+SF:r\nLocation:\x20https://34\.98\.96\.201:443/nice%20ports%2C/Trinity\.tx
+SF:t\.bak\r\nContent-Length:\x200\r\nDate:\x20Wed,\x2022\x20Apr\x202026\x2
+SF:020:38:09\x20GMT\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\n\r\
+SF:n")%r(DNSVersionBindReqTCP,B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nCo
+SF:ntent-Length:\x2054\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\n
+SF:Date:\x20Wed,\x2022\x20Apr\x202026\x2020:38:19\x20GMT\r\n\r\n<html><tit
+SF:le>Error\x20400\x20\(Bad\x20Request\)!!1</title></html>")%r(DNSStatusRe
+SF:questTCP,B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length:\x205
+SF:4\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nDate:\x20Wed,\x202
+SF:2\x20Apr\x202026\x2020:38:20\x20GMT\r\n\r\n<html><title>Error\x20400\x2
+SF:0\(Bad\x20Request\)!!1</title></html>")%r(Help,1AD,"HTTP/1\.0\x20400\x2
+SF:0Bad\x20Request\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nRefe
+SF:rrer-Policy:\x20no-referrer\r\nContent-Length:\x20273\r\nDate:\x20Wed,\
+SF:x2022\x20Apr\x202026\x2020:38:20\x20GMT\r\n\r\n\n<html><head>\n<meta\x2
+SF:0http-equiv=\"content-type\"\x20content=\"text/html;charset=utf-8\">\n<
+SF:title>400\x20Bad\x20Request</title>\n</head>\n<body\x20text=#000000\x20
+SF:bgcolor=#ffffff>\n<h1>Error:\x20Bad\x20Request</h1>\n<h2>Your\x20client
+SF:\x20has\x20issued\x20a\x20malformed\x20or\x20illegal\x20request\.</h2>\
+SF:n<h2></h2>\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.99%T=SSL%I=7%D=4/23%Time=69E931B8%P=aarch64-unknown-lin
+SF:ux-android%r(GetRequest,469E,"HTTP/1\.0\x20200\x20OK\r\nContent-Securit
+SF:y-Policy:\x20frame-ancestors\x20https://www\.evernote\.com\x20https://e
+SF:vernote\.com\x20https://stage\.evernote\.com\x20https://app\.preprod3\.
+SF:evernote\.com\x20https://evernote\.prismic\.io/\x20'self'\r\nlink:\x20<
+SF:https://34\.98\.96\.201/>;\x20rel=\"alternate\";\x20hreflang=\"en-us\",
+SF:\x20<https://34\.98\.96\.201/de-de>;\x20rel=\"alternate\";\x20hreflang=
+SF:\"de-de\",\x20<https://34\.98\.96\.201/es-es>;\x20rel=\"alternate\";\x2
+SF:0hreflang=\"es-es\",\x20<https://34\.98\.96\.201/fr-fr>;\x20rel=\"alter
+SF:nate\";\x20hreflang=\"fr-fr\",\x20<https://34\.98\.96\.201/it-it>;\x20r
+SF:el=\"alternate\";\x20hreflang=\"it-it\",\x20<https://34\.98\.96\.201/ja
+SF:-jp>;\x20rel=\"alternate\";\x20hreflang=\"ja-jp\",\x20<https://34\.98\.
+SF:96\.201/ko-kr>;\x20rel=\"alternate\";\x20hreflang=\"ko-kr\",\x20<https:
+SF://34\.98\.96\.201/pt-br>;\x20rel=\"alternate\";\x20hreflang=\"pt-br\",\
+SF:x20<https://34\.98\.96\.201/>;\x20rel=\"alternate\";\x20hreflang=\"x-de
+SF:fault\"\r\nset-cookie:\x20NEXT_LOCALE=en-us;\x20Path=/;\x20Domain=\.eve
+SF:rnote\.com;\x20SameSite=lax\r\nset-cookie:\x20clientGeoLocation=BD,Dhak
+SF:a")%r(FourOhFourRequest,18E1,"HTTP/1\.0\x20404\x20Not\x20Found\r\nConte
+SF:nt-Security-Policy:\x20frame-ancestors\x20https://www\.evernote\.com\x2
+SF:0https://evernote\.com\x20https://stage\.evernote\.com\x20https://app\.
+SF:preprod3\.evernote\.com\x20https://evernote\.prismic\.io/\x20'self'\r\n
+SF:link:\x20<https://34\.98\.96\.201/nice%20ports%2C/Trinity\.txt\.bak>;\x
+SF:20rel=\"alternate\";\x20hreflang=\"en-us\",\x20<https://34\.98\.96\.201
+SF:/de-de/nice%20ports%2C/Trinity\.txt\.bak>;\x20rel=\"alternate\";\x20hre
+SF:flang=\"de-de\",\x20<https://34\.98\.96\.201/es-es/nice%20ports%2C/Trin
+SF:ity\.txt\.bak>;\x20rel=\"alternate\";\x20hreflang=\"es-es\",\x20<https:
+SF://34\.98\.96\.201/fr-fr/nice%20ports%2C/Trinity\.txt\.bak>;\x20rel=\"al
+SF:ternate\";\x20hreflang=\"fr-fr\",\x20<https://34\.98\.96\.201/it-it/nic
+SF:e%20ports%2C/Trinity\.txt\.bak>;\x20rel=\"alternate\";\x20hreflang=\"it
+SF:-it\",\x20<https://34\.98\.96\.201/ja-jp/nice%20ports%2C/Trinity\.txt\.
+SF:bak>;\x20rel=\"alternate\";\x20hreflang=\"ja-jp\",\x20<https://34\.98\.
+SF:96\.201/ko-kr/nice%20ports%2C/Trinity\.txt\.bak>;\x20rel=\"alternate\";
+SF:\x20hreflang=\"ko-kr\",\x20<https://34\.");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr 23 02:39:46 2026 -- 1 IP address (1 host up) scanned in 115.31 seconds

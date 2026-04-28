@@ -1,0 +1,6 @@
+# Nmap 7.99 scan initiated Thu Apr 23 02:43:54 2026 as: nmap -sn -T4 --host-timeout 2m -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/facebook.com/recon_facebook.com.txt facebook.com
+Nmap scan report for facebook.com (31.13.64.35)
+Host is up (0.0093s latency).
+Other addresses for facebook.com (not scanned): 2a03:2880:f16b:183:face:b00c:0:25de
+rDNS record for 31.13.64.35: edge-star-mini-shv-02-ccu1.facebook.com
+# Nmap done at Thu Apr 23 02:43:54 2026 -- 1 IP address (1 host up) scanned in 0.12 seconds

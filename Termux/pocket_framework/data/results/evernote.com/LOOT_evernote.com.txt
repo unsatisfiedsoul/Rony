@@ -1,0 +1,5 @@
+===============================================
+           EXTRACTED SENSITIVE DATA            
+===============================================
+scan_evernote.com.txt:65:SF:fault\"\r\nset-cookie:\x20NEXT_LOCALE=en-us;\x20Path=/;\x20Domain=\.eve
+scan_evernote.com.txt:66:SF:rnote\.com;\x20SameSite=lax\r\nset-cookie:\x20clientGeoLocation=BD,Dhak

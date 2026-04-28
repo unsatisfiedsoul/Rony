@@ -1,0 +1,6 @@
+[FOUND] http://cyberbangla.com/robots.txt
+--- Content of robots.txt ---
+User-agent: *
+Allow: /
+
+-----------------------

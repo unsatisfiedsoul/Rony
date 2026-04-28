@@ -1,0 +1,33 @@
+===============================================
+      SECURITY SCAN SUMMARY: cyberbanglaltd.com
+      Generated: Fri Apr 24 00:37:28 +06 2026
+===============================================
+
+[+] TARGET INFRASTRUCTURE
+Host is up (0.059s latency).
+
+[+] DISCOVERED SERVICES
+# Nmap 7.99 scan initiated Fri Apr 24 00:35:53 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/cyberbanglaltd.com/scan_cyberbanglaltd.com.txt cyberbanglaltd.com
+80/tcp   open  http     Cloudflare http proxy
+443/tcp  open  ssl/http Cloudflare http proxy
+8080/tcp open  http     Cloudflare http proxy
+
+[+] DISCOVERED SUBDOMAINS
+academy.cyberbanglaltd.com
+www.academy.cyberbanglaltd.com
+www.cyberbanglaltd.com
+
+[+] SOFTWARE & INFRASTRUCTURE
+Server: cloudflare
+server: cloudflare
+x-powered-by: PHP/8.2.30
+Cloudflare http proxy
+scan initiated Fri Apr 24 00:35:53 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/cyberbanglaltd.com/scan_cyberbanglaltd.com.txt cyberbanglaltd.com
+
+[+] EXPOSED FILES & PATHS
+[FOUND] http://cyberbanglaltd.com/robots.txt
+
+[!] VULNERABILITY REPORT (NUCLEI)
+No significant vulnerabilities found.
+
+[!] Check LOOT_cyberbanglaltd.com.txt for cleaned findings.

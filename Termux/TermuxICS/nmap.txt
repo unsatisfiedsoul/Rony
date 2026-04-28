@@ -1,0 +1,17 @@
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-04-21 02:05 +0600
+Nmap scan report for ip4-45-158-172-34.dyn.netcomnetz.de (45.158.172.34)
+Host is up (0.20s latency).
+
+PORT    STATE SERVICE
+102/tcp open  iso-tsap
+| s7-info:
+|   Module: 6ES7 314-6EH04-0AB0
+|   Basic Hardware: 6ES7 314-6EH04-0AB0
+|   Version: 3.3.11
+|   System Name: SIMATIC 300(1)
+|   Module Type: CPU 314C-2 PN/DP
+|   Serial Number: S Q-F7U059282015
+|_  Copyright: Original Siemens Equipment
+Service Info: Device: specialized
+
+Nmap done: 1 IP address (1 host up) scanned in 3.18 seconds

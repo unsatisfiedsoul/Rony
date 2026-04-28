@@ -1,0 +1,15 @@
+https://cpanel.bytecapsuleit.com
+https://cpcalendars.bytecapsuleit.com
+https://cpcontacts.bytecapsuleit.com
+https://service.bytecapsuleit.com
+https://serverapp.bytecapsuleit.com
+https://sbd.bytecapsuleit.com
+https://webdisk.bytecapsuleit.com
+https://api-sbd.bytecapsuleit.com
+https://cybercare.bytecapsuleit.com
+https://autodiscover.bytecapsuleit.com
+https://cybercare.bytecapsuleit.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js
+https://cybercare.bytecapsuleit.com/cdn-cgi/l/email-protection
+https://cybercare.bytecapsuleit.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/'+e.replace(/
+https://cybercare.bytecapsuleit.com/cdn-cgi/styles/cf.errors.css
+https://www.bytecapsuleit.com

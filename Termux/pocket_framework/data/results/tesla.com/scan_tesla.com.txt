@@ -1,0 +1,13 @@
+# Nmap 7.99 scan initiated Thu Apr 23 02:48:53 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/tesla.com/scan_tesla.com.txt tesla.com
+Nmap scan report for tesla.com (2.18.53.207)
+Host is up (0.18s latency).
+Other addresses for tesla.com (not scanned): 2.18.48.207 2.18.51.207 2.18.49.207 2.18.55.207 2.18.50.207 23.40.100.207 2.18.54.207 2.18.52.207 23.7.244.207
+rDNS record for 2.18.53.207: a2-18-53-207.deploy.static.akamaitechnologies.com
+Not shown: 998 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+443/tcp open  ssl/http AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr 23 02:49:23 2026 -- 1 IP address (1 host up) scanned in 30.76 seconds

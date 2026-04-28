@@ -1,0 +1,4 @@
+===============================================
+           EXTRACTED SENSITIVE DATA            
+===============================================
+No high-entropy secrets or sensitive keywords found.

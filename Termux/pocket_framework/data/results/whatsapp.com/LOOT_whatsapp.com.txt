@@ -1,0 +1,4 @@
+===============================================
+           EXTRACTED SENSITIVE DATA            
+===============================================
+scan_whatsapp.com.txt:twtaskhandle=\"AcQKEy3SIctrAc-wr6cpf3aYsvjcTyfT5c6YDa6QHeEyLJHrhm4FYn3d

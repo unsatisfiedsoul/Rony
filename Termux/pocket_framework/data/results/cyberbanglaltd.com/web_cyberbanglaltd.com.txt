@@ -1,0 +1,29 @@
+HTTP/1.1 301 Moved Permanently
+Date: Thu, 23 Apr 2026 18:37:26 GMT
+Connection: keep-alive
+Location: https://cyberbanglaltd.com/
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=xiitzismy8FH5TZ1PPgzqkK8N59%2FeAcb%2FDszR4%2FNrz7GcXBtgBTNsTXYoUu9mF3WhUIADrMqvfebuRAzyIFZMUg7jOc8wrP%2F5rAwK7W4cWn9czhBzz0gkd3Uq6yr0MDMe%2BF1UxY%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Server: cloudflare
+CF-RAY: 9f0efac0dbf1ba5b-DAC
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Thu, 23 Apr 2026 18:37:26 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+x-powered-by: PHP/8.2.30
+cache-control: no-cache, private
+set-cookie: XSRF-TOKEN=eyJpdiI6ImZncVFTUEhuU202QmlPUFh3Tkd4K2c9PSIsInZhbHVlIjoiRjRuTmJEb25YV3Z3TmFQbVZ3NnMwMkxMaDJia0RWMHRTL1hDMjIvd1pCejQvR2N0VzNOcGlpUDhJL1FYZmkvcjhLVjdmZkdaQU1MQ1dDRGNYV2h2dTBOVnVra1VXRUFEUG5BOWxxZHpYMDVnMUU5OW5nTGkvZHNaUlN2eFJVTzMiLCJtYWMiOiIyMjcxYzM0NmMzMWMzOTM4MzNlZDZhMmQxNmFiZmNhZDk1OWZmNWQwMGEyNzJkMDAzZmJkYTFiMWMxMGFkNjI1IiwidGFnIjoiIn0%3D; expires=Thu, 23 Apr 2026 20:37:26 GMT; Max-Age=7200; path=/; samesite=lax
+set-cookie: laravel_session=eyJpdiI6InpYNVI4QjlnUkFBbGloMCtjcnZpYUE9PSIsInZhbHVlIjoiY3BOS3p1R0s5V0RwY0FEc0ZSL0MvdjdJdHlyVVYzdTY2T0d5b3h5N3F1dlB4VHMyT0ZnSy9kSTRyUVhVYm1WWnEvVTNJdDYzbmcvRWYrcm5oOXJSTkpGeGwyejIrRWZCcjVxSUZyY1l4c0xmSCtiOHFQc3dTN0tnc2FBQlllL2YiLCJtYWMiOiI1NjdmMTE4NDExYzk1NzJhY2Q0ZjM1Y2RiMDJkMWExMmVmNDBlMTFiODYxMThlNTU5OTdiODI0NDFmOTViM2NhIiwidGFnIjoiIn0%3D; expires=Thu, 23 Apr 2026 20:37:26 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+vary: Accept-Encoding
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+strict-transport-security: max-age=31536000; includeSubDomains
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cf-cache-status: DYNAMIC
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=iU2gBFRNcgLts%2F1Uz0T0sbNrMzmFHKb4h1qA6fuPotwhukX%2F4E%2Feugd84FiBBpqXUX4tdNqHCVyLABRhzESyWWbT6nw48PE4g9zF%2FVhcE5vOQ2t0hlSzSGFAu0%2FXYZ4Opo3kUjw%3D"}]}
+cf-ray: 9f0efac1bb2871f4-DAC
+alt-svc: h3=":443"; ma=86400
+

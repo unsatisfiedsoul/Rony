@@ -1,0 +1,142 @@
+🔴 CRITICAL / HIGH PRIORITY (Fix Immediately)
+
+192.168.5.31 – Linux Server (OpenSSH Vulnerabilities)
+
+Vulnerability Severity Remediation Action
+OpenSSH < 10.3 multiple vulns HIGH (8.1) Update OpenSSH to version 10.3 or later. Reboot service.
+VNC Server (unencrypted detected) INFO Configure VNC with TLS/encryption or disable if unused.
+Telnet Server Detection INFO Disable Telnet completely. Use SSH only.
+SSH Password Authentication INFO Consider switching to key-based authentication only.
+SSH SHA-1 HMAC Algorithms INFO Disable SHA-1 HMAC in sshd_config.
+
+Commands (example RHEL/Debian):
+
+```bash
+sudo apt update && sudo apt upgrade openssh-server   # Debian/Ubuntu
+sudo yum update openssh                               # RHEL/CentOS
+```
+
+---
+
+192.168.5.119 – Telnet Server
+
+Vulnerability Severity Remediation Action
+Unencrypted Telnet Server MEDIUM (6.5) Disable Telnet via xinetd or systemctl. Ensure SSH is enabled instead.
+ICMP Timestamp Request LOW (2.1) Block ICMP timestamp requests at firewall.
+
+Commands:
+
+```bash
+sudo systemctl stop telnet.socket
+sudo systemctl disable telnet.socket
+```
+
+---
+
+192.168.5.1 – Network Gateway
+
+Vulnerability Severity Remediation Action
+IP Forwarding Enabled MEDIUM (6.5) Disable IP forwarding unless this device is a router.
+ICMP Timestamp Request LOW (2.1) Block ICMP timestamp requests at firewall.
+
+Command:
+
+```bash
+# Disable IP forwarding temporarily
+echo 0 > /proc/sys/net/ipv4/ip_forward
+# Make permanent (edit /etc/sysctl.conf)
+net.ipv4.ip_forward = 0
+```
+
+---
+
+192.168.5.20 – Windows Server
+
+Vulnerability Severity Remediation Action
+SMB Signing not required MEDIUM (5.3) Enforce SMB signing via Group Policy.
+
+GPO Path:
+Computer Configuration → Windows Settings → Security Settings → Local Policies → Security Options
+
+· Microsoft network server: Digitally sign communications (always) → Enabled
+· Microsoft network client: Digitally sign communications (always) → Enabled
+
+---
+
+192.168.5.25 – Linux (SSL Certificate Issues)
+
+Vulnerability Severity Remediation Action
+SSL Certificate Cannot Be Trusted MEDIUM (6.5) Replace self-signed cert with CA-signed certificate.
+SSL Self-Signed Certificate MEDIUM (6.5) Same as above.
+SSL Certificate Wrong Hostname MEDIUM (5.3) Regenerate cert with correct Common Name (CN) or SAN.
+SSL/TLS Weak Ciphers Supported INFO Disable CBC ciphers, enable only TLS 1.2/1.3 with strong ciphers.
+
+Example (Apache):
+
+```apache
+SSLCertificateFile /path/to/ca_signed_cert.crt
+SSLCipherSuite EECDH+AESGCM:EDH+AESGCM
+SSLProtocol -all +TLSv1.2 +TLSv1.3
+```
+
+---
+
+🟡 MEDIUM PRIORITY (Schedule Within 2 Weeks)
+
+All Cameras (192.168.5.100–124, excluding servers)
+
+Finding Remediation Action
+HTTP / ONVIF / RTSP exposed Move to isolated VLAN with firewall blocking internet access.
+ICMP Timestamp Disclosure Block ICMP timestamp requests at network firewall.
+HSTS Non-compliant (.116, .120) Enable Strict Transport Security on web interface if supported.
+jQuery detected Update firmware to latest version (check vendor for patches).
+
+Network ACL Example (on firewall/switch):
+
+```
+deny camera VLAN access to WAN
+allow camera VLAN to NVR only
+deny camera VLAN to corporate LAN except NVR
+```
+
+---
+
+Printers (192.168.5.60, 192.168.5.90)
+
+Finding Remediation Action
+SNMP exposed Change default SNMP community strings (public/private).
+NetBIOS/SMB exposed Disable NetBIOS/SMB on printer if not needed.
+"Do not scan printers" flag Keep in isolated print VLAN with no internet access.
+
+---
+
+🟢 LOW PRIORITY / INFORMATIONAL (Review When Possible)
+
+All Linux hosts (192.168.5.26, .29, .32, .33, .34, and others with no critical issues)
+
+Finding Remediation Action
+TCP/IP Timestamps Supported Disable TCP timestamps to reduce fingerprinting risk.
+OS Fingerprint Detected Not actionable — inherent to OS.
+NetBIOS/SMB exposure Disable if not needed (uncommon on Linux).
+
+Disable TCP timestamps (Linux):
+
+```bash
+echo 0 > /proc/sys/net/ipv4/tcp_timestamps
+# Add to /etc/sysctl.conf:
+net.ipv4.tcp_timestamps = 0
+```
+
+---
+
+📋 Quick Reference One-Pager
+
+IP Device Type Top Action Deadline
+192.168.5.31 Linux Server Patch OpenSSH to ≥10.3 Immediate
+192.168.5.119 Telnet Server Disable Telnet Immediate
+192.168.5.1 Gateway Disable IP forwarding Immediate
+192.168.5.20 Windows Server Enforce SMB signing Immediate
+192.168.5.25 Linux Install CA-signed cert 1 week
+192.168.5.100–124 Cameras Isolate into VLAN 1 week
+192.168.5.60, .90 Printers Isolate into VLAN 2 weeks
+192.168.5.26, .29, .32–34 Linux (clean) Disable TCP timestamps When possible

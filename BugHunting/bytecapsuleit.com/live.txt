@@ -1,0 +1,11 @@
+https://api-sbd.bytecapsuleit.com
+https://serverapp.bytecapsuleit.com
+https://webdisk.bytecapsuleit.com
+https://www.bytecapsuleit.com
+https://autodiscover.bytecapsuleit.com
+https://cpcalendars.bytecapsuleit.com
+https://cybercare.bytecapsuleit.com
+https://cpanel.bytecapsuleit.com
+https://cpcontacts.bytecapsuleit.com
+https://service.bytecapsuleit.com
+https://sbd.bytecapsuleit.com

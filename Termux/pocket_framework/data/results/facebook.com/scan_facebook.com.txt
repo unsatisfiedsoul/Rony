@@ -1,0 +1,82 @@
+# Nmap 7.99 scan initiated Thu Apr 23 02:43:54 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/facebook.com/scan_facebook.com.txt facebook.com
+Nmap scan report for facebook.com (31.13.64.35)
+Host is up (0.019s latency).
+Other addresses for facebook.com (not scanned): 2a03:2880:f16b:183:face:b00c:0:25de
+rDNS record for 31.13.64.35: edge-star-mini-shv-02-ccu1.facebook.com
+Not shown: 998 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      proxygen-bolt
+443/tcp open  ssl/https
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.99%I=7%D=4/23%Time=69E9331B%P=aarch64-unknown-linux-andr
+SF:oid%r(GetRequest,B3,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nLocati
+SF:on:\x20https:///\r\nContent-Type:\x20text/plain\r\nServer:\x20proxygen-
+SF:bolt\r\nDate:\x20Wed,\x2022\x20Apr\x202026\x2020:44:12\x20GMT\r\nConnec
+SF:tion:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(HTTPOptions,B3,"HTTP
+SF:/1\.1\x20301\x20Moved\x20Permanently\r\nLocation:\x20https:///\r\nConte
+SF:nt-Type:\x20text/plain\r\nServer:\x20proxygen-bolt\r\nDate:\x20Wed,\x20
+SF:22\x20Apr\x202026\x2020:44:12\x20GMT\r\nConnection:\x20close\r\nContent
+SF:-Length:\x200\r\n\r\n")%r(RTSPRequest,BF9,"HTTP/1\.1\x20400\x20Bad\x20R
+SF:equest\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nProxy-Status:
+SF:\x20http_headers_parsing_error;\x20details=\"ParseHeader\"\r\nDate:\x20
+SF:Wed,\x2022\x20Apr\x202026\x2020:44:12\x20GMT\r\nConnection:\x20close\r\
+SF:nContent-Length:\x202854\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"en\
+SF:"\x20id=\"facebook\">\n\n<head>\n\x20\x20<title>Facebook\x20\|\x20Error
+SF:</title>\n\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20<meta\x20http-eq
+SF:uiv=\"cache-control\"\x20content=\"no-cache\">\n\x20\x20<meta\x20http-e
+SF:quiv=\"cache-control\"\x20content=\"no-store\">\n\x20\x20<meta\x20http-
+SF:equiv=\"cache-control\"\x20content=\"max-age=0\">\n\x20\x20<meta\x20htt
+SF:p-equiv=\"expires\"\x20content=\"-1\">\n\x20\x20<meta\x20http-equiv=\"p
+SF:ragma\"\x20content=\"no-cache\">\n\x20\x20<meta\x20name=\"robots\"\x20c
+SF:ontent=\"noindex,nofollow\">\n\x20\x20<style>\n\x20\x20\x20\x20html,\n\
+SF:x20\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20color:\x20#141823;\n\
+SF:x20\x20\x20\x20\x20\x20background-color:\x20#e9eaed;\n\x20\x20\x20\x20\
+SF:x20\x20font-family:\x20Helvetica,\x20Lucida\x20Grande,\x20Arial,\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20Tahoma,\x20Verdana,\x20sans-serif;\n\x20\x20
+SF:\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x20padding:\x200;\n
+SF:\x20\x20\x20\x20\x20\x20text-align:\x20center;\n\x20\x20\x20\x20}\n\n\x
+SF:20\x20\x20\x20#header\x20{\n\x20\x20\x20\x20\x20\x20heigh")%r(X11Probe,
+SF:BF9,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html;\
+SF:x20charset=utf-8\r\nProxy-Status:\x20http_headers_parsing_error;\x20det
+SF:ails=\"ParseHeader\"\r\nDate:\x20Wed,\x2022\x20Apr\x202026\x2020:44:12\
+SF:x20GMT\r\nConnection:\x20close\r\nContent-Length:\x202854\r\n\r\n<!DOCT
+SF:YPE\x20html>\n<html\x20lang=\"en\"\x20id=\"facebook\">\n\n<head>\n\x20\
+SF:x20<title>Facebook\x20\|\x20Error</title>\n\x20\x20<meta\x20charset=\"u
+SF:tf-8\">\n\x20\x20<meta\x20http-equiv=\"cache-control\"\x20content=\"no-
+SF:cache\">\n\x20\x20<meta\x20http-equiv=\"cache-control\"\x20content=\"no
+SF:-store\">\n\x20\x20<meta\x20http-equiv=\"cache-control\"\x20content=\"m
+SF:ax-age=0\">\n\x20\x20<meta\x20http-equiv=\"expires\"\x20content=\"-1\">
+SF:\n\x20\x20<meta\x20http-equiv=\"pragma\"\x20content=\"no-cache\">\n\x20
+SF:\x20<meta\x20name=\"robots\"\x20content=\"noindex,nofollow\">\n\x20\x20
+SF:<style>\n\x20\x20\x20\x20html,\n\x20\x20\x20\x20body\x20{\n\x20\x20\x20
+SF:\x20\x20\x20color:\x20#141823;\n\x20\x20\x20\x20\x20\x20background-colo
+SF:r:\x20#e9eaed;\n\x20\x20\x20\x20\x20\x20font-family:\x20Helvetica,\x20L
+SF:ucida\x20Grande,\x20Arial,\n\x20\x20\x20\x20\x20\x20\x20\x20Tahoma,\x20
+SF:Verdana,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x2
+SF:0\x20\x20\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20text-align:\x2
+SF:0center;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20#header\x20{\n\x20\x20\x
+SF:20\x20\x20\x20heigh");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.99%T=SSL%I=7%D=4/23%Time=69E93322%P=aarch64-unknown-lin
+SF:ux-android%r(HTTPOptions,11D3,"HTTP/1\.1\x20500\x20Internal\x20Server\x
+SF:20Error\r\nVary:\x20Accept-Encoding\r\ndebug-link:\x20https://www\.meta
+SF:\.com/debug/\?mid=c7c8b69fe9b6faa81409f203767d7880\r\nerror-mid:\x20c7c
+SF:8b69fe9b6faa81409f203767d7880\r\nPragma:\x20no-cache\r\nCache-Control:\
+SF:x20private,\x20no-cache,\x20no-store,\x20must-revalidate\r\nExpires:\x2
+SF:0Sat,\x2001\x20Jan\x202000\x2000:00:00\x20GMT\r\ncontent-security-polic
+SF:y:\x20default-src\x20'self'\x20blob:\x20\*;script-src\x20'nonce-Mf9VqO0
+SF:S'\x20127\.0\.0\.1:\*\x20blob:\x20'self'\x20https://\*\.google-analytic
+SF:s\.com\x20\*\.google\.com;style-src\x20'self'\x20data:\x20blob:\x20'uns
+SF:afe-inline';connect-src\x20'self'\x20data:\x20blob:\x20ws://localhost:\
+SF:*\x20https://\*\.google-analytics\.com;font-src\x20'self'\x20data:\x20b
+SF:lob:\x20\*;img-src\x20'self'\x20data:\x20blob:\x20\*\x20https://\*\.goo
+SF:gle-analytics\.com;media-src\x20'self'\x20data:\x20blob:\x20\*;child-sr
+SF:c\x20'self'\x20data:\x20blob:\x20\*;frame-src\x20'self'\x20data:\x20blo
+SF:b:\x20\*;manifest-src\x20'self'\x20data:\x20blob:\x20\*;object-src\x20'
+SF:self'\x20data:\x20blob:\x20\*;worker-src\x20'self'\x20data:\x20blob:\x2
+SF:0\*;block-all-mixed-content;upgrade-insecure-requ");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr 23 02:44:33 2026 -- 1 IP address (1 host up) scanned in 39.65 seconds

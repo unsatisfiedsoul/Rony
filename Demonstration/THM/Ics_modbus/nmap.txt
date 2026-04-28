@@ -1,0 +1,21 @@
+# Nmap 7.99 scan initiated Sun Apr 19 16:31:53 2026 as: nmap -p22,80,8080,502 -sV -sC -oN nmap.txt 10.48.180.1
+Nmap scan report for 10.48.180.1
+Host is up (0.090s latency).
+
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.11 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 0a:4e:85:c8:a2:d0:8f:57:27:93:94:b5:dd:5a:9d:37 (ECDSA)
+|_  256 b1:22:55:e2:78:0b:b4:da:ac:2d:9d:d0:24:28:99:97 (ED25519)
+80/tcp   open  http    Werkzeug httpd 3.1.3 (Python 3.12.3)
+|_http-server-header: Werkzeug/3.1.3 Python/3.12.3
+|_http-title: PLC CCTV Simulator
+502/tcp  open  modbus  Modbus TCP
+8080/tcp open  http    Werkzeug httpd 2.3.7 (Python 3.12.3)
+| http-title: Site doesn't have a title (text/html; charset=utf-8).
+|_Requested resource was /login
+|_http-server-header: Werkzeug/2.3.7 Python/3.12.3
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Apr 19 16:32:39 2026 -- 1 IP address (1 host up) scanned in 46.23 seconds

@@ -1,0 +1,35 @@
+HTTP/1.1 301 Moved Permanently
+Date: Thu, 23 Apr 2026 11:05:39 GMT
+Content-Type: text/html
+Connection: keep-alive
+Server: cloudflare
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Location: https://zerodaytest.com/
+cf-cache-status: DYNAMIC
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=l%2FGTlCvlbrPyXcVPheB0VrslaCYV%2FTHTr2v5%2FXsJL2bAo0akIV%2FQaoTJzGFepKd884wt16N57ZskhDBL96AVWXsMijgdrS6lV7BuPzLx2XDIoRVD1AJJfCDYMS%2BKj5JVTXHzPmzLVcvhNNrRl2w%3D"}]}
+CF-RAY: 9f0c64f4487d2b1a-DAC
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Thu, 23 Apr 2026 11:05:39 GMT
+content-type: text/html; charset=utf-8
+server: cloudflare
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+content-security-policy: default-src 'self'; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' https: data:;
+x-frame-options: DENY
+x-content-type-options: nosniff
+referrer-policy: strict-origin-when-cross-origin
+permissions-policy: camera=(), microphone=(), geolocation=()
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding
+x-nextjs-cache: HIT
+x-nextjs-prerender: 1
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-powered-by: Next.js
+cache-control: s-maxage=31536000
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2FrEiWxH5tC3RYc97xR7zgDaw%2Fdkb%2F53nvHYlUO%2FtfhBkO5onim44cJgqZIr%2BorIDLjVmY19p4xXztE3acPSgYayPABHeGSIalckyg1ExNrX6OhkgbzCOYFPaz6cMM%2FKiDyRZ0Qq3l5i5hAfQHl8%3D"}]}
+cf-cache-status: DYNAMIC
+cf-ray: 9f0c64f6f84d870f-DAC
+alt-svc: h3=":443"; ma=86400
+

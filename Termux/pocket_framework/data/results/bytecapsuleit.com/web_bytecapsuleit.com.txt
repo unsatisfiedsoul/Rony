@@ -1,0 +1,24 @@
+HTTP/1.1 301 Moved Permanently
+Date: Wed, 22 Apr 2026 20:22:41 GMT
+Connection: keep-alive
+Location: https://bytecapsuleit.com/
+X-Content-Type-Options: nosniff
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=gYwDBKwGLk5mVkskRT%2F3oWPCL8MktUMSCS9y1t7eJs0BcLPKfPKxwB47ssEISoL5JPNMt89NCfctSebp22RrnUjaAr9%2Bxja%2B%2BZoEAAwGWRm1glClsxYwKuEmAe7mXcK0aLcfhg%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Server: cloudflare
+CF-RAY: 9f07578d3a425942-DAC
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Wed, 22 Apr 2026 20:22:41 GMT
+content-type: text/html
+server: cloudflare
+last-modified: Mon, 23 Mar 2026 14:28:19 GMT
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2FTq7ALdxsxKUEK%2BABA6hviJVxYefy3Iv5de0Kh0FYbbV6B2RcacW5H1ozvsQkldEkaw1FAqAip9oqpcNrfb1ZyPQbm0vSSw4VyE%2FQm%2BHyW%2FXjVZlRR3G63%2FxW9N4nZFc5%2FFugA%3D%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-cache-status: DYNAMIC
+strict-transport-security: max-age=0; includeSubDomains; preload
+x-content-type-options: nosniff
+cf-ray: 9f07578dfadaba55-DAC
+alt-svc: h3=":443"; ma=86400
+

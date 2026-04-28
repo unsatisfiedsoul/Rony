@@ -1,0 +1,113 @@
+# Nmap 7.99 scan initiated Thu Apr 23 02:54:23 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/whatsapp.com/scan_whatsapp.com.txt whatsapp.com
+Nmap scan report for whatsapp.com (31.13.64.60)
+Host is up (0.011s latency).
+Other addresses for whatsapp.com (not scanned): 2a03:2880:f26b:1d2:face:b00c:0:167
+rDNS record for 31.13.64.60: whatsapp-cdn-shv-02-ccu1.fbcdn.net
+Not shown: 997 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE          VERSION
+80/tcp   open  http             proxygen-bolt
+443/tcp  open  ssl/https        proxygen-bolt
+5222/tcp open  ssl/xmpp-client?
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.99%I=7%D=4/23%Time=69E9358A%P=aarch64-unknown-linux-andr
+SF:oid%r(GetRequest,48C,"HTTP/1\.1\x20403\x20Forbidden\r\nContent-Type:\x2
+SF:0text/plain\r\nServer:\x20proxygen-bolt\r\nProxy-Status:\x20http_reques
+SF:t_error;\x20e_fb_vipaddr=\"AcNj_5ODjx8Nr2dEl4xSSS5Kl2uDkrA6hu77Umxi9kZk
+SF:1vNBiNAaDeiWDRzUChhFaxl9mMA\";\x20e_clientaddr=\"AcMisUDBFcquDJow52WW5L
+SF:pbzngaxVxHolpcc26sHRERSgkIvbwRXpCNJKJJE7gPqYfcEzTo90MmznLDoxQ\";\x20e_f
+SF:b_zone=\"AcPC_bxx8_MSEBOICJxZrE0F-bqlaTCnidcfrbsrUaCeUwQ_JR-daxmSH7NOzg
+SF:\";\x20e_fb_twtaskhandle=\"AcPoKpX6f4gh5g0IXw8QWno99zyXltiEdHHOPkJjHDQQ
+SF:ng0BwsXI87uxBGDffBcdW0GFs8ezuNiH39I0EIqA158Se2B5IHd7biazBNc\";\x20e_pro
+SF:xy=\"AcO7SmgOv_MSHyM2ClOwwpDuSgAaojJF2rCUhaf_gPncKd6dk4fUQnbMBGVYAd-o7Z
+SF:hP0iAQmVfv53I\",\x20http_request_error;\x20e_fb_vipaddr=\"AcOOim7aZK1Hd
+SF:SlRRE0RkVdp5LzUvdbzo9RTWAloGDx6wgMjUiloaG4CtL7ZKKyrnzhTA7s\";\x20e_clie
+SF:ntaddr=\"AcMzfOBt3sD7GoW3kPsLCnea5ffs_9f5vvy8rYE2yWwoE4Hom8tPEIuU61Cf-Z
+SF:IxQvoqQu97azLGc6ocv-8\";\x20e_fb_zone=\"AcOIKdUbtUiohDlwBk7e8b_rlZFekSk
+SF:lcxuPmwwv7utC3Rq71GAd93V94TciQQ\";\x20e_fb_twtaskhandle=\"AcN5VqUYCx")%
+SF:r(HTTPOptions,484,"HTTP/1\.1\x20403\x20Forbidden\r\nContent-Type:\x20te
+SF:xt/plain\r\nServer:\x20proxygen-bolt\r\nProxy-Status:\x20http_request_e
+SF:rror;\x20e_fb_vipaddr=\"AcSHAr40-fEpJqVQg_SnSBqVooIpmDKcsWOsb-bULDrID2R
+SF:ySCP0X8ltYt3ZZyoHOZewPU8\";\x20e_clientaddr=\"AcTibYFgb1qytAs7Bt_tcCjvA
+SF:y0si2VZMsYzLGhxaot-ma_tLVlZbL5UVHZEalhqhJSeji6uBRt5IpcCnDA\";\x20e_fb_z
+SF:one=\"AcTWbKDoYM509cIIN3GCknCeQW85NXKLqxgPuvFcYdYA6n82yD8aha9tLMyT1g\";
+SF:\x20e_fb_twtaskhandle=\"AcSTlZjQiBMifidncXTKQaw25fHNkfIjilyCsK_MDE4PexM
+SF:doJlmQ8cyT0tK0HTxgiwmSEUdWcT48Z2tDX6gWex5cNWr7Mx-83Q\";\x20e_proxy=\"Ac
+SF:Rkbk_KX5tPVIDG9WjBCexN2LtFeGZSKml-57_V-FsE8GvP1YgdAHoLpsBCLfsrZ85wPSrMn
+SF:TzRsGk\",\x20http_request_error;\x20e_fb_vipaddr=\"AcTBtfU8goCcW-EiJ--m
+SF:spa50nf1VpD_32XYhWaeRy4yW_skGRcLHaYQgPeAZ6FC-LOGvSY\";\x20e_clientaddr=
+SF:\"AcSPwbs-p8-nPwNKasN1XFQbocXxxPX1LMgQR40sF1GrJBkr-wqRVt07GPNT0OtK2PLb4
+SF:8_Rqilh41CMuc8\";\x20e_fb_zone=\"AcTHMfH-2kYRM6qx_DSfFZ_JBcrGGWP8OXwUzb
+SF:TgM3Z-lQ66DAv6rY8oPPNPeg\";\x20e_fb_twtaskhandle=\"AcSVmNYEWK-xvv")%r(R
+SF:TSPRequest,137,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20
+SF:text/html;\x20charset=utf-8\r\nProxy-Status:\x20http_headers_parsing_er
+SF:ror;\x20details=\"ParseHeader\"\r\nDate:\x20Wed,\x2022\x20Apr\x202026\x
+SF:2020:54:35\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x20101\r\n
+SF:\r\n<html>\n<head>\n<title>WhatsApp\x20Error</title>\n</head>\n\n<body>
+SF:\n<h1>WhatsApp\x20Error</h1>\n</body>\n\n</html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.99%T=SSL%I=7%D=4/23%Time=69E93591%P=aarch64-unknown-lin
+SF:ux-android%r(GetRequest,36D,"HTTP/1\.1\x20404\x20default_vip_404\r\nCon
+SF:tent-Type:\x20text/html;\x20charset=utf-8\r\nAccess-Control-Allow-Origi
+SF:n:\x20\*\r\nProxy-Status:\x20proxy_internal_response;\x20e_fb_vipaddr=\
+SF:"AcR6_GTJrafmQ8I-3x6uVYGhP51GpeuCe8TbzjbGNlyjWsPWdkIP3h72tjiA-tv2p5UIiE
+SF:U\";\x20e_isproxyerr=\"AcR7v5Y2zSftHdUUBHPSk5UVRQt0l-MTZMerKSjAyOD_evoZ
+SF:ul1MF8wAL84ZgQ\";\x20e_clientaddr=\"AcSPfIXEzVyOuf03GQR0oozqMEnAMnrnS6m
+SF:Ar0FEpYA1g5ZQsjLhu890gNpCg_ToBzKDGhL8bQHqcNG4E-M\";\x20e_fb_zone=\"AcQe
+SF:nc9-w4Ghqfvd5PBhJIaAtLVLVCQUQ4jH1q9TvNotejWVd-QIJ_oQgn1uYA\";\x20e_fb_t
+SF:wtaskhandle=\"AcSfsjKWBWSCjycQ6LqoxkqhISc7lM32XYPJFNf6iy1P7l942XLN6pSLK
+SF:0tZQkQSbxw8sypbuFownUipJot9b7B-sNYEwrBA8hxM\";\x20e_proxy=\"AcQaGPklsHb
+SF:nkH5o6YI8Jaif-A5lNx80zCTXbeKveMqSV6tvV35-qx_qBQzD4lOOt_v8TPyIFhDN4vw\"\
+SF:r\nDate:\x20Wed,\x2022\x20Apr\x202026\x2020:54:41\x20GMT\r\nConnection:
+SF:\x20close\r\nContent-Length:\x20101\r\n\r\n<html>\n<head>\n<title>Whats
+SF:App\x20Error</title>\n</head>\n\n<body>\n<h1>WhatsApp\x20Error</h1>\n</
+SF:body>\n\n</html>\n")%r(HTTPOptions,36D,"HTTP/1\.1\x20404\x20default_vip
+SF:_404\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nAccess-Control-
+SF:Allow-Origin:\x20\*\r\nProxy-Status:\x20proxy_internal_response;\x20e_f
+SF:b_vipaddr=\"AcTrQ6KCVQaN5LaIKLsLYZ1Sd409jnI5fl7iFPeTIjgPHBKgvUZFUupTBvr
+SF:mmwbJAh8klrY\";\x20e_isproxyerr=\"AcSQ6Tr5ZEffh1rxvj-xpeq_lxzQW15bMrM-g
+SF:WH9nQEKJuRbOAh5YDdgJPHILQ\";\x20e_clientaddr=\"AcTbQJtuEzdwnU3XN8xtVMko
+SF:4xYAUxgzrkYttbcIGGSZiJVV1abUYkzOx4ogoolIhtCaeRqwJQpxOT0YHgE\";\x20e_fb_
+SF:zone=\"AcTHNa2ohsUWCzko-7-Aj6rM3PDoBlURXzTfo6EXDh2uqf9ZUjwUe7RyTuzJ2w\"
+SF:;\x20e_fb_twtaskhandle=\"AcSoeMyj8twQg_3fU9Jxa5aZOx9Mod0QSrnI7K8LycxUQF
+SF:PcMVJ6KNAMxpgHjxV_1nkADgHfLIoOf8bQGpoAbWmKw4bAXxlPSlRo\";\x20e_proxy=\"
+SF:AcTY2LvWMjztn4qlX6S_eeUig9T5SVEUMHC3tLK4Umh1ZiRN489vSC9isvB4JlzrhaLtf_9
+SF:hI-DWkkY\"\r\nDate:\x20Wed,\x2022\x20Apr\x202026\x2020:54:41\x20GMT\r\n
+SF:Connection:\x20close\r\nContent-Length:\x20101\r\n\r\n<html>\n<head>\n<
+SF:title>WhatsApp\x20Error</title>\n</head>\n\n<body>\n<h1>WhatsApp\x20Err
+SF:or</h1>\n</body>\n\n</html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5222-TCP:V=7.99%T=SSL%I=7%D=4/23%Time=69E9359B%P=aarch64-unknown-li
+SF:nux-android%r(GetRequest,36D,"HTTP/1\.1\x20404\x20default_vip_404\r\nCo
+SF:ntent-Type:\x20text/html;\x20charset=utf-8\r\nAccess-Control-Allow-Orig
+SF:in:\x20\*\r\nProxy-Status:\x20proxy_internal_response;\x20e_fb_vipaddr=
+SF:\"AcSAyV05n5KE-rtNgy0HKpMCmR-UmCzTZOvKLVnTVlSPAxrE_D448Dho6b7e1b9IHpWVq
+SF:MU\";\x20e_isproxyerr=\"AcRbAD-tFtmWpiyUwS9oIiwI-yVvTbqFKM6806M63aw_uEA
+SF:EjAdQQX2_EJheQg\";\x20e_clientaddr=\"AcRp5vLMsUXy5bfIdgPoXElHxwHk5v7iR8
+SF:yW-SsHRJ92r1oTU8KyrPqXp7EjEc17oq1yRPmceqk8lN90qJ0\";\x20e_fb_zone=\"AcR
+SF:WT7bARVTYtMPU5q_nsOPAVppPWGEYNbnS4zbfOHKj4rUFp8FDOrhNIQ3aPw\";\x20e_fb_
+SF:twtaskhandle=\"AcQKEy3SIctrAc-wr6cpf3aYsvjcTyfT5c6YDa6QHeEyLJHrhm4FYn3d
+SF:wQYYfLJe6rRax8YHC_XJ11cLGGeUU2CLKa_5Bhb9j14m\";\x20e_proxy=\"AcTgvRVy2T
+SF:Io8Li8uOSeW_7hXhbxishXyPO7HD5PMoVuTuHW6bJOS207WSwPOdzoY49tlyDYmN88ryE\"
+SF:\r\nDate:\x20Wed,\x2022\x20Apr\x202026\x2020:54:51\x20GMT\r\nConnection
+SF::\x20close\r\nContent-Length:\x20101\r\n\r\n<html>\n<head>\n<title>What
+SF:sApp\x20Error</title>\n</head>\n\n<body>\n<h1>WhatsApp\x20Error</h1>\n<
+SF:/body>\n\n</html>\n")%r(HTTPOptions,36C,"HTTP/1\.1\x20404\x20default_vi
+SF:p_404\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nAccess-Control
+SF:-Allow-Origin:\x20\*\r\nProxy-Status:\x20proxy_internal_response;\x20e_
+SF:fb_vipaddr=\"AcTIbmO2o21xCnfNFeTiygy7a_s4-sIOeK4cNhzv56WOw8waUda051LS_h
+SF:tubnlK5HuFn1o\";\x20e_isproxyerr=\"AcRyMeSv_IqtKrVunZolUMBlUjhPGy3A8O-c
+SF:IfPLk_sSiJwdO8L9bNWSoNC-2w\";\x20e_clientaddr=\"AcR_CIOmrAJZy-kaMYMfZOZ
+SF:WALz0KqIo8opZJoOnopNb135HqOJeDAXSLHYMJlvMaesgwzUgwXDMv6q2Bus\";\x20e_fb
+SF:_zone=\"AcT48WmyeF0RiB86J45Jj5VeSBUBPLXh02btoIMXgi94h6v6qKbLMslK0Wj5Kg\
+SF:";\x20e_fb_twtaskhandle=\"AcQc7_nZXYbxema0vM7ttQiGsPAWBQiTy_OSkr5veZzJW
+SF:7uWYteQC_nido_K9rObhblNCIkgXlD1AcXznUinHp_AhpI7p0iJRJ8\";\x20e_proxy=\"
+SF:AcS0rrPXehvOJwQhNjrx-ihNzEfhL7hCZsRsX8rSg4_qMW4N8zxj7BZZFAQjr4VUJqLMcBn
+SF:w_PF1m5Q\"\r\nDate:\x20Wed,\x2022\x20Apr\x202026\x2020:54:51\x20GMT\r\n
+SF:Connection:\x20close\r\nContent-Length:\x20101\r\n\r\n<html>\n<head>\n<
+SF:title>WhatsApp\x20Error</title>\n</head>\n\n<body>\n<h1>WhatsApp\x20Err
+SF:or</h1>\n</body>\n\n</html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr 23 02:54:53 2026 -- 1 IP address (1 host up) scanned in 30.51 seconds

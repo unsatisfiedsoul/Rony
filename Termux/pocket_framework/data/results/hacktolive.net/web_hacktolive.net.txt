@@ -1,0 +1,31 @@
+HTTP/1.1 301 Moved Permanently
+Date: Wed, 22 Apr 2026 20:30:12 GMT
+Content-Type: text/html
+Connection: keep-alive
+Server: cloudflare
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Location: https://hacktolive.net/
+cf-cache-status: DYNAMIC
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=tYzlMQ%2Fmq%2BO3OLNLO9i6zbdXobEH2MlfTKUbRzvpe9jEOr7%2F%2F%2B5xntSP9zZOCQXRdQ7rzLCLRkRUdfrx6%2B625UinVmhPySPVucyG%2F9hzEGX7ZtiQLIF0dyng1%2FpUBNPBnw%3D%3D"}]}
+CF-RAY: 9f07628e3d44ba59-DAC
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Wed, 22 Apr 2026 20:30:12 GMT
+content-type: text/html; charset=utf-8
+server: cloudflare
+vary: Accept-Encoding
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding
+x-nextjs-cache: HIT
+x-nextjs-prerender: 1
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-powered-by: Next.js
+cache-control: s-maxage=31536000
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Xx0XtDTbgUwFSPuzYrSxlSygnrYa8pZ0us0aF4sIP60cnRLu0FXK953ptvNmwWSkKNgIwH%2BnaGdOsUfGonlwctf80dHMmlWHR1bm%2B08%2F1r%2BlE%2F0gPqPUCJNTUfLgtfVHpQ%3D%3D"}]}
+strict-transport-security: max-age=31536000; includeSubDomains
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-cache-status: DYNAMIC
+cf-ray: 9f07628f4dcdba59-DAC
+alt-svc: h3=":443"; ma=86400
+

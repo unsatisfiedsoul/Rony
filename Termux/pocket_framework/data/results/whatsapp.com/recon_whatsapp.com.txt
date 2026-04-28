@@ -1,0 +1,6 @@
+# Nmap 7.99 scan initiated Thu Apr 23 02:54:22 2026 as: nmap -sn -T4 --host-timeout 2m -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/whatsapp.com/recon_whatsapp.com.txt whatsapp.com
+Nmap scan report for whatsapp.com (31.13.64.60)
+Host is up (0.011s latency).
+Other addresses for whatsapp.com (not scanned): 2a03:2880:f26b:1d2:face:b00c:0:167
+rDNS record for 31.13.64.60: whatsapp-cdn-shv-02-ccu1.fbcdn.net
+# Nmap done at Thu Apr 23 02:54:22 2026 -- 1 IP address (1 host up) scanned in 0.11 seconds

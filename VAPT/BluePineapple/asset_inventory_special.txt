@@ -1,0 +1,22 @@
+🖥️ Servers / Infrastructure (Critical & High Risks)
+
+IP Address Type / Risk
+192.168.5.31 Linux server – OpenSSH < 10.3 (High: 8.1), VNC, Telnet
+192.168.5.119 Telnet server – unencrypted (Medium: 6.5)
+192.168.5.1 Gateway / router – IP forwarding enabled (Medium: 6.5)
+192.168.5.20 Windows server – SMB signing not required (Medium: 5.3)
+192.168.5.25 Linux – SSL self-signed / untrusted certs
+192.168.5.26 Linux – informational findings only
+192.168.5.29 Linux – informational only
+192.168.5.32 Linux – informational only
+192.168.5.33 Linux – informational only
+192.168.5.34 Linux – informational only
+
+-------------Others----------------
+⚠️ Other / Uncategorized (but active)
+
+IP Address Notes
+192.168.5.11 Present in index but no vulnerability page (possible missing data)
+192.168.5.15–18 Present in index but missing pages in the PDF
+
+These may be incomplete entries from the scan index.

@@ -1,0 +1,22 @@
+===============================================
+      SECURITY SCAN SUMMARY: whatsapp.com
+      Generated: Thu Apr 23 02:54:53 +06 2026
+===============================================
+
+[+] TARGET INFRASTRUCTURE
+Host is up (0.011s latency).
+
+[+] DISCOVERED SERVICES
+# Nmap 7.99 scan initiated Thu Apr 23 02:54:23 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/whatsapp.com/scan_whatsapp.com.txt whatsapp.com
+80/tcp   open  http             proxygen-bolt
+443/tcp  open  ssl/https        proxygen-bolt
+5222/tcp open  ssl/xmpp-client?
+
+[+] SOFTWARE & INFRASTRUCTURE
+Server: proxygen-bolt Proxy-Status: http_reques
+Server: proxygen-bolt Proxy-Status: http_request_e
+
+proxygen-bolt
+scan initiated Thu Apr 23 02:54:23 2026 as: nmap -sV -T4 --open --max-retries 1 -oN /data/data/com.termux/files/home/Rony/Termux/pocket_framework/data/results/whatsapp.com/scan_whatsapp.com.txt whatsapp.com
+
+[!] Check LOOT_whatsapp.com.txt for cleaned findings.

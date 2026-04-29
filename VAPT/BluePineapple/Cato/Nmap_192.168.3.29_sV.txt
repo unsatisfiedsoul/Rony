@@ -1,0 +1,5 @@
+Nmap scan report for 192.168.3.29                          Host is up (0.27s latency).                                Not shown: 989 filtered tcp ports (no-response)            PORT     STATE SERVICE
+21/tcp   open  ftp                                         22/tcp   open  ssh                                         80/tcp   open  http   IIS Server                                     135/tcp  open  msrpc                                       139/tcp  open  netbios-ssn                                 443/tcp  open  https
+445/tcp  open  microsoft-ds                                990/tcp  open  ftps                                        3389/tcp open  ms-wbt-server
+3390/tcp open  dsc
+5985/tcp open  wsman

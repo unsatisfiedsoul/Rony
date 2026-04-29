@@ -1,0 +1,896 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  <html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />  
+<meta http-equiv="Content-Script-Type" content="text/javascript" />  
+<meta http-equiv="Content-Style-Type" content="text/css" />  <title>Integrated Dell Remote Access Controller 6 - Express</title>  
+<link href="./css/loginmaster.css" rel="stylesheet" type="text/css" />  <link rel="SHORTCUT ICON" href="./images/favicon.ico" type="image/x-icon" />  
+<link rel="icon" href="./images/favicon.ico" type="image/x-icon" />  
+<link rel="shortcut icon" href="./images/favicon.png" type="image/png" />  <!--<script type="text/javascript" src="functions.jsesp"></script>-->  <script type="text/javascript">  
+	//  
+var FieldMapping;  
+FieldMapping.TYPE_HTML     = 0;  
+FieldMapping.TYPE_TEXT     = 1;  
+FieldMapping.TYPE_CHECKBOX = 2;  
+FieldMapping.TYPE_SELECT   = 3;  
+FieldMapping.TYPE_RADIO    = 4;  
+FieldMapping.TYPE_CALLBACK = 5;  
+  
+var xmlRequestObject;  
+var requestCtxt = new Object();  
+requestCtxt.m_fieldMapping = null;  
+requestCtxt.updateComplete = null;  
+  
+function FieldMapping( n, d, type, encoder, decoder )  
+{  
+    //fieldName used for displaying data  
+    this.m_fieldName = n;  
+    //dataName used for updating data  
+    this.m_dataName = d == null ? n : d;  
+    this.m_type = type == null  ? FieldMapping.TYPE_HTML : type;  
+    this.m_encoder = encoder == null ? encodeText : encoder;  
+    this.m_decoder = decoder == null ? decodeText : decoder;  
+}  
+function showInlineMessage( elementName, errorMsg ) {  
+    var elem = document.getElementById( elementName );  
+    if( elem != null ) {  
+        elem.innerHTML = errorMsg;  
+        elem.style.display = 'inline';  
+    }  
+    else {  
+        alert('Cannot find element: ' + elementName );  
+    }  
+}	  
+//  This can be refactored into waitWithCallback  
+function setFieldListFromXML(xmlDoc)  
+{  
+    if (xmlDoc==null)   
+    {  
+        //Request failed  
+        //TODO: disable screen?  
+    }  
+    else  
+    {  
+        //  Set the fields.   
+        for( var i=0 ; i<fieldList.length ; ++i )  
+        {  
+            var dataName = fieldList[i].m_dataName;  
+            var paramValue = getXMLValue( xmlDoc, dataName ) ;  
+            //  
+            if( fieldList[i].m_type == FieldMapping.TYPE_CALLBACK )   
+                dataCallback( fieldList[i], paramValue, xmlDoc );  
+            else  
+                fieldList[i].m_decoder( fieldList[i], paramValue );  
+        }   
+    }  //end status==ok block  
+    //  
+    hideElement( 'progressScreen' );  
+    showInlineElement( 'contentArea' );  
+}      
+//  Convenience method for hiding elements (such as error messages).  
+function hideElement( elemName ) {  
+    var elem = document.getElementById( elemName );  
+    if( elem == null || elem['style'] == null ){}  
+        //alert('Missing element ' + elemName );  
+    else  
+        elem.style.display = 'none';  
+}  
+  
+function sendPost( reqUrl, postData, renderPageCallback )  
+{  
+  if( renderPageCallback != null )  
+      document.chainedCallback = renderPageCallback;  
+  else  
+      document.chainedCallback = setFieldListFromXML  
+  //  
+  loadXMLDocument( reqUrl, waitWithCallback, postData );  
+}  
+function getXMLValue( xmlDoc, elementName )  
+{  
+    //alert("getXMLValue( xmlDoc, " + elementName + ");");  
+    var rtn = "";  
+    var i;  
+    //  
+    if( xmlDoc == null || xmlDoc.childNodes.length == 0 )  
+    {  
+      //alert("Received bad XML document.");  
+    }  
+    else   
+    {  
+       var elements = xmlDoc.getElementsByTagName( elementName );  
+       //  
+       if( elements != null && elements.length > 0  && elements[0].childNodes != null  )  
+       {  
+           if( elements[0].childNodes.length == 0 )  
+               return null;  
+           else if( elements[0].childNodes[0].nodeType == 3){  
+                var j = elements[0].childNodes.length;  
+                for (i = 0; i < j; i++){  
+                    rtn = rtn + elements[0].childNodes[i].nodeValue;  
+                }  
+                //Fix for FireFox. Long returns are broken up into 4096 byte child nodes.  IE is all in one.  
+                //alert("rtn len=" + rtn.length + "ChildNode count=" + j + "\n" );  
+           }  
+           else {  
+               rtn = elements[0];  
+		   }  
+       }  
+    }  
+   return rtn  
+ }  
+ function loadXMLDocument( url, callback, postData )   
+{  
+    var xDoc;  
+    //  
+    if( window.XMLHttpRequest )   
+    {  
+        xmlRequestObject = new XMLHttpRequest();  
+    }   
+    else if( window.ActiveXObject )  
+    //     if( window.ActiveXObject )    
+    {  
+        try   
+        {  
+            xmlRequestObject = new ActiveXObject("Msxml2.XMLHTTP");  
+           // alert("XMLHttpRequest is executed");   
+        }  
+        catch ( e )   
+        {  
+            try   
+            {  
+                xmlRequestObject = new ActiveXObject("Microsoft.XMLHTTP");  
+            }  
+            catch ( E )   
+            {      
+            }  
+        }  
+     }  
+     //  
+     if( xmlRequestObject )   
+     {  
+         xmlRequestObject.onreadystatechange = callback;  
+         xmlRequestObject.open("POST", url, true );  
+         if( postData == null )  
+             postData = '';  
+         xmlRequestObject.setRequestHeader("Content-Type", "application/x-www-form-urlencoded" );  
+         xmlRequestObject.send( postData );  
+     }  
+}  
+function waitWithCallback()  
+{  
+    //Only execute for state "loaded", all other states have   
+    //  no processing.  
+    if (xmlRequestObject.readyState == 4)  
+    {  
+        // only if "OK"  
+        if (xmlRequestObject.status == 200 )  
+        {  
+            var xmlDoc = xmlRequestObject.responseXML;  
+            var reqStatus = getXMLValue( xmlDoc, 'status' );  
+            if( reqStatus != 'ok' )  
+            {  
+                var message = getXMLValue( xmlDoc, 'message' );  
+                //alert(" Request failed: " + message );  
+                //If we fail perform the callback with a null doc   
+                //  to signal the chainedCallback that the server'  
+                //  did not recognize the request  
+                document.chainedCallback(null);  
+            }  
+            else  
+            {  
+                //It might be wise at somepoint to implement   
+                //  chainedCallback as a stack to avoid accidentally  
+                //  stepping on a callback by overwriting it with  
+                //  a value that hasn't been called back yet.  This  
+                //  would introduce substantial complexity though...  
+                document.chainedCallback(xmlDoc);  
+                if( requestCtxt.updateComplete != null)  
+                {  
+                    requestCtxt.updateComplete( requestCtxt, xmlDoc );  
+                }  
+            }  
+        }  
+        else if( xmlRequestObject.status == 401 )  
+        {  
+            document.location = "/login.html";  
+        }  
+        else  
+        {  
+            //showErrorMessage(" Could not retrieve data from server ( status=" +  
+            //                                 xmlRequestObject.status + ", " + xmlRequestObject.statusText + ")" );  
+            showContentPanel();  
+        }  
+    }  
+} //end of waitWithCallback  
+function showContentPanel()  
+{  
+    hideElement( 'progressScreen' );  
+    showInlineElement( 'contentArea' );  
+}  
+</script>  <script src="./js/Clarity.js" type="text/javascript"></script>  <script type="text/javascript">  
+  
+    //  Make sure we are not being displayed in a frame.  
+    var thisIDRACText = EntityDecode(" This iDRAC") //" This iDRAC"; //the leading blank should insure that it is first in the list  
+      
+    if (top.frames.length >= 1)   
+        top.location.replace("/login.html");  
+    var isCancel=false;  
+    var ie=(!(!document.all)) && navigator.userAgent.indexOf("Opera")==-1;  
+    var ns=!(!document.layers);  
+    var loggingIn = false;  
+  
+    //DF340980 GUI: Web navigation after session termination can result in IE redirection loop  
+/*  
+		var sessionID = "";  
+		var sessionID = "";  
+		//alert(sessionID);  
+    if(sessionID != "")  
+    	document.location.replace('/index.html');		  
+*/  
+    var MAXUNLEN = 512;          // Dell's limit on the maximum # of char in a username  
+    var MINUNLEN = 1;            // Dell's limit on the minimum # of char in a username  
+    var MAXPWLEN = 254;          // Dell's limit on the maximum # of char in a password  
+    var MINPWLEN = 1;            // Dell's limit on the minimum # of char in a password  
+   
+    var oemFlagVal = "0";  
+      
+  
+    <!-- getting dynamic messages from resource file -->  
+      
+    var userNameMustMoreMsg    = "The Username must contain more than";//The Username must contain more than  
+    var userNameMustLessMsg    = "The Username must contain less than";//The Username must contain less than   
+    var userNamePrintableMsg   = "The Username must contain only printable characters and no white space.";//The Username must contain only printable characters and no white space.  
+      
+    var passwordMustMoreMsg    = "The Password must contain more than";//The Password must contain more than   
+    var passwordMustLessMsg    = "The Password must contain less than";//The Password must contain less than  
+    var passwordPrintableMsg   = "The Password must contain only printable characters and no white space.";//The Password must contain only printable characters and no white space.  
+     
+    var charsMsg               = "characters.";//Characters.  
+    var loginWaitMsg           = "Logging in ... please wait";//Logging in ... please wait  
+    var loginFailedVerifyMsg   = "Login failed. Verify that your username and password are correct.";//Login failed. Verify that your username and password are correct.  
+    var loginSessionCtExceeded = "The maximum number of user sessions is reached.";//The maxiumum number of user sessions has been reached  
+          
+    var missedUserNameMsg      = "Missing Username.";//Missing Username.  
+    var missedPasswordMsg      = "Missing Password.";//Missing Password.  
+    var loginFailedPrvMsg      = "Login failed. User does not have 'Login to iDRAC' privilege.";//Login failed. User does not have 'Login to iDRAC' privilege.  
+      
+    var loginFailedMsg         = "Login failed.";//Login failed.  
+    var badResponseMsg         = "Received bad response from server.";//Received bad response from server.  
+    var validateUserInputMsg   = "Validating user input.";//Validating user input.  
+  
+    var commFailedMsg          = "Communication Failed.";//Communication Failed.       
+          
+          
+    <!-- alert("SCEnabled:  " + 0 ); -->  
+    var fullUserName = "";    
+  
+    var tStr = "";  
+    var dNames = new Array();  
+    var x = 0;  
+    dNames[x++] = thisIDRACText;      
+  
+		var LDAPEnableMode = "0";  
+  
+		if (LDAPEnableMode==2)  
+		{  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+    tStr = my_trim( '' );  
+    if (tStr.length > 0) { dNames[x++] = tStr; }  
+		}  
+  
+    dNames.sort;  
+  
+    if(dNames[0] == thisIDRACText ) { dNames[0] = dNames[0].substr(1); }  
+// -------------------------------------------  
+  
+   function my_trim(str) {  
+            if (str == null || str==undefined )  
+            {  
+                    return "";  
+            }  
+            else if (str.length > 0) {  
+                //str = str.replace(/EMPTY_STR\n/gi, "");  
+                str = str.replace(/^\s*/gi, "");  
+                str = str.replace(/\s*$/gi, "");  
+            }  
+            return str;  
+    }    
+  
+    function select(val) {  
+        if(val == 13)  
+        {  
+            if( isCancel )  
+                frmCancel();  
+            else  
+                frmSubmit();  
+            return( false );  
+        }  
+        return( true );  
+    }  
+  
+    function frmSubmit() {  
+        hideElement("login_info");      
+        document.getElementById("btnOK").className = 'blackpage_button_emphasized_clicked';  
+        document.getElementById("login_progress").style.display="";  
+  
+        if(loggingIn == true) { return; }  
+  
+		var localDomain = false;  
+		var element     = document.getElementById("domainDisp");  
+		var domainName  = element.value;  
+		  
+		if (domainName == null || domainName == ""){   // IE7 needs extra help to read the selected option  
+			for (var i = 0; i < element.options.length; i++) {  
+				if (element.options[i].selected == true) {  
+					domainName = element.options[i].text;  
+					break;  
+			    }  
+			}  
+		}  
+  
+		if( domainName == thisIDRACText.substr(1) ) {   
+		   localDomain  = true;  
+		   domainName   = "";   
+		}  
+  
+  
+  
+        showInlineMessage( "loginStatus", validateUserInputMsg );  
+  
+		element      = document.getElementById("user");  
+		fullUserName = element.value;  
+  
+  
+	    if ( fullUserName == null || fullUserName == "" ) {  
+		    showInlineMessage( "loginStatus",userNameMustMoreMsg + " " + (MINUNLEN - 1) + " " + charsMsg );  
+        showLoginFail();        
+	        return;  
+	    }   
+  
+		if (isLongerThanMax(fullUserName, MAXUNLEN)) {  
+		    showInlineMessage( "loginStatus", userNameMustLessMsg + " " + (MAXUNLEN + 1) + " " + charsMsg );  
+        showLoginFail();        
+			return;  
+		}  
+		if (isShorterThanMin(fullUserName, MINUNLEN)) {  
+		    showInlineMessage( "loginStatus", userNameMustMoreMsg + " " + (MINUNLEN - 1) + " " + charsMsg );  
+        showLoginFail();        
+			return;  
+		}  
+  
+		if (!isPrintable(fullUserName, true)) {  
+		    showInlineMessage( "loginStatus", userNamePrintableMsg );  
+        showLoginFail();        
+			return;  
+		}  
+  
+		element      = document.getElementById("password");  
+		fullPassword = element.value;  
+  
+	    if ( fullPassword == null || fullPassword == "" ) {  
+		    showInlineMessage( "loginStatus", passwordMustMoreMsg + " " + (MINUNLEN - 1) + " " + charsMsg );  
+        showLoginFail();        
+	        return;  
+	    }   
+  
+		if (isLongerThanMax(fullPassword, MAXPWLEN)) {  
+		    showInlineMessage( "loginStatus", passwordMustLessMsg + " " + (MAXPWLEN + 1) + " " + charsMsg );  
+        showLoginFail();        
+			return;  
+		}  
+		if (isShorterThanMin(fullPassword, MINPWLEN)) {  
+		    showInlineMessage( "loginStatus", passwordMustMoreMsg + " " + (MINPWLEN - 1) + " " + charsMsg );  
+        showLoginFail();        
+			return;  
+		}  
+  
+		if (!isPrintable(fullPassword, true)) {  
+		    showInlineMessage( "loginStatus", passwordPrintableMsg );  
+        showLoginFail();        
+			return;  
+		}  
+  
+		if( !localDomain ) {  
+			if ( !( (fullUserName.indexOf("@" + domainName)  > -1 ) || //if domain not in uid, tack it on.   
+					(fullUserName.indexOf("\\" + domainName) > -1)  ||   
+					(fullUserName.indexOf("/" + domainName)  > -1 ) )) { fullUserName += "@" + domainName; }  
+		}  
+        showInlineMessage( "loginStatus", loginWaitMsg );  
+		sendLoginRequest();  
+		document.auth.user.disabled = true;  
+		document.auth.password.disabled = true;  
+                document.getElementById("btnOK").focus();  
+               
+		loggingIn = true;  
+    }  
+  
+// Tests to see if the value is a printable ASCII Char  
+// Return true if value contains only printable ASCII chars  
+    function isPrintable(value, bAllowSpace) {  
+       var nASCII_StartP = 33;  
+       var nASCII_EndP   = 126;  
+       var str = new String(value);  
+  
+	   if ( value == null || value == "" ) { return false; }   
+	     
+       for (var i = 0; i <  str.length; i++) {  
+          if (bAllowSpace == true) {  
+             //?=: char code == 167  
+             if(str.charCodeAt(i) == 167) {  
+                // Exception to handle  
+                // DF386463: idrac special character "? (section sign on foreign KB's) not supported   
+             } else if (((str.charCodeAt(i) < nASCII_StartP)&&(str.charCodeAt(i)!=32)) || str.charCodeAt(i) > nASCII_EndP)  
+                return false;  
+          } else {  
+             if (str.charCodeAt(i) < nASCII_StartP || str.charCodeAt(i) > nASCII_EndP)  
+              return false;  
+          }  
+       }  
+       return true;  
+   }  
+  
+// Tests to see if the length of the string is LONGER than the customer desired maximum  
+// Return true if its LONGER than the Maximum length  
+    function isLongerThanMax(value, MAXLEN) { return value.length > MAXLEN ? true : false; }  
+  
+// Tests to see if the length of the string is SHORTER than the customer desired minimum  
+// Return true if its SHORTER than the Minimum length  
+    function isShorterThanMin(value, MINLEN) { return value.length < MINLEN ? true : false; }  
+  
+  
+    function frmCancel() {  
+        //top.document.location.reload(true);  
+        top.location.replace("/login.html");  
+    }  
+  
+    function f_help() {  
+        var lang = "en";  
+        window.open("helpProxy.html?helpId=" + "h_authenticate.html" + "&lang=" + lang, "help", "height=500,width=700,scrollbars=no,toolbar=no,menubar=no,resizable=yes,location=no,directories=no,status=no");  
+    }  
+  
+    function f_help2() {     
+        var lang = "en";  
+        window.open("/help/" + lang + "/h_authenticate.html", "help", "height=500,width=700,scrollbars=yes,toolbar=no,menubar=no,resizable=yes,location=no,directories=no,status=no");  
+    }  
+  
+    function f_about() {  
+        window.open("/public/about.html", "About", "height=320,width=700,scrollbars=no,toolbar=no,menubar=no,resizable=yes,location=no,directories=no,status=no");  
+    }  
+  
+    function f_support() {  
+        if (oemFlagVal == 0)  
+            window.open("http://support.dell.com/", "support");  
+        else  
+            window.open("/public/support.html", "Support", "height=320,width=700,scrollbars=no,toolbar=no,menubar=no,resizable=yes,location=no,directories=no,status=no");              
+    }  
+  
+    //  
+    function sendLoginRequest() {  
+        var form = document.auth;  
+        var url = 'data/login';  
+        //var postData = 'user=' + encodeURIComponent(fullUserName) + '&password=' + encodeURIComponent(form.password.value);  
+        //var postData = 'user=' + escapeStr(fullUserName) + '&password=' + escapeStr(form.password.value);  
+        var postData = 'user=' + handleGermanChar(fullUserName) + '&password=' + handleGermanChar(form.password.value);  
+        sendPost(url, postData, loginRequestChange);  
+        //loadXMLDocument( url, loginRequestChange );  
+        return false;  
+    }  
+    function handleGermanChar(str) {  
+        var tmp = new Array();  
+        var i;  
+        var escstr="";  
+        var dec;  
+  
+        //str = str.replace(/\\/g, "\\\\");  
+        tmp = str.split("");  
+        for(i=0; i<str.length; i++) {  
+           dec = (tmp[i]+'').charCodeAt(0);  
+           if(dec == 167) {  
+              escstr += escape(tmp[i]);  
+           } else {  
+              escstr += encodeURIComponent(tmp[i]);  
+           }  
+        }  
+        return(escstr);  
+    }  
+  
+    //    Handler for xml requests.  
+    //  
+    errMsg = new Array();  //display msg x via: showInlineMessage( "loginStatus", errMsg[x] );  
+    errMsg[0] = null;  
+    errMsg[1] = loginFailedVerifyMsg;  
+    errMsg[2] = missedUserNameMsg;  
+    errMsg[3] = missedPasswordMsg;  
+    errMsg[4] = loginFailedPrvMsg;  
+    errMsg[5] = loginSessionCtExceeded;  
+    errMsg[99] = loginFailedMsg;  
+      
+    function loginRequestChange() {  
+        // Only do something if req shows that the response was loaded.  
+        var errorMessage;  
+        //  
+        if (xmlRequestObject.readyState == 4) {  
+            // Was the requests sucessfull?  
+            if (xmlRequestObject.status == 200) {  
+                var xmlDoc = xmlRequestObject.responseXML;  
+                if( xmlDoc == null ) {  
+                    errorMessage = badResponseMsg;  
+                } else {                          
+                    //  Did we get a valid response?  
+                    var reqStatus = getXMLValue( xmlDoc, 'status' );  
+                    if( reqStatus != 'ok' ) {  
+                        errorMessage = getXMLValue( xmlDoc, 'errorMessage' );  
+                    }   
+                    else {  
+                        var authResult = getXMLValue( xmlDoc, 'authResult' );  
+                        if (authResult != 0) { errorMessage = errMsg[authResult]; }   
+                        else {  
+                            var url = getXMLValue( xmlDoc, "forwardUrl" );  
+                            document.location = url;  
+                        }  
+                    }  
+                }  
+            } else  
+                errorMessage = commFailedMsg;  
+            //  
+            if( errorMessage != null ) {  
+                showInlineMessage( "loginStatus", errorMessage );  
+                showLoginFail();        
+                /*  
+                document.auth.user.disabled = false;  
+                document.auth.password.disabled = false;  
+                document.auth.user.value = "";  
+                document.auth.password.value = "";  
+                document.auth.user.focus();  
+                */  
+                loggingIn = false;  
+            }  
+        }  
+    }  
+  
+    function pageRendererCallback( xmlDoc )  
+    {  
+      //  Call standard processing method.  
+       setFieldListFromXML( xmlDoc );  
+    }  
+  
+    function loadPageData()  
+    {     
+    	setTitle();  
+    	  
+        oObj = new Array();  
+        var element = document.getElementById("domainDisp");  
+        oObj[x] = document.createElement('option');  // <<<<<< x HAS NOT BEEN DEFINED YET!!! RBJ >>>>>>>>>>>>>>  
+        for (x = 0; x < dNames.length; x++) {  
+            //alert("dNames=" + dNames[x]);  
+            oObj[x] = document.createElement('option');  
+            oObj[x].text = dNames[x];  
+            try{ element.add(oObj[x], null); }     // standards compliant (add at end)  
+            catch(ex) { element.add(oObj[x]); }    // ie only  
+        }  
+  
+        //document.auth.user.focus();  
+  
+        // DF302415   
+        showErrorMsg();  
+    }  
+  
+    function gotoLogin()  
+    {  
+        top.document.location.href = "/login.html";  
+    }  
+  
+    function TextEncode( text )  
+    {  
+        return String(text).replace(/&/g, '&amp;')  
+                           .replace(/"/g, '&quot;')  
+                           .replace(/'/g, '&#39;')  
+                           .replace(/</g, '&lt;')  
+                           .replace(/>/g, '&gt;');  
+    }  
+  
+    // DF302415   
+    function showErrorMsg() {  
+       var loc = window.location;  
+       if(loc != null) {  
+          var param = loc.search.substring(1);  
+          if(param.indexOf("ErrorMsg=") != -1) {  
+             var errMsg = param.substring( param.indexOf("=")+1 );  
+             showInlineMessage( "loginStatus", TextEncode(decodeURIComponent(errMsg.substring())) );  
+             showLoginFail();        
+	     if(( decodeURIComponent(errMsg.substring()) == "Single Sign-On failed...  Try normal login." ))  
+             {  
+                setTimeout("gotoLogin()",10000);  
+             }  
+  
+  
+          }  
+       }  
+    }  
+  
+	function EntityDecode(str) {  
+		var matches = str.match(/&#\d+;?/g);  
+		  
+		if ((matches != null)&&(matches.length != null))  
+		{  
+			for(var i = 0; i < matches.length; i++)  
+			{  
+				// line wraps here -- be careful copy/pasting  
+				var replacement = String.fromCharCode((matches[i]).replace(/\D/g,""));  
+			  
+				str = str.replace(/&#\d+;?/,replacement);  
+			}  
+		}  
+		return str;  
+	}   
+		  
+	function setTitle()  
+	{  
+		var tmpHostName = "idrac-G5N25K1";  
+		var tmpIPName = "192.168.3.25";  
+		var titleString = "";  
+		var hostLen = 0;  
+		if (tmpHostName != null)   
+			hostLen = tmpHostName.length;  
+		if (hostLen > 0) {   
+			titleString = tmpHostName;  
+		} else if (tmpIPName[0] == '[') {  
+ 	 		titleString = tmpIPName.replace(/\=/g, '');  
+ 	 	}  
+ 	 	var tmpDracName = "iDRAC6";  
+  		titleString = titleString + " - " + tmpDracName;  
+  		titleString = titleString + " - " + EntityDecode("Login");  
+  		  
+  		document.title = titleString;  
+	}  
+    
+function escapeStr(str) {  
+  var tmp = new Array();  
+  var i;  
+  var escstr="";  
+  var dec;  
+  // DF489680: idrac6 web GUI login fails with special character "\" in password  
+  // str = str.replace(/\\/g, "\\\\");  
+  tmp = str.split("");  
+  for(i=0; i<str.length; i++) {  
+    switch(tmp[i]) {  
+      case '@':  
+      case '(':  
+      case ')':  
+      case ',':  
+      case ':':  
+      case '?':  
+      case '=':  
+      case '&':  
+      case '#':  
+      case '+':  
+      case '%':  
+        dec = (tmp[i]+'').charCodeAt(0);  
+        escstr+= "@0"+ dec.toString(16);  
+        break;  
+      default:  
+        escstr+=tmp[i];  
+    }  
+  }  
+  return(escstr);  
+}   
+function OnInputUserKeyUp()  
+{  
+  
+	fullUsername = document.getElementById('user');  
+	DomainName = document.getElementById('domainDisp');  
+		  
+	if(fullUsername.value.indexOf('@')!=-1)  
+	{  
+		document.auth.domainDisp.disabled = true;  
+	}  
+	else if(fullUsername.value.indexOf('/')!=-1)  
+	{  
+		document.auth.domainDisp.disabled = true;  
+	}  
+	else if(fullUsername.value.indexOf('\\')!=-1)  
+	{  
+		document.auth.domainDisp.disabled = true;  
+	}  
+	else  
+	{  
+		document.auth.domainDisp.disabled = false;  
+	}	  
+}  
+  
+function showLoginFail()  
+{  
+        hideElement("login_info");      
+        hideElement("login_progress");              
+        hideElement("login_buttons");              
+        document.getElementById("login_failed").style.display="";         
+        document.getElementById("login_failed_buttons").style.display="";             
+        document.getElementById("btnTryAgain").focus();  
+}  
+</script>  </head>  
+<body style="margin-top:0; margin-left:0; margin-height:0; margin-width:0;" onkeypress="return(select(ns ? event.which : event.keyCode));" onload="loadPageData();">  
+    <div class="login">  <div class="login_header_idrac">  
+      
+        <img src="/images/Ttl_2_iDRAC6_Exp_ML.png" alt="" />  
+    </div>  
+    <div class="login_left">  
+        <div class="login_right">  
+            <div class="login_content">  
+              <div id="login_info" style="display: block;">  
+                <div class="hr">  
+                </div>  
+                <div class="login_title">  
+                    <div class="login_text">  
+                        Login  
+                    </div>  
+                    <div class="login_help">  
+                        <a href="javascript:f_help()" title="Help">  
+                          <span class="login_help_icon">&nbsp;</span>  
+                        </a>  
+                    </div>  
+                </div>  
+                <div class="login_instructional_text">  
+                    Type in Username and Password, and then click Submit.  
+                </div>  
+                <form method="post" onsubmit="sendLoginRequest();" name="auth" id="auth" action="">  
+                <div class="login_userinfo">  
+                    <table>  
+                        <tr>  
+                          <td class="left">  
+                                <span>Username:</span>  
+                            </td>  
+                          <td class="right">  
+                            <span>Password:</span>  
+                          </td>  
+                        </tr>  
+                        <tr>  
+                          <td class="left input">  
+                                <input style="width: 150px;" maxlength="512" value=""   
+														       id="user" name="user"  onkeyup="OnInputUserKeyUp()"    
+														       onfocus="javascript:isCancel=false;" type="text" autocomplete="off" />  
+                            </td>  
+                          <td class="right input">  
+                                <input style="width: 150px;" maxlength="128" value=""   
+														       id="password" name="password"   
+														       onfocus="javascript:isCancel=false;" type="password" autocomplete="off" />  
+                            </td>  
+                        </tr>  
+                        <tr>  
+                          <td class="left">  
+                                <span>Domain:</span>  
+                            </td>  
+                        </tr>  
+                        <tr>  
+                          <td class="left input">  
+                                <input type="hidden" id="ADUserDomain" />  
+                                <select size="1" id="domainDisp" name="domainDisp" style="width:200">  
+                                </select>  
+                            </td>  
+                        </tr>  
+                    </table>  
+                </div>  
+                <div class="hr">  
+                </div>  
+            </div>  
+              <div id="login_progress" style="display: none;">  
+                <div class="hr">  
+                </div>  
+                <div id="login_progress_text">  
+                  Verifying Credentials  
+                </div>  
+                <div class="hr">  
+                </div>  
+              </div>  
+              <div id="login_failed" style="display: none;">  
+                <div class="login_failed_hr_top">  
+                </div>  
+                <div id="login_failed_text">  
+                  Login Error  
+                </div>  
+                <div id="login_failed_message">  
+                  Credentials Failed, Please Try Again.  
+                </div>  
+                <div class="login_failed_hr_bottom">  
+                </div>  
+              </div>  
+                <div>  
+                    <div class="button_clear" id="login_buttons">  
+                        <a class="blackpage_button_emphasized" href="javascript:frmSubmit()" id="btnOK" onfocus="javascript:isCancel=false;"><span>Submit</span></a>  
+                        <a class="blackpage_button" href="javascript:frmCancel()" onfocus="javascript:isCancel=true;"><span>Cancel</span></a>  
+                    </div>  
+                    <div class="button_clear" id="login_failed_buttons" style="display: none;">  
+                      <a class="blackpage_button" href="javascript:frmCancel()" id="btnTryAgain" onfocus="javascript:isCancel=true;"><span>Try Again</span></a>  
+                    </div>  
+                </div>  
+                </form>  
+            </div>  
+        </div>  
+    </div>  
+    <div class="login_footer">  
+    </div>  
+    <div class="title_links">  
+        <a href="javascript:f_support()">Support</a>|<a href="javascript:f_about()">About</a>  
+    </div>  
+			<div align="center">  
+				<p><span id="loginStatus" class="login-status"></span></p>  
+			</div>  
+</div>
+
+</body>  
+</html>

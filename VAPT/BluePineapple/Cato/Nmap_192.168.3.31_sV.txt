@@ -1,0 +1,9 @@
+Nmap scan report for 192.168.3.31                          Host is up (0.28s latency).
+Not shown: 989 filtered tcp ports (no-response)            PORT      STATE SERVICE                                    111/tcp   open  rpcbind
+135/tcp   open  msrpc                                      139/tcp   open  netbios-ssn                                443/tcp   open  https   veeam backup and replicator
+445/tcp   open  microsoft-ds                               1063/tcp  open  kyoceranetdev
+2049/tcp  open  nfs
+3389/tcp  open  ms-wbt-server
+5357/tcp  open  wsdapi
+5985/tcp  open  wsman
+10001/tcp open  scp-config

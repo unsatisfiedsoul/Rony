@@ -1,0 +1,8 @@
+Nmap scan report for 192.168.3.25                          Host is up (0.28s latency).                                Not shown: 994 closed tcp ports (reset)                    PORT     STATE SERVICE
+21/tcp   open  ftp                                         22/tcp   open  ssh                                         80/tcp   open  http  Mbedthis-Appweb/2.4.2
+      443/tcp  open  https iDRAC6 Dell Remote Access Controller | a hardware management subsystem | root, calvin
+       3389/tcp open  ms-wbt-server                               3390/tcp open  dsc
+
+system hostname: pa-esx01.parisacc.local
+system model: PowerEdge R710
+Service Tag: G5N25K1

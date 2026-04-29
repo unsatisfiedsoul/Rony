@@ -1,0 +1,9 @@
+PORT     STATE  SERVICE                                    22/tcp   closed ssh
+80/tcp   open   http vmware esxi
+427/tcp  open   svrloc
+443/tcp  open   https
+902/tcp  open   iss-realsecure
+5988/tcp closed wbem-http
+5989/tcp open   wbem-https                                 8000/tcp open   http-alt
+8300/tcp open   tmi
+9080/tcp open   glrpc

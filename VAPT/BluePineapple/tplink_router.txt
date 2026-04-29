@@ -1,0 +1,3 @@
+192.168.68.1 tplink deco mesh
+192.168.68.250 tplink deco mesh
+

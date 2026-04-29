@@ -1,0 +1,7 @@
+Nmap scan report for 192.168.3.20
+Host is up (0.29s latency).                                Not shown: 989 filtered tcp ports (no-response)
+PORT     STATE  SERVICE                                    22/tcp   open   ssh
+	80/tcp   open   http  vSphere documentetion centre, Web based datastore browser                                  389/tcp  open   ldap
+	443/tcp  open   https                                   514/tcp  open   shell
+	636/tcp  open   ldapssl                                 902/tcp  closed iss-realsecure                          2020/tcp open   xinupageserver                          3128/tcp open   squid-http
+	6502/tcp closed netop-rc                                8084/tcp open   websnp

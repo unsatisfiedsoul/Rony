@@ -1,0 +1,18 @@
+# Nmap 7.99 scan initiated Wed Apr 29 14:44:32 2026 as: /usr/lib/nmap/nmap --privileged -T4 -sC -oN Nmap_192.168.5.31.txt 192.168.5.31
+Nmap scan report for 192.168.5.31
+Host is up (0.0047s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+88/tcp   open  kerberos-sec
+3283/tcp open  netassistant
+5900/tcp open  vnc
+| vnc-info: 
+|   Protocol version: 3.889
+|   Security types: 
+|     Apple Remote Desktop (30)
+|     Unknown security type (33)
+|     Unknown security type (36)
+|_    Mac OS X security type (35)
+
+# Nmap done at Wed Apr 29 14:44:44 2026 -- 1 IP address (1 host up) scanned in 11.82 seconds

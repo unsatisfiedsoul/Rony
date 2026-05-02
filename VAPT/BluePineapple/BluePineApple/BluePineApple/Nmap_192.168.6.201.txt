@@ -1,0 +1,41 @@
+# Nmap 7.99 scan initiated Thu Apr 30 14:58:28 2026 as: /usr/lib/nmap/nmap --privileged -sV -oN Nmap_192.168.6.201.txt 192.168.6.201
+Nmap scan report for 192.168.6.201
+Host is up (0.0015s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+23/tcp open  telnet
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port23-TCP:V=7.99%I=7%D=4/30%Time=69F319C1%P=x86_64-pc-linux-gnu%r(NULL
+SF:,5C,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\r\r\nWelcome\x20t
+SF:o\x20Linux\x20\(ZMM220\)\x20for\x20MIPS\r\n\rKernel\x203\.0\.8\x20on\x2
+SF:0an\x20MIPS\r\n\r\(none\)\x20login:\x20")%r(GenericLines,7C,"\xff\xfd\x
+SF:01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\r\r\nWelcome\x20to\x20Linux\x20\
+SF:(ZMM220\)\x20for\x20MIPS\r\n\rKernel\x203\.0\.8\x20on\x20an\x20MIPS\r\n
+SF:\r\(none\)\x20login:\x20\r\n\r\n\(none\)\x20login:\x20\(none\)\x20login
+SF::\x20")%r(tn3270,6D,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\r
+SF:\r\nWelcome\x20to\x20Linux\x20\(ZMM220\)\x20for\x20MIPS\r\n\rKernel\x20
+SF:3\.0\.8\x20on\x20an\x20MIPS\r\n\r\^@IBM-3279-4-E\xfb\^Y\(none\)\x20logi
+SF:n:\x20")%r(GetRequest,6E,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\
+SF:x03\r\r\nWelcome\x20to\x20Linux\x20\(ZMM220\)\x20for\x20MIPS\r\n\rKerne
+SF:l\x203\.0\.8\x20on\x20an\x20MIPS\r\n\rGET\x20/\x20HTTP/1\.0\r\n\r\n\(no
+SF:ne\)\x20login:\x20")%r(RPCCheck,58,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x0
+SF:1\xff\xfb\x03\r\r\nWelcome\x20to\x20Linux\x20\(ZMM220\)\x20for\x20MIPS\
+SF:r\n\rKernel\x203\.0\.8\x20on\x20an\x20MIPS\r\n\r\x80\^@\^@\(r\xfe\^\]")
+SF:%r(Help,62,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\r\r\nWelco
+SF:me\x20to\x20Linux\x20\(ZMM220\)\x20for\x20MIPS\r\n\rKernel\x203\.0\.8\x
+SF:20on\x20an\x20MIPS\r\n\rHELP\r\n\(none\)\x20login:\x20")%r(SIPOptions,1
+SF:3B,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\r\r\nWelcome\x20to
+SF:\x20Linux\x20\(ZMM220\)\x20for\x20MIPS\r\n\rKernel\x203\.0\.8\x20on\x20
+SF:an\x20MIPS\r\n\rOPTIONS\x20sip:nm\x20SIP/2\.0\r\nVia:\x20SIP/2\.0/TCP\x
+SF:20nm;branch=foo\r\nFrom:\x20<sip:nm@nm>;tag=root\r\nTo:\x20<sip:nm2@nm2
+SF:>\r\nCall-ID:\x2050000\r\nCSeq:\x2042\x20OPTIONS\r\nMax-Forwards:\x2070
+SF:\r\nContent-Length:\x200\r\nContact:\x20<sip:nm@nm>\r\nAccept:\x20appli
+SF:cation/sdp\r\n\r\n\(none\)\x20login:\x20")%r(NCP,88,"\xff\xfd\x01\xff\x
+SF:fd\x1f\xff\xfb\x01\xff\xfb\x03\r\r\nWelcome\x20to\x20Linux\x20\(ZMM220\
+SF:)\x20for\x20MIPS\r\n\rKernel\x203\.0\.8\x20on\x20an\x20MIPS\r\n\rDmdT\^
+SF:@\^@\^@\x08\x20\x08\x08\x20\x08\x08\x20\x08\x08\x20\x08\x08\x20\x08\x08
+SF:\x20\x08\x08\x20\x08\x08\x20\x08\x08\x20\x08\x08\x20\x08\^@\^@\^@\^A\^@
+SF:\^@\^@\^@\^@");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr 30 14:59:21 2026 -- 1 IP address (1 host up) scanned in 53.05 seconds

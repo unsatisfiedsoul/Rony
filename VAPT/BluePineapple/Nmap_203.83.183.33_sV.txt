@@ -1,0 +1,5 @@
+PORT      STATE SERVICE          VERSION
+179/tcp   open  tcpwrapped                           1088/tcp  open  cplscrambler-al?
+2000/tcp  open  bandwidth-test   MikroTik bandwidth-test server
+10000/tcp open  http             MikroTik router config httpd
+Service Info: OS: RouterOS; Device: router; CPE: cpe:/o:mikrotik:routeros

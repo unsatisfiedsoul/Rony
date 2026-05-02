@@ -1,0 +1,34 @@
+To turn your script into a professional auditing tool, you should move away from random guessing and follow a structured **ICS Reconnaissance Lifecycle**. This is how a Red Team Analyst would systematically "dissect" a target like the one you just found.
+## 🛡️ The 4-Stage Audit Protocol
+### Phase 1: The Subnet Sweep (Enumeration)
+Before looking at registers, you must identify every active "Unit" behind the IP. Some gateways support up to 247 slaves.
+ * **Goal:** Identify which Slave IDs are active.
+ * **Execution:** Run your script in a loop (or manually) for Slaves 1–10.
+ * **What to look for:** Any ID that returns data (even [0]) is a physical device.
+### Phase 2: Memory Zone Mapping (Scanning)
+Once you have an active Slave ID, you need to find where the "Live" data lives. Modbus devices usually group data into "islands."
+ * **Execution:** Scan common "Start" addresses.
+   * **0-100:** System Status / Model IDs.
+   * **1000-1100:** Configuration / Setpoints.
+   * **4000-4100:** Live Telemetry (Temperature, Pressure, Speed).
+ * **The "Count" Strategy:** Always start with a count=10. If it fails, drop to count=1 to check for "Read-Only" single registers.
+### Phase 3: Fingerprinting (Identification)
+This is what we just did with the iSMA and Delta units. You compare the register patterns against known manufacturer behaviors.
+ * **Register 4015/4016:** Classic for iSMA/Building Automation.
+ * **Register 7000+:** Common for Industrial Inverters and Meters.
+ * **Fixed-Length Responses:** If you ask for 5 and get 7 (like you did with Slave 4), it’s a hardware-coded diagnostic frame.
+### Phase 4: Impact Assessment (Risk Analysis)
+This is the final step of the audit. You determine what an attacker could actually *do*.
+ * **Read-Only vs. Writable:** Can you write to these registers? (e.g., Changing the 4000 relay registers on the iSMA could physically turn off a server room's cooling).
+ * **Information Leakage:** Does register 4100 contain the local IP, gateway, or serial settings? (This allows for "pivoting" further into the internal network).
+## 🛠️ Recommended Script Workflow
+If you were to document this for your portfolio or a report, use this sequence:
+ 1. **Identify Presence:** python snowcrash_2.0.py -ip=[IP] -slave=[1-5] -address=0 -count=1
+ 2. **Locate Telemetry:** python snowcrash_2.0.py -ip=[IP] -slave=[ID] -address=4000 -count=20
+ 3. **Confirm Identity:**
+   * Check if address=1001 returns a hardware code.
+   * Check if address=4100 returns ASCII text (like "iSMA").
+ 4. **Monitor Delta:**
+   Watch a specific register for 60 seconds. If the value changes (e.g., 291 \rightarrow 292), it is a real-time sensor.
+## ⚠️ The Auditor’s Rule of Thumb
+**Never write (mode=write) during the reconnaissance phase.** In industrial environments, writing a "0" or "1" to the wrong register could stop a cooling fan, trip a circuit breaker, or reset a PLC's logic. Professional auditing is **99% Reading** and **1% reporting**.

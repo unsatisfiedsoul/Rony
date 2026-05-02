@@ -1,0 +1,988 @@
+# Nmap 7.99 scan initiated Tue Apr 28 10:52:55 2026 as: /usr/lib/nmap/nmap --privileged -sT -oN Nmap_192.168.68.1_sT.txt 192.168.68.1/24
+Nmap scan report for 192.168.68.0
+Host is up (0.032s latency).
+All 1000 scanned ports on 192.168.68.0 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.1
+Host is up (0.0073s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+53/tcp   open  domain
+80/tcp   open  http
+443/tcp  open  https
+1900/tcp open  upnp
+
+Nmap scan report for 192.168.68.2
+Host is up (0.0053s latency).
+All 1000 scanned ports on 192.168.68.2 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.3
+Host is up (0.0053s latency).
+All 1000 scanned ports on 192.168.68.3 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.4
+Host is up (0.0051s latency).
+All 1000 scanned ports on 192.168.68.4 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.5
+Host is up (0.0051s latency).
+All 1000 scanned ports on 192.168.68.5 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.6
+Host is up (0.0051s latency).
+All 1000 scanned ports on 192.168.68.6 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.7
+Host is up (0.0051s latency).
+All 1000 scanned ports on 192.168.68.7 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.8
+Host is up (0.0050s latency).
+All 1000 scanned ports on 192.168.68.8 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.9
+Host is up (0.0050s latency).
+All 1000 scanned ports on 192.168.68.9 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.10
+Host is up (0.0050s latency).
+All 1000 scanned ports on 192.168.68.10 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.11
+Host is up (0.032s latency).
+All 1000 scanned ports on 192.168.68.11 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.12
+Host is up (0.032s latency).
+All 1000 scanned ports on 192.168.68.12 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.13
+Host is up (0.61s latency).
+All 1000 scanned ports on 192.168.68.13 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.14
+Host is up (0.62s latency).
+All 1000 scanned ports on 192.168.68.14 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.15
+Host is up (0.62s latency).
+All 1000 scanned ports on 192.168.68.15 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.16
+Host is up (0.62s latency).
+All 1000 scanned ports on 192.168.68.16 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.17
+Host is up (0.62s latency).
+All 1000 scanned ports on 192.168.68.17 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.18
+Host is up (0.62s latency).
+All 1000 scanned ports on 192.168.68.18 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.19
+Host is up (0.62s latency).
+All 1000 scanned ports on 192.168.68.19 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.20
+Host is up (0.62s latency).
+All 1000 scanned ports on 192.168.68.20 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.21
+Host is up (0.62s latency).
+All 1000 scanned ports on 192.168.68.21 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.22
+Host is up (0.62s latency).
+All 1000 scanned ports on 192.168.68.22 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.23
+Host is up (0.61s latency).
+All 1000 scanned ports on 192.168.68.23 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.24
+Host is up (0.61s latency).
+All 1000 scanned ports on 192.168.68.24 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.25
+Host is up (0.61s latency).
+All 1000 scanned ports on 192.168.68.25 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.26
+Host is up (0.61s latency).
+All 1000 scanned ports on 192.168.68.26 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.27
+Host is up (0.61s latency).
+All 1000 scanned ports on 192.168.68.27 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.28
+Host is up (0.61s latency).
+All 1000 scanned ports on 192.168.68.28 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.29
+Host is up (0.61s latency).
+All 1000 scanned ports on 192.168.68.29 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.30
+Host is up (0.61s latency).
+All 1000 scanned ports on 192.168.68.30 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.31
+Host is up (0.61s latency).
+All 1000 scanned ports on 192.168.68.31 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.32
+Host is up (0.61s latency).
+All 1000 scanned ports on 192.168.68.32 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.33
+Host is up (0.032s latency).
+All 1000 scanned ports on 192.168.68.33 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.34
+Host is up (0.032s latency).
+All 1000 scanned ports on 192.168.68.34 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.35
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.35 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.36
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.36 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.37
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.37 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.38
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.38 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.39
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.39 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.40
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.40 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.41
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.41 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.42
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.42 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.43
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.43 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.44
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.44 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.45
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.45 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.46
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.46 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.47
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.47 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.48
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.48 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.49
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.49 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.50
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.50 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.51
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.51 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.52
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.52 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.53
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.53 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.54
+Host is up (0.48s latency).
+All 1000 scanned ports on 192.168.68.54 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.55
+Host is up (0.032s latency).
+All 1000 scanned ports on 192.168.68.55 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.56
+Host is up (0.032s latency).
+All 1000 scanned ports on 192.168.68.56 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.57
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.57 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.58
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.58 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.59
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.59 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.60
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.60 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.61
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.61 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.62
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.62 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.63
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.63 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.64
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.64 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.65
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.65 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.66
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.66 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.67
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.67 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.68
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.68 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.69
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.69 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.70
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.70 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.71
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.71 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.72
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.72 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.73
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.73 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.74
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.74 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.75
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.75 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.76
+Host is up (0.24s latency).
+All 1000 scanned ports on 192.168.68.76 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.77
+Host is up (0.032s latency).
+All 1000 scanned ports on 192.168.68.77 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.78
+Host is up (0.032s latency).
+All 1000 scanned ports on 192.168.68.78 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.79
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.79 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.80
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.80 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.81
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.81 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.82
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.82 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.83
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.83 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.84
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.84 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.85
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.85 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.86
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.86 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.87
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.87 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.88
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.88 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.89
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.89 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.90
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.90 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.91
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.91 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.92
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.92 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.93
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.93 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.94
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.94 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.95
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.95 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.96
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.96 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.97
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.97 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.98
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.68.98 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.99
+Host is up (0.031s latency).
+All 1000 scanned ports on 192.168.68.99 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.100
+Host is up (0.043s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT      STATE SERVICE
+49152/tcp open  unknown
+62078/tcp open  iphone-sync
+
+Nmap scan report for 192.168.68.101
+Host is up (0.015s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT      STATE SERVICE
+49152/tcp open  unknown
+
+Nmap scan report for 192.168.68.102
+Host is up (0.033s latency).
+All 1000 scanned ports on 192.168.68.102 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.103
+Host is up (0.041s latency).
+All 1000 scanned ports on 192.168.68.103 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.104
+Host is up (0.041s latency).
+All 1000 scanned ports on 192.168.68.104 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.105
+Host is up (0.041s latency).
+All 1000 scanned ports on 192.168.68.105 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.106
+Host is up (0.041s latency).
+All 1000 scanned ports on 192.168.68.106 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.107
+Host is up (0.041s latency).
+All 1000 scanned ports on 192.168.68.107 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.108
+Host is up (0.041s latency).
+All 1000 scanned ports on 192.168.68.108 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.109
+Host is up (0.041s latency).
+All 1000 scanned ports on 192.168.68.109 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.110
+Host is up (0.041s latency).
+All 1000 scanned ports on 192.168.68.110 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.111
+Host is up (0.041s latency).
+All 1000 scanned ports on 192.168.68.111 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.112
+Host is up (0.040s latency).
+All 1000 scanned ports on 192.168.68.112 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.113
+Host is up (0.36s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+6100/tcp open  synchronet-db
+
+Nmap scan report for 192.168.68.114
+Host is up (0.040s latency).
+All 1000 scanned ports on 192.168.68.114 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.115
+Host is up (0.040s latency).
+All 1000 scanned ports on 192.168.68.115 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.116
+Host is up (0.040s latency).
+All 1000 scanned ports on 192.168.68.116 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.117
+Host is up (0.040s latency).
+All 1000 scanned ports on 192.168.68.117 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.118
+Host is up (0.040s latency).
+All 1000 scanned ports on 192.168.68.118 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.119
+Host is up (0.23s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+135/tcp open  msrpc
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+
+Nmap scan report for 192.168.68.120
+Host is up (0.040s latency).
+All 1000 scanned ports on 192.168.68.120 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.121
+Host is up (0.031s latency).
+All 1000 scanned ports on 192.168.68.121 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.122
+Host is up (0.015s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT      STATE SERVICE
+49152/tcp open  unknown
+
+Nmap scan report for 192.168.68.123
+Host is up (0.0026s latency).
+All 1000 scanned ports on 192.168.68.123 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.124
+Host is up (0.0025s latency).
+All 1000 scanned ports on 192.168.68.124 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.125
+Host is up (0.0025s latency).
+All 1000 scanned ports on 192.168.68.125 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.126
+Host is up (0.079s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+9900/tcp open  iua
+
+Nmap scan report for 192.168.68.127
+Host is up (0.0024s latency).
+All 1000 scanned ports on 192.168.68.127 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.128
+Host is up (0.0024s latency).
+All 1000 scanned ports on 192.168.68.128 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.129
+Host is up (0.0024s latency).
+All 1000 scanned ports on 192.168.68.129 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.130
+Host is up (0.0024s latency).
+All 1000 scanned ports on 192.168.68.130 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.131
+Host is up (0.0024s latency).
+All 1000 scanned ports on 192.168.68.131 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.132
+Host is up (0.0023s latency).
+All 1000 scanned ports on 192.168.68.132 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.133
+Host is up (0.0023s latency).
+All 1000 scanned ports on 192.168.68.133 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.134
+Host is up (0.0023s latency).
+All 1000 scanned ports on 192.168.68.134 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.135
+Host is up (2.0s latency).
+Not shown: 986 closed tcp ports (conn-refused)
+PORT      STATE SERVICE
+22/tcp    open  ssh
+80/tcp    open  http
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+1801/tcp  open  msmq
+2103/tcp  open  zephyr-clt
+2105/tcp  open  eklogin
+2107/tcp  open  msmq-mgmt
+2179/tcp  open  vmrdp
+3389/tcp  open  ms-wbt-server
+5357/tcp  open  wsdapi
+5985/tcp  open  wsman
+16992/tcp open  amt-soap-http
+
+Nmap scan report for 192.168.68.136
+Host is up (0.020s latency).
+All 1000 scanned ports on 192.168.68.136 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.137
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.137 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.138
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.138 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.139
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.139 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.140
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.140 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.141
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.141 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.142
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.142 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.143
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.143 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.144
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.144 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.145
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.145 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.146
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.146 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.147
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.147 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.148
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.148 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.149
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.149 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.150
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.150 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.151
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.151 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.152
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.152 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.153
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.153 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.154
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.154 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.155
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.155 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.156
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.156 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.157
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.157 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.158
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.158 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.159
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.159 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.160
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.160 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.161
+Host is up (0.021s latency).
+All 1000 scanned ports on 192.168.68.161 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.162
+Host is up (0.021s latency).
+All 1000 scanned ports on 192.168.68.162 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.163
+Host is up (0.021s latency).
+All 1000 scanned ports on 192.168.68.163 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.164
+Host is up (0.021s latency).
+All 1000 scanned ports on 192.168.68.164 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.165
+Host is up (0.021s latency).
+All 1000 scanned ports on 192.168.68.165 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.166
+Host is up (0.021s latency).
+All 1000 scanned ports on 192.168.68.166 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.167
+Host is up (0.021s latency).
+All 1000 scanned ports on 192.168.68.167 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.168
+Host is up (0.021s latency).
+All 1000 scanned ports on 192.168.68.168 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.169
+Host is up (0.021s latency).
+All 1000 scanned ports on 192.168.68.169 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.170
+Host is up (0.021s latency).
+All 1000 scanned ports on 192.168.68.170 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.171
+Host is up (0.021s latency).
+All 1000 scanned ports on 192.168.68.171 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.172
+Host is up (0.021s latency).
+All 1000 scanned ports on 192.168.68.172 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.173
+Host is up (0.00075s latency).
+All 1000 scanned ports on 192.168.68.173 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.174
+Host is up (0.029s latency).
+All 1000 scanned ports on 192.168.68.174 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.175
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.175 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.176
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.176 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.177
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.177 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.178
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.178 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.179
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.179 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.180
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.180 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.181
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.181 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.182
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.182 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.183
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.183 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.184
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.184 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.185
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.185 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.186
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.186 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.187
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.187 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.188
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.188 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.189
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.189 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.190
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.190 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap scan report for 192.168.68.191
+Host is up (0.013s latency).
+All 1000 scanned ports on 192.168.68.191 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+

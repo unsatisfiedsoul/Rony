@@ -1,0 +1,452 @@
+# Nmap 7.99 scan initiated Thu Apr 30 17:51:36 2026 as: nmap -sV -oN nmap.5_sV.txt 192.168.5.0/24
+Nmap scan report for 192.168.5.1
+Host is up (0.022s latency).
+Not shown: 999 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     Cisco SSH 1.25 (protocol 1.99)
+Service Info: OS: IOS; CPE: cpe:/o:cisco:ios
+
+Nmap scan report for 192.168.5.60
+Host is up (0.0079s latency).
+Not shown: 994 closed tcp ports (conn-refused)
+PORT     STATE SERVICE    VERSION
+25/tcp   open  smtp       Brother printer smtpd
+80/tcp   open  http       Debut embedded httpd 1.30 (Brother/HP printer http admin)
+443/tcp  open  ssl/http   Debut embedded httpd 1.30 (Brother/HP printer http admin)
+515/tcp  open  printer
+631/tcp  open  http       Debut embedded httpd 1.30 (Brother/HP printer http admin)
+9100/tcp open  jetdirect?
+Service Info: Device: printer
+
+Nmap scan report for 192.168.5.100
+Host is up (0.023s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE     VERSION
+80/tcp   open  http
+554/tcp  open  rtsp
+8088/tcp open  radan-http?
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.99%I=7%D=4/30%Time=69F34274%P=aarch64-unknown-linux-andr
+SF:oid%r(GetRequest,F0D,"HTTP/1\.1\x20200\x20OK\r\nCONNECTION:\x20keep-ali
+SF:ve\r\nDate:\x20Thu,\x2030\x20Apr\x202026\x2018:09:44\x20GMT\r\nLast-Mod
+SF:ified:\x20Fri,\x2029\x20Jul\x202022\x2005:20:54\x20GMT\r\nEtag:\x20\"16
+SF:59072054:d71\"\r\nCONTENT-LENGTH:\x203441\r\nP3P:\x20CP=CAO\x20PSA\x20O
+SF:UR\r\nCACHE-CONTROL:\x20max-age=0\r\nX-Frame-Options:\x20SAMEORIGIN\r\n
+SF:X-XSS-Protection:\x201;mode=block\r\nContent-Security-Policy:\x20script
+SF:-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval'\r\nX-Content-Type-Op
+SF:tions:\x20nosniff\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<!DOCTYPE\x20HTM
+SF:L>\x20<html>\x20<head>\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x20co
+SF:ntent=\"IE=edge\">\x20<meta\x20charset=\"UTF-8\">\x20<title>WEB\x20SERV
+SF:ICE</title>\x20<link\x20href=\"\./baseProj/images/favicon\.ico\"\x20typ
+SF:e=\"image/x-icon\"\x20rel=\"shortcut\x20icon\">\x20<script\x20src=\"ext
+SF:/ext-all\.js\"></script>\x20<script\x20type=\"text/javascript\"\x20src=
+SF:\"\./projectPath\.js\"></script>\x20<script\x20type=\"text/javascript\"
+SF:\x20src=\"/app/libs/require\.js\"></script>\x20<script\x20type=\"text/j
+SF:avascript\"\x20src=\"/app/jsCore/require-config\.js\"></script>\x20<scr
+SF:ipt\x20type=\"text/jav")%r(HTTPOptions,F0D,"HTTP/1\.1\x20200\x20OK\r\nC
+SF:ONNECTION:\x20keep-alive\r\nDate:\x20Thu,\x2030\x20Apr\x202026\x2018:09
+SF::49\x20GMT\r\nLast-Modified:\x20Fri,\x2029\x20Jul\x202022\x2005:20:54\x
+SF:20GMT\r\nEtag:\x20\"1659072054:d71\"\r\nCONTENT-LENGTH:\x203441\r\nP3P:
+SF:\x20CP=CAO\x20PSA\x20OUR\r\nCACHE-CONTROL:\x20max-age=0\r\nX-Frame-Opti
+SF:ons:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;mode=block\r\nContent-Secu
+SF:rity-Policy:\x20script-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval
+SF:'\r\nX-Content-Type-Options:\x20nosniff\r\nCONTENT-TYPE:\x20text/html\r
+SF:\n\r\n<!DOCTYPE\x20HTML>\x20<html>\x20<head>\x20<meta\x20http-equiv=\"X
+SF:-UA-Compatible\"\x20content=\"IE=edge\">\x20<meta\x20charset=\"UTF-8\">
+SF:\x20<title>WEB\x20SERVICE</title>\x20<link\x20href=\"\./baseProj/images
+SF:/favicon\.ico\"\x20type=\"image/x-icon\"\x20rel=\"shortcut\x20icon\">\x
+SF:20<script\x20src=\"ext/ext-all\.js\"></script>\x20<script\x20type=\"tex
+SF:t/javascript\"\x20src=\"\./projectPath\.js\"></script>\x20<script\x20ty
+SF:pe=\"text/javascript\"\x20src=\"/app/libs/require\.js\"></script>\x20<s
+SF:cript\x20type=\"text/javascript\"\x20src=\"/app/jsCore/require-config\.
+SF:js\"></script>\x20<script\x20type=\"text/jav");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port554-TCP:V=7.99%I=7%D=4/30%Time=69F34275%P=aarch64-unknown-linux-and
+SF:roid%r(RTSPRequest,9E,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x200\r\nServer:\
+SF:x20Rtsp\x20Server/3\.0\r\nPublic:\x20OPTIONS,\x20DESCRIBE,\x20ANNOUNCE,
+SF:\x20SETUP,\x20PLAY,\x20RECORD,\x20PAUSE,\x20TEARDOWN,\x20SET_PARAMETER,
+SF:\x20GET_PARAMETER\r\n\r\n")%r(HTTPOptions,9E,"RTSP/1\.0\x20200\x20OK\r\
+SF:nCSeq:\x200\r\nServer:\x20Rtsp\x20Server/3\.0\r\nPublic:\x20OPTIONS,\x2
+SF:0DESCRIBE,\x20ANNOUNCE,\x20SETUP,\x20PLAY,\x20RECORD,\x20PAUSE,\x20TEAR
+SF:DOWN,\x20SET_PARAMETER,\x20GET_PARAMETER\r\n\r\n")%r(SIPOptions,9F,"RTS
+SF:P/1\.0\x20200\x20OK\r\nCSeq:\x2042\r\nServer:\x20Rtsp\x20Server/3\.0\r\
+SF:nPublic:\x20OPTIONS,\x20DESCRIBE,\x20ANNOUNCE,\x20SETUP,\x20PLAY,\x20RE
+SF:CORD,\x20PAUSE,\x20TEARDOWN,\x20SET_PARAMETER,\x20GET_PARAMETER\r\n\r\n
+SF:");
+
+Nmap scan report for 192.168.5.101
+Host is up (0.017s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.103
+Host is up (0.023s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.105
+Host is up (0.018s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.106
+Host is up (0.023s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.107
+Host is up (0.024s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.108
+Host is up (0.024s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.109
+Host is up (0.024s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.110
+Host is up (0.020s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.111
+Host is up (0.021s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.112
+Host is up (0.022s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.113
+Host is up (0.021s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.114
+Host is up (0.020s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.115
+Host is up (0.020s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.116
+Host is up (0.020s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http
+554/tcp  open  rtsp
+1935/tcp open  rtmp?
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.99%I=7%D=4/30%Time=69F343AB%P=aarch64-unknown-linux-andr
+SF:oid%r(GetRequest,16A0,"HTTP/1\.1\x20200\x20OK\r\nCONNECTION:\x20close\r
+SF:\nDate:\x20Thu,\x2030\x20Apr\x202026\x2018:14:56\x20GMT\r\nLast-Modifie
+SF:d:\x20Wed,\x2030\x20Mar\x202022\x2023:15:04\x20GMT\r\nEtag:\x20\"164868
+SF:2104:93f6\"\r\nCONTENT-LENGTH:\x2037878\r\nCACHE-CONTROL:\x20max-age=0\
+SF:r\nX-Frame-Options:\x20SAMEORIGIN\r\nStrict-Transport-Security:\x20max-
+SF:age=604800;\x20includeSubDomains\r\nX-XSS-Protection:\x201;mode=block\r
+SF:\nContent-Security-Policy:\x20script-src\x20'self'\x20'unsafe-inline'\x
+SF:20'unsafe-eval'\r\nX-Content-Type-Options:\x20nosniff\r\nCONTENT-TYPE:\
+SF:x20text/html\r\n\r\n<!DOCTYPE\x20html>\x20<html>\x20<head>\x20<title></
+SF:title>\x20<meta\x20charset=\"UTF-8\">\x20<meta\x20http-equiv=\"X-UA-Com
+SF:patible\"\x20content=\"IE=edge\">\x20<meta\x20name=\"format-detection\"
+SF:\x20content=\"telephone=no\">\x20<script\x20src=\"jsBase/lib/jquery\.js
+SF:\?version=@WebVersion@\"></script>\x20<script\x20src=\"jsBase/widget/js
+SF:/jquery\.ui\.core\.js\?version=@WebVersion@\"></script>\x20<script\x20s
+SF:rc=\"jsBase/widget/js/jquery\.ui\.widget\.js\?version=@WebVersion@\"></
+SF:script>\x20<script\x20src=\"jsBase/widget/js/dui\.password\.js")%r(HTTP
+SF:Options,95B8,"HTTP/1\.1\x20200\x20OK\r\nCONNECTION:\x20close\r\nDate:\x
+SF:20Thu,\x2030\x20Apr\x202026\x2018:14:59\x20GMT\r\nLast-Modified:\x20Wed
+SF:,\x2030\x20Mar\x202022\x2023:15:04\x20GMT\r\nEtag:\x20\"1648682104:93f6
+SF:\"\r\nCONTENT-LENGTH:\x2037878\r\nCACHE-CONTROL:\x20max-age=0\r\nX-Fram
+SF:e-Options:\x20SAMEORIGIN\r\nStrict-Transport-Security:\x20max-age=60480
+SF:0;\x20includeSubDomains\r\nX-XSS-Protection:\x201;mode=block\r\nContent
+SF:-Security-Policy:\x20script-src\x20'self'\x20'unsafe-inline'\x20'unsafe
+SF:-eval'\r\nX-Content-Type-Options:\x20nosniff\r\nCONTENT-TYPE:\x20text/h
+SF:tml\r\n\r\n<!DOCTYPE\x20html>\x20<html>\x20<head>\x20<title></title>\x2
+SF:0<meta\x20charset=\"UTF-8\">\x20<meta\x20http-equiv=\"X-UA-Compatible\"
+SF:\x20content=\"IE=edge\">\x20<meta\x20name=\"format-detection\"\x20conte
+SF:nt=\"telephone=no\">\x20<script\x20src=\"jsBase/lib/jquery\.js\?version
+SF:=@WebVersion@\"></script>\x20<script\x20src=\"jsBase/widget/js/jquery\.
+SF:ui\.core\.js\?version=@WebVersion@\"></script>\x20<script\x20src=\"jsBa
+SF:se/widget/js/jquery\.ui\.widget\.js\?version=@WebVersion@\"></script>\x
+SF:20<script\x20src=\"jsBase/widget/js/dui\.password\.js");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port554-TCP:V=7.99%I=7%D=4/30%Time=69F343AE%P=aarch64-unknown-linux-and
+SF:roid%r(RTSPRequest,9E,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x200\r\nServer:\
+SF:x20Rtsp\x20Server/3\.0\r\nPublic:\x20OPTIONS,\x20DESCRIBE,\x20ANNOUNCE,
+SF:\x20SETUP,\x20PLAY,\x20RECORD,\x20PAUSE,\x20TEARDOWN,\x20SET_PARAMETER,
+SF:\x20GET_PARAMETER\r\n\r\n")%r(HTTPOptions,9E,"RTSP/1\.0\x20200\x20OK\r\
+SF:nCSeq:\x200\r\nServer:\x20Rtsp\x20Server/3\.0\r\nPublic:\x20OPTIONS,\x2
+SF:0DESCRIBE,\x20ANNOUNCE,\x20SETUP,\x20PLAY,\x20RECORD,\x20PAUSE,\x20TEAR
+SF:DOWN,\x20SET_PARAMETER,\x20GET_PARAMETER\r\n\r\n")%r(SIPOptions,9F,"RTS
+SF:P/1\.0\x20200\x20OK\r\nCSeq:\x2042\r\nServer:\x20Rtsp\x20Server/3\.0\r\
+SF:nPublic:\x20OPTIONS,\x20DESCRIBE,\x20ANNOUNCE,\x20SETUP,\x20PLAY,\x20RE
+SF:CORD,\x20PAUSE,\x20TEARDOWN,\x20SET_PARAMETER,\x20GET_PARAMETER\r\n\r\n
+SF:");
+
+Nmap scan report for 192.168.5.119
+Host is up (0.022s latency).
+Not shown: 999 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+23/tcp open  telnet
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port23-TCP:V=7.99%I=7%D=4/30%Time=69F343A8%P=aarch64-unknown-linux-andr
+SF:oid%r(NULL,5C,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\r\r\nWe
+SF:lcome\x20to\x20Linux\x20\(ZMM220\)\x20for\x20MIPS\r\n\rKernel\x203\.0\.
+SF:8\x20on\x20an\x20MIPS\r\n\r\(none\)\x20login:\x20")%r(GenericLines,7C,"
+SF:\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\r\r\nWelcome\x20to\x20
+SF:Linux\x20\(ZMM220\)\x20for\x20MIPS\r\n\rKernel\x203\.0\.8\x20on\x20an\x
+SF:20MIPS\r\n\r\(none\)\x20login:\x20\r\n\r\n\(none\)\x20login:\x20\(none\
+SF:)\x20login:\x20")%r(tn3270,6D,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff
+SF:\xfb\x03\r\r\nWelcome\x20to\x20Linux\x20\(ZMM220\)\x20for\x20MIPS\r\n\r
+SF:Kernel\x203\.0\.8\x20on\x20an\x20MIPS\r\n\r\^@IBM-3279-4-E\xfb\^Y\(none
+SF:\)\x20login:\x20")%r(GetRequest,6E,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x0
+SF:1\xff\xfb\x03\r\r\nWelcome\x20to\x20Linux\x20\(ZMM220\)\x20for\x20MIPS\
+SF:r\n\rKernel\x203\.0\.8\x20on\x20an\x20MIPS\r\n\rGET\x20/\x20HTTP/1\.0\r
+SF:\n\r\n\(none\)\x20login:\x20")%r(RPCCheck,58,"\xff\xfd\x01\xff\xfd\x1f\
+SF:xff\xfb\x01\xff\xfb\x03\r\r\nWelcome\x20to\x20Linux\x20\(ZMM220\)\x20fo
+SF:r\x20MIPS\r\n\rKernel\x203\.0\.8\x20on\x20an\x20MIPS\r\n\r\x80\^@\^@\(r
+SF:\xfe\^\]")%r(Help,62,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\
+SF:r\r\nWelcome\x20to\x20Linux\x20\(ZMM220\)\x20for\x20MIPS\r\n\rKernel\x2
+SF:03\.0\.8\x20on\x20an\x20MIPS\r\n\rHELP\r\n\(none\)\x20login:\x20")%r(SI
+SF:POptions,13B,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\r\r\nWel
+SF:come\x20to\x20Linux\x20\(ZMM220\)\x20for\x20MIPS\r\n\rKernel\x203\.0\.8
+SF:\x20on\x20an\x20MIPS\r\n\rOPTIONS\x20sip:nm\x20SIP/2\.0\r\nVia:\x20SIP/
+SF:2\.0/TCP\x20nm;branch=foo\r\nFrom:\x20<sip:nm@nm>;tag=root\r\nTo:\x20<s
+SF:ip:nm2@nm2>\r\nCall-ID:\x2050000\r\nCSeq:\x2042\x20OPTIONS\r\nMax-Forwa
+SF:rds:\x2070\r\nContent-Length:\x200\r\nContact:\x20<sip:nm@nm>\r\nAccept
+SF::\x20application/sdp\r\n\r\n\(none\)\x20login:\x20")%r(NCP,88,"\xff\xfd
+SF:\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\r\r\nWelcome\x20to\x20Linux\x2
+SF:0\(ZMM220\)\x20for\x20MIPS\r\n\rKernel\x203\.0\.8\x20on\x20an\x20MIPS\r
+SF:\n\rDmdT\^@\^@\^@\x08\x20\x08\x08\x20\x08\x08\x20\x08\x08\x20\x08\x08\x
+SF:20\x08\x08\x20\x08\x08\x20\x08\x08\x20\x08\x08\x20\x08\x08\x20\x08\^@\^
+SF:@\^@\^A\^@\^@\^@\^@\^@");
+
+Nmap scan report for 192.168.5.120
+Host is up (0.019s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+443/tcp open  ssl/https
+554/tcp open  rtsp
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.99%I=7%D=4/30%Time=69F343AD%P=aarch64-unknown-linux-andr
+SF:oid%r(GetRequest,2C4A,"HTTP/1\.1\x20200\x20OK\r\nCONNECTION:\x20keep-al
+SF:ive\r\nDate:\x20Thu,\x2030\x20Apr\x202026\x2017:50:58\x20GMT\r\nLast-Mo
+SF:dified:\x20Wed,\x2025\x20Sep\x202024\x2009:17:20\x20GMT\r\nEtag:\x20\"1
+SF:727255840:2a6e\"\r\nCONTENT-LENGTH:\x2010862\r\nCACHE-CONTROL:\x20max-a
+SF:ge=0\r\nP3P:\x20CP=CAO\x20PSA\x20OUR\r\nX-Frame-Options:\x20SAMEORIGIN\
+SF:r\nStrict-Transport-Security:\x20max-age=604800;\x20includeSubDomains\r
+SF:\nX-XSS-Protection:\x201;mode=block\r\nContent-Security-Policy:\x20scri
+SF:pt-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval'\r\nX-Content-Type-
+SF:Options:\x20nosniff\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<!doctype\x20h
+SF:tml><html\x20lang=\"en\"><head><meta\x20charset=\"utf-8\"><meta\x20name
+SF:=\"viewport\"\x20content=\"width=device-width,initial-scale=1,shrink-to
+SF:-fit=no\"><meta\x20name=\"theme-color\"\x20content=\"#000000\"><meta\x2
+SF:0http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\"/><meta\x20name=\
+SF:"format-detection\"\x20content=\"telephone=no\"><title>WEB</title></hea
+SF:d><body><script>function\x20_clearTheme_\(\){for\(key\x20in\x20localSto
+SF:rage\)/color\.\(\.\*\)less/gi\.test\(key\)&&localStorage\.r")%r(HTTPOpt
+SF:ions,1C48,"HTTP/1\.1\x20200\x20OK\r\nCONNECTION:\x20keep-alive\r\nDate:
+SF:\x20Thu,\x2030\x20Apr\x202026\x2017:51:01\x20GMT\r\nLast-Modified:\x20W
+SF:ed,\x2025\x20Sep\x202024\x2009:17:20\x20GMT\r\nEtag:\x20\"1727255840:2a
+SF:6e\"\r\nCONTENT-LENGTH:\x2010862\r\nCACHE-CONTROL:\x20max-age=0\r\nP3P:
+SF:\x20CP=CAO\x20PSA\x20OUR\r\nX-Frame-Options:\x20SAMEORIGIN\r\nStrict-Tr
+SF:ansport-Security:\x20max-age=604800;\x20includeSubDomains\r\nX-XSS-Prot
+SF:ection:\x201;mode=block\r\nContent-Security-Policy:\x20script-src\x20's
+SF:elf'\x20'unsafe-inline'\x20'unsafe-eval'\r\nX-Content-Type-Options:\x20
+SF:nosniff\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<!doctype\x20html><html\x2
+SF:0lang=\"en\"><head><meta\x20charset=\"utf-8\"><meta\x20name=\"viewport\
+SF:"\x20content=\"width=device-width,initial-scale=1,shrink-to-fit=no\"><m
+SF:eta\x20name=\"theme-color\"\x20content=\"#000000\"><meta\x20http-equiv=
+SF:\"X-UA-Compatible\"\x20content=\"IE=edge\"/><meta\x20name=\"format-dete
+SF:ction\"\x20content=\"telephone=no\"><title>WEB</title></head><body><scr
+SF:ipt>function\x20_clearTheme_\(\){for\(key\x20in\x20localStorage\)/color
+SF:\.\(\.\*\)less/gi\.test\(key\)&&localStorage\.r");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.99%T=SSL%I=7%D=4/30%Time=69F343B3%P=aarch64-unknown-lin
+SF:ux-android%r(GetRequest,2C4A,"HTTP/1\.1\x20200\x20OK\r\nCONNECTION:\x20
+SF:keep-alive\r\nDate:\x20Thu,\x2030\x20Apr\x202026\x2017:51:04\x20GMT\r\n
+SF:Last-Modified:\x20Wed,\x2025\x20Sep\x202024\x2009:17:20\x20GMT\r\nEtag:
+SF:\x20\"1727255840:2a6e\"\r\nCONTENT-LENGTH:\x2010862\r\nCACHE-CONTROL:\x
+SF:20max-age=0\r\nP3P:\x20CP=CAO\x20PSA\x20OUR\r\nX-Frame-Options:\x20SAME
+SF:ORIGIN\r\nStrict-Transport-Security:\x20max-age=604800;\x20includeSubDo
+SF:mains\r\nX-XSS-Protection:\x201;mode=block\r\nContent-Security-Policy:\
+SF:x20script-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval'\r\nX-Conten
+SF:t-Type-Options:\x20nosniff\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<!docty
+SF:pe\x20html><html\x20lang=\"en\"><head><meta\x20charset=\"utf-8\"><meta\
+SF:x20name=\"viewport\"\x20content=\"width=device-width,initial-scale=1,sh
+SF:rink-to-fit=no\"><meta\x20name=\"theme-color\"\x20content=\"#000000\"><
+SF:meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\"/><meta\x2
+SF:0name=\"format-detection\"\x20content=\"telephone=no\"><title>WEB</titl
+SF:e></head><body><script>function\x20_clearTheme_\(\){for\(key\x20in\x20l
+SF:ocalStorage\)/color\.\(\.\*\)less/gi\.test\(key\)&&localStorage\.r")%r(
+SF:HTTPOptions,2C4A,"HTTP/1\.1\x20200\x20OK\r\nCONNECTION:\x20keep-alive\r
+SF:\nDate:\x20Thu,\x2030\x20Apr\x202026\x2017:51:07\x20GMT\r\nLast-Modifie
+SF:d:\x20Wed,\x2025\x20Sep\x202024\x2009:17:20\x20GMT\r\nEtag:\x20\"172725
+SF:5840:2a6e\"\r\nCONTENT-LENGTH:\x2010862\r\nCACHE-CONTROL:\x20max-age=0\
+SF:r\nP3P:\x20CP=CAO\x20PSA\x20OUR\r\nX-Frame-Options:\x20SAMEORIGIN\r\nSt
+SF:rict-Transport-Security:\x20max-age=604800;\x20includeSubDomains\r\nX-X
+SF:SS-Protection:\x201;mode=block\r\nContent-Security-Policy:\x20script-sr
+SF:c\x20'self'\x20'unsafe-inline'\x20'unsafe-eval'\r\nX-Content-Type-Optio
+SF:ns:\x20nosniff\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<!doctype\x20html><
+SF:html\x20lang=\"en\"><head><meta\x20charset=\"utf-8\"><meta\x20name=\"vi
+SF:ewport\"\x20content=\"width=device-width,initial-scale=1,shrink-to-fit=
+SF:no\"><meta\x20name=\"theme-color\"\x20content=\"#000000\"><meta\x20http
+SF:-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\"/><meta\x20name=\"form
+SF:at-detection\"\x20content=\"telephone=no\"><title>WEB</title></head><bo
+SF:dy><script>function\x20_clearTheme_\(\){for\(key\x20in\x20localStorage\
+SF:)/color\.\(\.\*\)less/gi\.test\(key\)&&localStorage\.r");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port554-TCP:V=7.99%I=7%D=4/30%Time=69F343AF%P=aarch64-unknown-linux-and
+SF:roid%r(RTSPRequest,9E,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x200\r\nServer:\
+SF:x20Rtsp\x20Server/3\.0\r\nPublic:\x20OPTIONS,\x20DESCRIBE,\x20ANNOUNCE,
+SF:\x20SETUP,\x20PLAY,\x20RECORD,\x20PAUSE,\x20TEARDOWN,\x20SET_PARAMETER,
+SF:\x20GET_PARAMETER\r\n\r\n")%r(HTTPOptions,9E,"RTSP/1\.0\x20200\x20OK\r\
+SF:nCSeq:\x200\r\nServer:\x20Rtsp\x20Server/3\.0\r\nPublic:\x20OPTIONS,\x2
+SF:0DESCRIBE,\x20ANNOUNCE,\x20SETUP,\x20PLAY,\x20RECORD,\x20PAUSE,\x20TEAR
+SF:DOWN,\x20SET_PARAMETER,\x20GET_PARAMETER\r\n\r\n")%r(SIPOptions,9F,"RTS
+SF:P/1\.0\x20200\x20OK\r\nCSeq:\x2042\r\nServer:\x20Rtsp\x20Server/3\.0\r\
+SF:nPublic:\x20OPTIONS,\x20DESCRIBE,\x20ANNOUNCE,\x20SETUP,\x20PLAY,\x20RE
+SF:CORD,\x20PAUSE,\x20TEARDOWN,\x20SET_PARAMETER,\x20GET_PARAMETER\r\n\r\n
+SF:");
+
+Nmap scan report for 192.168.5.121
+Host is up (0.020s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.122
+Host is up (0.022s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.123
+Host is up (0.018s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.124
+Host is up (0.023s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.125
+Host is up (0.020s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.126
+Host is up (0.024s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.127
+Host is up (0.020s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.128
+Host is up (0.022s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http?
+554/tcp  open  rtsp?
+8086/tcp open  d-s-n?
+
+Nmap scan report for 192.168.5.167
+Host is up (0.024s latency).
+Not shown: 994 closed tcp ports (conn-refused)
+PORT     STATE SERVICE    VERSION
+80/tcp   open  http       Virata-EmWeb 6.2.1
+443/tcp  open  ssl/http   Virata-EmWeb 6.2.1
+515/tcp  open  printer
+631/tcp  open  http       Virata-EmWeb 6.2.1
+7627/tcp open  ssl/http   HP LaserJet printer http admin
+9100/tcp open  jetdirect?
+Service Info: Device: printer
+
+Nmap scan report for 192.168.5.250
+Host is up (0.023s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE    VERSION
+80/tcp   open  http       OpenWrt uHTTPd
+443/tcp  open  ssl/https?
+1900/tcp open  upnp       MiniUPnP 1.8 (TP-LINK router; UPnP 1.1)
+Service Info: OS: Linux; Devices: WAP, broadband router; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr 30 18:01:44 2026 -- 256 IP addresses (29 hosts up) scanned in 608.29 seconds

@@ -1,0 +1,15 @@
+# Nmap 7.99 scan initiated Wed Apr 29 14:59:59 2026 as: /usr/lib/nmap/nmap -sS -sV -O -T4 --script=vuln -oN Nmap_192.168.5.25_vuln.txt 192.168.5.25
+Nmap scan report for 192.168.5.25
+Host is up (0.0038s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT     STATE SERVICE         VERSION
+7070/tcp open  ssl/realserver?
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: bridge|VoIP adapter|general purpose
+Running (JUST GUESSING): Oracle Virtualbox (98%), Slirp (98%), AT&T embedded (95%), QEMU (94%)
+OS CPE: cpe:/o:oracle:virtualbox cpe:/a:danny_gasparovski:slirp cpe:/a:qemu:qemu
+Aggressive OS guesses: Oracle Virtualbox Slirp NAT bridge (98%), AT&T BGW210 voice gateway (95%), QEMU user mode network gateway (94%)
+No exact OS matches for host (test conditions non-ideal).
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Apr 29 15:00:33 2026 -- 1 IP address (1 host up) scanned in 33.84 seconds

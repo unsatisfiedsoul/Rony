@@ -1,0 +1,1 @@
+# Nmap 7.99 scan initiated Mon Apr 27 06:37:53 2026 as: /usr/lib/nmap/nmap --privileged -sV -A -oN Nmap_192.168.6.1_aggresive.txt 192.168.6.0/24

@@ -1,0 +1,11 @@
+# Nmap 7.99 scan initiated Sat May  2 02:03:48 2026 as: nmap -oN Nmap_203.83.170.1_31.txt 203.83.170.1/31
+Nmap scan report for 203.83.170.1
+Host is up (0.0071s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT      STATE SERVICE
+179/tcp   open  bgp
+1088/tcp  open  cplscrambler-al
+2000/tcp  open  cisco-sccp
+10000/tcp open  snet-sensor-mgmt
+
+# Nmap done at Sat May  2 02:03:51 2026 -- 2 IP addresses (1 host up) scanned in 2.74 seconds

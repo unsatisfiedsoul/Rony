@@ -1,0 +1,1 @@
+# Nmap 7.99 scan initiated Thu Apr 30 12:06:17 2026 as: /usr/lib/nmap/nmap --privileged -oN Nmap_10.22.0.1_24.txt 10.22.0.1/24

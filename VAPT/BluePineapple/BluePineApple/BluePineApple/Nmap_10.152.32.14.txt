@@ -1,0 +1,8 @@
+# Nmap 7.99 scan initiated Thu Apr 30 14:43:29 2026 as: /usr/lib/nmap/nmap --privileged -sV -oN Nmap_10.152.32.14.txt 10.152.32.14
+Nmap scan report for 10.152.32.14
+Host is up (0.0010s latency).
+All 1000 scanned ports on 10.152.32.14 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr 30 14:43:36 2026 -- 1 IP address (1 host up) scanned in 6.76 seconds

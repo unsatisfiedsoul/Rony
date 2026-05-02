@@ -1,0 +1,8 @@
+Nmap scan report for 203.83.183.33
+Host is up (0.036s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT      STATE SERVICE
+179/tcp   open  bgp
+1088/tcp  open  cplscrambler-al
+2000/tcp  open  cisco-sccp
+10000/tcp open  snet-sensor-mgmt

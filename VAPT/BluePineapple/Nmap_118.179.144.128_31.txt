@@ -1,0 +1,13 @@
+# Nmap 7.99 scan initiated Sat May  2 02:00:17 2026 as: nmap -oN Nmap_118.179.144.128_31.txt 118.179.144.128/31
+Nmap scan report for 118.179.144.128
+Host is up (0.011s latency).
+Not shown: 994 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE
+22/tcp   filtered ssh
+23/tcp   filtered telnet
+161/tcp  filtered snmp
+179/tcp  open     bgp
+2000/tcp open     cisco-sccp
+8291/tcp filtered winbox
+
+# Nmap done at Sat May  2 02:00:22 2026 -- 2 IP addresses (1 host up) scanned in 5.17 seconds

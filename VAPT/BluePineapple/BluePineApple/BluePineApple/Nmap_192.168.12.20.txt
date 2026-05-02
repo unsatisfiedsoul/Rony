@@ -1,0 +1,31 @@
+# Nmap 7.99 scan initiated Wed Apr 29 12:52:17 2026 as: /usr/lib/nmap/nmap --privileged -T2 -oN Nmap_192.168.12.20.txt 192.168.12.20
+Nmap scan report for 192.168.12.20
+Host is up (0.00037s latency).
+Not shown: 976 filtered tcp ports (no-response)
+PORT      STATE  SERVICE
+42/tcp    closed nameserver
+163/tcp   closed cmip-man
+464/tcp   closed kpasswd5
+843/tcp   closed unknown
+1029/tcp  closed ms-lsa
+1068/tcp  closed instl_bootc
+1105/tcp  closed ftranhc
+1121/tcp  closed rmpp
+1580/tcp  closed tn-tl-r1
+1687/tcp  closed nsjtp-ctrl
+2601/tcp  closed zebra
+3128/tcp  closed squid-http
+3971/tcp  closed lanrevserver
+4343/tcp  closed unicall
+5222/tcp  closed xmpp-client
+5925/tcp  closed unknown
+5998/tcp  closed ncd-diag
+8254/tcp  closed unknown
+9110/tcp  closed unknown
+9503/tcp  closed unknown
+10001/tcp closed scp-config
+13783/tcp closed netbackup
+32768/tcp closed filenet-tms
+33354/tcp closed unknown
+
+# Nmap done at Wed Apr 29 14:15:45 2026 -- 1 IP address (1 host up) scanned in 5008.74 seconds

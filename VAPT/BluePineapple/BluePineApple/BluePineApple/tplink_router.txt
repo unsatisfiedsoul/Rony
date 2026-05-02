@@ -1,0 +1,19 @@
+192.168.68.1
+192.168.68.250
+
+_________________Details_______________
+nmap 192.168.68.1
+PORT     STATE SERVICE
+53/tcp   open  domain
+80/tcp   open  http
+443/tcp  open  https
+1900/tcp open  upnp
+
+
+nmap 192.168.68.250
+PORT     STATE  SERVICE
+20/tcp   closed ftp-data
+80/tcp   open   http
+443/tcp  open   https
+543/tcp  closed klogin
+1900/tcp open   upnp

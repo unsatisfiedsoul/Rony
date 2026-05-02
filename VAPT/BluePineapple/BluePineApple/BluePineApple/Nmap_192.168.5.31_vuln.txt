@@ -1,0 +1,26 @@
+# Nmap 7.99 scan initiated Wed Apr 29 14:55:57 2026 as: /usr/lib/nmap/nmap -sS -sV -O -T4 --script=vuln -oN Nmap_192.168.5.31_vuln.txt 192.168.5.31
+Nmap scan report for 192.168.5.31
+Host is up (0.0063s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+22/tcp   open  ssh           OpenSSH 10.2 (protocol 2.0)
+| vulners: 
+|   cpe:/a:openbsd:openssh:10.2: 
+|     	CVE-2026-35414	8.1	https://vulners.com/cve/CVE-2026-35414
+|     	CVE-2026-35386	8.1	https://vulners.com/cve/CVE-2026-35386
+|     	CVE-2026-35385	8.1	https://vulners.com/cve/CVE-2026-35385
+|     	CVE-2026-35387	6.5	https://vulners.com/cve/CVE-2026-35387
+|_    	CVE-2026-35388	2.5	https://vulners.com/cve/CVE-2026-35388
+88/tcp   open  kerberos-sec  Heimdal Kerberos (server time: 2026-04-29 08:56:12Z)
+3283/tcp open  netassistant?
+5900/tcp open  vnc           Apple remote desktop vnc
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: bridge|VoIP adapter|general purpose
+Running (JUST GUESSING): Oracle Virtualbox (97%), Slirp (97%), AT&T embedded (95%), QEMU (93%)
+OS CPE: cpe:/o:oracle:virtualbox cpe:/a:danny_gasparovski:slirp cpe:/a:qemu:qemu
+Aggressive OS guesses: Oracle Virtualbox Slirp NAT bridge (97%), AT&T BGW210 voice gateway (95%), QEMU user mode network gateway (93%)
+No exact OS matches for host (test conditions non-ideal).
+Service Info: OS: Mac OS X; CPE: cpe:/o:apple:mac_os_x
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Apr 29 14:56:25 2026 -- 1 IP address (1 host up) scanned in 28.83 seconds

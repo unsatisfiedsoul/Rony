@@ -1,0 +1,5 @@
+# For getting all urls in a saved html file
+grep -i "api" clickup.html | grep -oE "https?://[a-zA-Z0-9./?=_-]+"                                               
+# Getting all javascript file with location
+grep -oE 'src="[^"]+\.js"' clickup.html | cut -d'"' -f2
+

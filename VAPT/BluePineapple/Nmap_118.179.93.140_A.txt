@@ -1,0 +1,11 @@
+# Nmap 7.99 scan initiated Sat May  2 01:08:44 2026 as: nmap -A -oN Nmap_118.179.93.140_A.txt 118.179.93.140
+Nmap scan report for 118.179.93.140
+Host is up (0.0067s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE        VERSION
+161/tcp  filtered snmp
+179/tcp  open     tcpwrapped
+2000/tcp open     bandwidth-test MikroTik bandwidth-test server
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat May  2 01:08:53 2026 -- 1 IP address (1 host up) scanned in 8.75 seconds
